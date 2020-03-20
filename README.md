@@ -73,8 +73,8 @@ LifeLine is an app where users are able to see where groups of people are on a m
    * ...
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://drive.google.com/open?id=1Sb9GVDq2TAptMYr36AVoMDwyDyy2iSYb" width=600>
+<img src="https://www.figma.com/proto/jE3KKpTsZBvMxOezelbsN7/LifeLine?node-id=19%3A3&scaling=scale-down" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
