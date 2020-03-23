@@ -1,0 +1,793 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04010633242079420085F3E3 /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04010632242079420085F3E3 /* AccountSettingsViewController.swift */; };
+		043F207524162F8600F25D1D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F207424162F8600F25D1D /* SignUpViewController.swift */; };
+		0483B1292421A804003BF6DB /* ChangePhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483B1282421A804003BF6DB /* ChangePhoneViewController.swift */; };
+		0483B12B2421A819003BF6DB /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483B12A2421A819003BF6DB /* ChangePasswordViewController.swift */; };
+		048F8183242555060090FE28 /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F8182242555060090FE28 /* DeleteAccountViewController.swift */; };
+		0491A29A24244AAA00A3A404 /* Archiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491A29924244AAA00A3A404 /* Archiver.swift */; };
+		04928F2C24282F1C002C3549 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04928F2B24282F1C002C3549 /* ForgotPasswordViewController.swift */; };
+		04928F2E24282F78002C3549 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04928F2D24282F78002C3549 /* GroupsViewController.swift */; };
+		04938AB024293E5900B82DFB /* GroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04938AAF24293E5900B82DFB /* GroupViewCell.swift */; };
+		04938AB22429424600B82DFB /* GroupDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04938AB12429424600B82DFB /* GroupDetailsViewController.swift */; };
+		0494B0132415CD9A0016DEE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494B0122415CD9A0016DEE8 /* AppDelegate.swift */; };
+		0494B0152415CD9A0016DEE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494B0142415CD9A0016DEE8 /* SceneDelegate.swift */; };
+		0494B01A2415CD9A0016DEE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0494B0182415CD9A0016DEE8 /* Main.storyboard */; };
+		0494B01C2415CD9C0016DEE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0494B01B2415CD9C0016DEE8 /* Assets.xcassets */; };
+		0494B01F2415CD9C0016DEE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0494B01D2415CD9C0016DEE8 /* LaunchScreen.storyboard */; };
+		0494B02A2415CD9C0016DEE8 /* LifeLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494B0292415CD9C0016DEE8 /* LifeLineTests.swift */; };
+		0494B0352415CD9C0016DEE8 /* LifeLineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494B0342415CD9C0016DEE8 /* LifeLineUITests.swift */; };
+		0494B0432415CFD30016DEE8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494B0422415CFD30016DEE8 /* LoginViewController.swift */; };
+		0494B0472415E32E0016DEE8 /* LifeLineAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494B0462415E32E0016DEE8 /* LifeLineAPICaller.swift */; };
+		0B1A2C046D1783BE3CF86AC8 /* Pods_LifeLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A707D4E0B7C7F6CC378F2B /* Pods_LifeLineTests.framework */; };
+		7C0D2C504BDD2A45E585B7AE /* Pods_LifeLine_LifeLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196728FECA5F5D71D3A69D61 /* Pods_LifeLine_LifeLineUITests.framework */; };
+		F4AB5EBC0859A50F22A6E16F /* Pods_LifeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03CBDDF0F9D3CEA32B80963 /* Pods_LifeLine.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0494B0262415CD9C0016DEE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0494B0072415CD9A0016DEE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0494B00E2415CD9A0016DEE8;
+			remoteInfo = LifeLine;
+		};
+		0494B0312415CD9C0016DEE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0494B0072415CD9A0016DEE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0494B00E2415CD9A0016DEE8;
+			remoteInfo = LifeLine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04010632242079420085F3E3 /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
+		043F207424162F8600F25D1D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0483B1282421A804003BF6DB /* ChangePhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePhoneViewController.swift; sourceTree = "<group>"; };
+		0483B12A2421A819003BF6DB /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		048F8182242555060090FE28 /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
+		0491A29924244AAA00A3A404 /* Archiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archiver.swift; sourceTree = "<group>"; };
+		04928F2B24282F1C002C3549 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		04928F2D24282F78002C3549 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		04938AAF24293E5900B82DFB /* GroupViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewCell.swift; sourceTree = "<group>"; };
+		04938AB12429424600B82DFB /* GroupDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailsViewController.swift; sourceTree = "<group>"; };
+		0494B00F2415CD9A0016DEE8 /* LifeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0494B0122415CD9A0016DEE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0494B0142415CD9A0016DEE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0494B0192415CD9A0016DEE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0494B01B2415CD9C0016DEE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0494B01E2415CD9C0016DEE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0494B0202415CD9C0016DEE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0494B0252415CD9C0016DEE8 /* LifeLineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeLineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0494B0292415CD9C0016DEE8 /* LifeLineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeLineTests.swift; sourceTree = "<group>"; };
+		0494B02B2415CD9C0016DEE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0494B0302415CD9C0016DEE8 /* LifeLineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeLineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0494B0342415CD9C0016DEE8 /* LifeLineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeLineUITests.swift; sourceTree = "<group>"; };
+		0494B0362415CD9C0016DEE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0494B0422415CFD30016DEE8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0494B0462415E32E0016DEE8 /* LifeLineAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeLineAPICaller.swift; sourceTree = "<group>"; };
+		196728FECA5F5D71D3A69D61 /* Pods_LifeLine_LifeLineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLine_LifeLineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C5A63635A6251307C8E8E2A /* Pods-LifeLineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLineTests.debug.xcconfig"; path = "Target Support Files/Pods-LifeLineTests/Pods-LifeLineTests.debug.xcconfig"; sourceTree = "<group>"; };
+		68B27F1B28920A771180D25F /* Pods-LifeLine-LifeLineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine-LifeLineUITests.release.xcconfig"; path = "Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests.release.xcconfig"; sourceTree = "<group>"; };
+		70A707D4E0B7C7F6CC378F2B /* Pods_LifeLineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A03CBDDF0F9D3CEA32B80963 /* Pods_LifeLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE27882082D16D1F13D8FB4D /* Pods-LifeLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine.release.xcconfig"; path = "Target Support Files/Pods-LifeLine/Pods-LifeLine.release.xcconfig"; sourceTree = "<group>"; };
+		C28322599AF7EBDB7454AD03 /* Pods-LifeLineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLineTests.release.xcconfig"; path = "Target Support Files/Pods-LifeLineTests/Pods-LifeLineTests.release.xcconfig"; sourceTree = "<group>"; };
+		C559DB329DFD0D48AE9BB8CB /* Pods-LifeLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine.debug.xcconfig"; path = "Target Support Files/Pods-LifeLine/Pods-LifeLine.debug.xcconfig"; sourceTree = "<group>"; };
+		F901817ED0BC805B3ED51CA0 /* Pods-LifeLine-LifeLineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine-LifeLineUITests.debug.xcconfig"; path = "Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0494B00C2415CD9A0016DEE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4AB5EBC0859A50F22A6E16F /* Pods_LifeLine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0494B0222415CD9C0016DEE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B1A2C046D1783BE3CF86AC8 /* Pods_LifeLineTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0494B02D2415CD9C0016DEE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C0D2C504BDD2A45E585B7AE /* Pods_LifeLine_LifeLineUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0494B0062415CD9A0016DEE8 = {
+			isa = PBXGroup;
+			children = (
+				0494B0112415CD9A0016DEE8 /* LifeLine */,
+				0494B0282415CD9C0016DEE8 /* LifeLineTests */,
+				0494B0332415CD9C0016DEE8 /* LifeLineUITests */,
+				0494B0102415CD9A0016DEE8 /* Products */,
+				F837438F16910C6F4262AD41 /* Pods */,
+				6B6A305C3FD400E0F9BE8D48 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0494B0102415CD9A0016DEE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0494B00F2415CD9A0016DEE8 /* LifeLine.app */,
+				0494B0252415CD9C0016DEE8 /* LifeLineTests.xctest */,
+				0494B0302415CD9C0016DEE8 /* LifeLineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0494B0112415CD9A0016DEE8 /* LifeLine */ = {
+			isa = PBXGroup;
+			children = (
+				0494B0122415CD9A0016DEE8 /* AppDelegate.swift */,
+				0494B0142415CD9A0016DEE8 /* SceneDelegate.swift */,
+				0494B0182415CD9A0016DEE8 /* Main.storyboard */,
+				04938AAF24293E5900B82DFB /* GroupViewCell.swift */,
+				04938AB12429424600B82DFB /* GroupDetailsViewController.swift */,
+				04928F2B24282F1C002C3549 /* ForgotPasswordViewController.swift */,
+				048F8182242555060090FE28 /* DeleteAccountViewController.swift */,
+				0494B0462415E32E0016DEE8 /* LifeLineAPICaller.swift */,
+				0491A29924244AAA00A3A404 /* Archiver.swift */,
+				04010632242079420085F3E3 /* AccountSettingsViewController.swift */,
+				0494B0422415CFD30016DEE8 /* LoginViewController.swift */,
+				043F207424162F8600F25D1D /* SignUpViewController.swift */,
+				0494B01B2415CD9C0016DEE8 /* Assets.xcassets */,
+				0494B01D2415CD9C0016DEE8 /* LaunchScreen.storyboard */,
+				0494B0202415CD9C0016DEE8 /* Info.plist */,
+				0483B1282421A804003BF6DB /* ChangePhoneViewController.swift */,
+				0483B12A2421A819003BF6DB /* ChangePasswordViewController.swift */,
+				04928F2D24282F78002C3549 /* GroupsViewController.swift */,
+			);
+			path = LifeLine;
+			sourceTree = "<group>";
+		};
+		0494B0282415CD9C0016DEE8 /* LifeLineTests */ = {
+			isa = PBXGroup;
+			children = (
+				0494B0292415CD9C0016DEE8 /* LifeLineTests.swift */,
+				0494B02B2415CD9C0016DEE8 /* Info.plist */,
+			);
+			path = LifeLineTests;
+			sourceTree = "<group>";
+		};
+		0494B0332415CD9C0016DEE8 /* LifeLineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0494B0342415CD9C0016DEE8 /* LifeLineUITests.swift */,
+				0494B0362415CD9C0016DEE8 /* Info.plist */,
+			);
+			path = LifeLineUITests;
+			sourceTree = "<group>";
+		};
+		6B6A305C3FD400E0F9BE8D48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A03CBDDF0F9D3CEA32B80963 /* Pods_LifeLine.framework */,
+				196728FECA5F5D71D3A69D61 /* Pods_LifeLine_LifeLineUITests.framework */,
+				70A707D4E0B7C7F6CC378F2B /* Pods_LifeLineTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F837438F16910C6F4262AD41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C559DB329DFD0D48AE9BB8CB /* Pods-LifeLine.debug.xcconfig */,
+				AE27882082D16D1F13D8FB4D /* Pods-LifeLine.release.xcconfig */,
+				F901817ED0BC805B3ED51CA0 /* Pods-LifeLine-LifeLineUITests.debug.xcconfig */,
+				68B27F1B28920A771180D25F /* Pods-LifeLine-LifeLineUITests.release.xcconfig */,
+				1C5A63635A6251307C8E8E2A /* Pods-LifeLineTests.debug.xcconfig */,
+				C28322599AF7EBDB7454AD03 /* Pods-LifeLineTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0494B00E2415CD9A0016DEE8 /* LifeLine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0494B0392415CD9C0016DEE8 /* Build configuration list for PBXNativeTarget "LifeLine" */;
+			buildPhases = (
+				5C49E720D6081BC88429DDC0 /* [CP] Check Pods Manifest.lock */,
+				0494B00B2415CD9A0016DEE8 /* Sources */,
+				0494B00C2415CD9A0016DEE8 /* Frameworks */,
+				0494B00D2415CD9A0016DEE8 /* Resources */,
+				5531BCEEB5DBF4A57A498AC8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LifeLine;
+			productName = LifeLine;
+			productReference = 0494B00F2415CD9A0016DEE8 /* LifeLine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0494B0242415CD9C0016DEE8 /* LifeLineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0494B03C2415CD9C0016DEE8 /* Build configuration list for PBXNativeTarget "LifeLineTests" */;
+			buildPhases = (
+				EA4E1297FC26BF2CF21238E7 /* [CP] Check Pods Manifest.lock */,
+				0494B0212415CD9C0016DEE8 /* Sources */,
+				0494B0222415CD9C0016DEE8 /* Frameworks */,
+				0494B0232415CD9C0016DEE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0494B0272415CD9C0016DEE8 /* PBXTargetDependency */,
+			);
+			name = LifeLineTests;
+			productName = LifeLineTests;
+			productReference = 0494B0252415CD9C0016DEE8 /* LifeLineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0494B02F2415CD9C0016DEE8 /* LifeLineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0494B03F2415CD9C0016DEE8 /* Build configuration list for PBXNativeTarget "LifeLineUITests" */;
+			buildPhases = (
+				13740B2A2F303A2129A7AEE4 /* [CP] Check Pods Manifest.lock */,
+				0494B02C2415CD9C0016DEE8 /* Sources */,
+				0494B02D2415CD9C0016DEE8 /* Frameworks */,
+				0494B02E2415CD9C0016DEE8 /* Resources */,
+				699726C16335AABF280DF15C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0494B0322415CD9C0016DEE8 /* PBXTargetDependency */,
+			);
+			name = LifeLineUITests;
+			productName = LifeLineUITests;
+			productReference = 0494B0302415CD9C0016DEE8 /* LifeLineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0494B0072415CD9A0016DEE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Praveen Vandeyar";
+				TargetAttributes = {
+					0494B00E2415CD9A0016DEE8 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					0494B0242415CD9C0016DEE8 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 0494B00E2415CD9A0016DEE8;
+					};
+					0494B02F2415CD9C0016DEE8 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 0494B00E2415CD9A0016DEE8;
+					};
+				};
+			};
+			buildConfigurationList = 0494B00A2415CD9A0016DEE8 /* Build configuration list for PBXProject "LifeLine" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0494B0062415CD9A0016DEE8;
+			productRefGroup = 0494B0102415CD9A0016DEE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0494B00E2415CD9A0016DEE8 /* LifeLine */,
+				0494B0242415CD9C0016DEE8 /* LifeLineTests */,
+				0494B02F2415CD9C0016DEE8 /* LifeLineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0494B00D2415CD9A0016DEE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0494B01F2415CD9C0016DEE8 /* LaunchScreen.storyboard in Resources */,
+				0494B01C2415CD9C0016DEE8 /* Assets.xcassets in Resources */,
+				0494B01A2415CD9A0016DEE8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0494B0232415CD9C0016DEE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0494B02E2415CD9C0016DEE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13740B2A2F303A2129A7AEE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LifeLine-LifeLineUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5531BCEEB5DBF4A57A498AC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeLine/Pods-LifeLine-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeLine/Pods-LifeLine-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeLine/Pods-LifeLine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C49E720D6081BC88429DDC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LifeLine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		699726C16335AABF280DF15C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA4E1297FC26BF2CF21238E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LifeLineTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0494B00B2415CD9A0016DEE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0483B1292421A804003BF6DB /* ChangePhoneViewController.swift in Sources */,
+				0483B12B2421A819003BF6DB /* ChangePasswordViewController.swift in Sources */,
+				04928F2C24282F1C002C3549 /* ForgotPasswordViewController.swift in Sources */,
+				0494B0432415CFD30016DEE8 /* LoginViewController.swift in Sources */,
+				0494B0132415CD9A0016DEE8 /* AppDelegate.swift in Sources */,
+				04938AB024293E5900B82DFB /* GroupViewCell.swift in Sources */,
+				0494B0152415CD9A0016DEE8 /* SceneDelegate.swift in Sources */,
+				048F8183242555060090FE28 /* DeleteAccountViewController.swift in Sources */,
+				0491A29A24244AAA00A3A404 /* Archiver.swift in Sources */,
+				04928F2E24282F78002C3549 /* GroupsViewController.swift in Sources */,
+				04938AB22429424600B82DFB /* GroupDetailsViewController.swift in Sources */,
+				0494B0472415E32E0016DEE8 /* LifeLineAPICaller.swift in Sources */,
+				043F207524162F8600F25D1D /* SignUpViewController.swift in Sources */,
+				04010633242079420085F3E3 /* AccountSettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0494B0212415CD9C0016DEE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0494B02A2415CD9C0016DEE8 /* LifeLineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0494B02C2415CD9C0016DEE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0494B0352415CD9C0016DEE8 /* LifeLineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0494B0272415CD9C0016DEE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0494B00E2415CD9A0016DEE8 /* LifeLine */;
+			targetProxy = 0494B0262415CD9C0016DEE8 /* PBXContainerItemProxy */;
+		};
+		0494B0322415CD9C0016DEE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0494B00E2415CD9A0016DEE8 /* LifeLine */;
+			targetProxy = 0494B0312415CD9C0016DEE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0494B0182415CD9A0016DEE8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0494B0192415CD9A0016DEE8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0494B01D2415CD9C0016DEE8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0494B01E2415CD9C0016DEE8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0494B0372415CD9C0016DEE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0494B0382415CD9C0016DEE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0494B03A2415CD9C0016DEE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C559DB329DFD0D48AE9BB8CB /* Pods-LifeLine.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8APX7SXT4Z;
+				INFOPLIST_FILE = LifeLine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pv.LifeLine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0494B03B2415CD9C0016DEE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE27882082D16D1F13D8FB4D /* Pods-LifeLine.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8APX7SXT4Z;
+				INFOPLIST_FILE = LifeLine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pv.LifeLine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0494B03D2415CD9C0016DEE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C5A63635A6251307C8E8E2A /* Pods-LifeLineTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8APX7SXT4Z;
+				INFOPLIST_FILE = LifeLineTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pv.LifeLineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeLine.app/LifeLine";
+			};
+			name = Debug;
+		};
+		0494B03E2415CD9C0016DEE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C28322599AF7EBDB7454AD03 /* Pods-LifeLineTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8APX7SXT4Z;
+				INFOPLIST_FILE = LifeLineTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pv.LifeLineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeLine.app/LifeLine";
+			};
+			name = Release;
+		};
+		0494B0402415CD9C0016DEE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F901817ED0BC805B3ED51CA0 /* Pods-LifeLine-LifeLineUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8APX7SXT4Z;
+				INFOPLIST_FILE = LifeLineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pv.LifeLineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LifeLine;
+			};
+			name = Debug;
+		};
+		0494B0412415CD9C0016DEE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68B27F1B28920A771180D25F /* Pods-LifeLine-LifeLineUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8APX7SXT4Z;
+				INFOPLIST_FILE = LifeLineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pv.LifeLineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LifeLine;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0494B00A2415CD9A0016DEE8 /* Build configuration list for PBXProject "LifeLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0494B0372415CD9C0016DEE8 /* Debug */,
+				0494B0382415CD9C0016DEE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0494B0392415CD9C0016DEE8 /* Build configuration list for PBXNativeTarget "LifeLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0494B03A2415CD9C0016DEE8 /* Debug */,
+				0494B03B2415CD9C0016DEE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0494B03C2415CD9C0016DEE8 /* Build configuration list for PBXNativeTarget "LifeLineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0494B03D2415CD9C0016DEE8 /* Debug */,
+				0494B03E2415CD9C0016DEE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0494B03F2415CD9C0016DEE8 /* Build configuration list for PBXNativeTarget "LifeLineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0494B0402415CD9C0016DEE8 /* Debug */,
+				0494B0412415CD9C0016DEE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0494B0072415CD9A0016DEE8 /* Project object */;
+}
