@@ -68,12 +68,14 @@ LifeLine is an app where users are able to see where groups of people are on a m
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* <img src="https://github.com/GroupAlert/LifeLine/blob/master/LL_SignUp_SignIn.png" width=600>
+   * Signup/SignIn screen; Displays logo with splash page. Ability to SignUp for service or Log in to an account.
+* <img src="https://github.com/GroupAlert/LifeLine/blob/master/LL_Profile_Contacts.png" width=600>
+   * User Profile screen; Displays user information with profile image, countdown timer edit function, and user contacts editing    function.
+* <img src="https://github.com/GroupAlert/LifeLine/blob/master/LL_MapDisplay.png" width=600>
+   * Map screen; Displays current location of user. With Search function, user can locate those in their contacts list.
+* <img src="https://github.com/GroupAlert/LifeLine/blob/master/LL_Countdown.png" width=600>
+   * Countdown screen; Countdown appears after a sufficient impact, and will cycle down then alert those nearby for assitance unless the stop button is used to negate the countdown.
 
 ## Wireframes
 <img src="https://github.com/GroupAlert/Documentation/blob/master/LifeLine%20Mockup.png" width=600>
