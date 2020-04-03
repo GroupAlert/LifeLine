@@ -90,14 +90,12 @@ Dictionaries to recieve information.
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | Name          | String   | unique id for the user post (default field) |
-   | phone number  | String   |  image author |
-   | Contacts      | Dict     | image that user posts |
-   | cap           | String   | image caption by author |
+   | Name          | String   | User name account|
+   | phone number  | String   |  users phone for recovery|
+   | Contacts      | Dict     | emergincy contact |
+   | image         | png      | image caption by author |
    | commentsCount | Number   | number of comments that has been posted to an image |
-   | likesCount    | Number   | number of likes for the post |
-   | createdAt     | DateTime | date when post is created (default field) |
-   | updatedAt     | DateTime | date when post is last updated (default field) |
+   
    
 ### Networking
 - Post user information functions: Windows Server 2019 on AWS, PHP & MySQL
