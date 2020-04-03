@@ -89,7 +89,8 @@ LifeLine is an app where users are able to see where groups of people are on a m
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+Strings, Data var for images to send information.
+Dictionaries to recieve information.
 ### Networking
 - Post user information functions: Windows Server 2019 on AWS, PHP & MySQL
 - Read user information functions: Windows Server 2019 on AWS, PHP & MySQL
