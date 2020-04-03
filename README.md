@@ -18,7 +18,7 @@ LifeLine is an app where users are able to see where groups of people are on a m
 - **Category: Lifestyle** 
 - **Mobile: iOS android to come soon**
 - **Story: See where your friends and family are**
-- **Market: Familes, companies and friends can all use this app to see where eachother are and how they are driving**
+- **Market: Familes, companies and friends can all use this app to see where each other are and how they are driving**
 - **Habit: This app runs in the background and you would open it to see where someone is or check alerts of someone driving too fast or getting into an accident**
 - **Scope: We are aiming this at all age groups. Families  can use this to keep track of teens and elder family members. Companies can use this to keep track of delivery workers to hold people accountable. Our main goal is to be the preferred driving behavior and location app**
 
@@ -68,18 +68,18 @@ LifeLine is an app where users are able to see where groups of people are on a m
 
 **Flow Navigation** (Screen to Screen)
 
-* <img src="https://github.com/GroupAlert/LifeLine/blob/master/LL_SignUp_SignIn.png" width=600>
+* <img src="https://github.com/GroupAlert/LifeLine/blob/master/LL_SignUp_SignIn.png" width=250>
    * Signup/SignIn screen; Displays logo with splash page. Ability to SignUp for service or Log in to an account.
-* <img src="https://github.com/GroupAlert/LifeLine/blob/master/LL_Profile_Contacts.png" width=600>
+* <img src="https://github.com/GroupAlert/LifeLine/blob/master/LL_Profile_Contacts.png" width=250>
    * User Profile screen; Displays user information with profile image, countdown timer edit function, and user contacts editing    function.
-* <img src="https://github.com/GroupAlert/LifeLine/blob/master/LL_MapDisplay.png" width=600>
+* <img src="https://github.com/GroupAlert/LifeLine/blob/master/LL_MapDisplay.png" width=250>
    * Map screen; Displays current location of user. With Search function, user can locate those in their contacts list.
-* <img src="https://github.com/GroupAlert/LifeLine/blob/master/LL_Countdown.png" width=600>
+* <img src="https://github.com/GroupAlert/LifeLine/blob/master/LL_Countdown.png" width=250>
    * Countdown screen; Countdown appears after a sufficient impact, and will cycle down then alert those nearby for assitance unless the stop button is used to negate the countdown.
 
 ## Wireframes
-<img src="https://github.com/GroupAlert/Documentation/blob/master/LifeLine%20Mockup.png" width=600>
-<img src="https://github.com/GroupAlert/Documentation/blob/master/wireframe.png" width=600>
+<img src="https://github.com/GroupAlert/Documentation/blob/master/LifeLine%20Mockup.png" width=250>
+<img src="https://github.com/GroupAlert/Documentation/blob/master/wireframe.png" width=250>
 <img src="https://github.com/GroupAlert/Documentation/blob/master/LifeLine.gif" width=250><br>
 
 ### [BONUS] Digital Wireframes & Mockups
@@ -91,6 +91,10 @@ LifeLine is an app where users are able to see where groups of people are on a m
 ### Models
 [Add table of models]
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- Post user information functions: Windows Server 2019 on AWS, PHP & MySQL
+- Read user information functions: Windows Server 2019 on AWS, PHP & MySQL
+- Post group information functions: Windows Server 2019 on AWS, PHP & MySQL
+- Read group information functions: Windows Server 2019 on AWS, PHP & MySQL
+- Post zone information functions: Windows Server 2019 on AWS, PHP & MySQL
+- Read zone information functions: Windows Server 2019 on AWS, PHP & MySQL
+- http://ec2-54-241-187-187.us-west-1.compute.amazonaws.com/lifeline/testapi.html
