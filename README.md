@@ -81,13 +81,9 @@ LifeLine is an app where users are able to see where groups of people are on a m
 <img src="https://github.com/GroupAlert/Documentation/blob/master/LifeLine%20Mockup.png" width=250>
 <img src="https://github.com/GroupAlert/Documentation/blob/master/wireframe.png" width=250>
 <img src="https://github.com/GroupAlert/Documentation/blob/master/LifeLine.gif" width=250><br>
-
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
+https://www.figma.com/proto/jE3KKpTsZBvMxOezelbsN7/LifeLine?node-id=19%3A3&scaling=scale-down
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
 Strings, Data var for images to send information.
 Dictionaries to recieve information.
