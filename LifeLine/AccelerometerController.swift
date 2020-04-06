@@ -1,5 +1,5 @@
 //
-//  AccelerometeController.swift
+//  AccelerometerController.swift
 //  LifeLine
 //
 //  Created by Mark Falcone on 4/3/20.
@@ -12,7 +12,7 @@ import CoreLocation
 import UserNotifications
 
 
-class AccelerometeController: NSObject {
+class AccelerometerController: NSObject {
 
 var motionManager = CMMotionManager()
 
@@ -28,7 +28,7 @@ override func viewDidLoad() {
         
     }
     // this can also go in a viewDidApear to start the tracking as soon as the app is shown
-    func testAccelerometers() {
+    func testAccelerometer() {
         print("in start accc")
 //        motionManager.accelerometerUpdateInterval = 0.5
 //        motionManager.startAccelerometerUpdates()
