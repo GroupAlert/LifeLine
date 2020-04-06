@@ -41,20 +41,20 @@ LifeLine is an app where users are able to see where groups of people are on a m
 ### 2. Screen Archetypes
 
 * Login Screen
-   * user can sign up 
-   * user can log in
+   * User can sign up 
+   * User can log in
 * Account Settings Screen
-   * user can edit their account information
-   * user can log out
-   * user can delete their account
+   * User can edit their account information
+   * User can log out
+   * User can delete their account
 * Groups Screen
-   * user can create groups
-   * user can invite other users 
-   * user can edit other users' roles
-   * user can edit groups
+   * User can create groups
+   * User can invite other users 
+   * User can edit other users' roles
+   * User can edit groups
 * Maps Screen
-    * user can see people on the map
-    * user can filter by group
+    * User can see people on the map
+    * User can filter by group
 
 
 ### 3. Navigation
@@ -62,8 +62,8 @@ LifeLine is an app where users are able to see where groups of people are on a m
 **Tab Navigation** (Tab to Screen)
 
 * groups tap
-* setting tab
-* map tab
+* Setting tab
+* Map tab
 
 
 **Flow Navigation** (Screen to Screen)
@@ -85,7 +85,7 @@ https://www.figma.com/proto/jE3KKpTsZBvMxOezelbsN7/LifeLine?node-id=19%3A3&scali
 
 ## Schema 
 ### Models
-Strings, Data var for images to send information.
+Strings, Images, and Dictionaries to send information.
 Dictionaries to recieve information.
 
    | Property      | Type     | Description |
