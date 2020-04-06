@@ -90,12 +90,12 @@ Dictionaries to recieve information.
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | Name          | String   | User name account|
-   | phone number  | String   |  users phone for recovery|
-   | Contacts      | Dict     | emergincy contact |
-   | image         | png      | image caption by author |
-   | commentsCount | Number   | number of comments that has been posted to an image |
-   
+   | User       | Dictionary | User information |
+   | Name          | String   | User display name|
+   | Phone Number  | String   | User phone number|
+   | Image         | Png      | User display image |
+   | Groups        | Dictionary | Groups the user is in |
+   | Group Members       | Dictionary | Members of a group |
    
 ### Networking
 - Post user information functions: Windows Server 2019 on AWS, PHP & MySQL
