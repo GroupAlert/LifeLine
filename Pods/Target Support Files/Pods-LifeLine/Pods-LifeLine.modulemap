@@ -1,6 +1,0 @@
-framework module Pods_LifeLine {
-  umbrella header "Pods-LifeLine-umbrella.h"
-
-  export *
-  module * { export * }
-}
