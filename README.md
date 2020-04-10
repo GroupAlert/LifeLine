@@ -61,8 +61,8 @@ LifeLine is an app where users are able to see where groups of people are on a m
 
 **Tab Navigation** (Tab to Screen)
 
-* groups tap
-* Setting tab
+* Groups tab
+* Settings tab
 * Map tab
 
 
