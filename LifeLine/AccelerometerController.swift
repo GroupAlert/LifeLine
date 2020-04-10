@@ -17,16 +17,7 @@ class AccelerometerController: NSObject {
 var motionManager = CMMotionManager()
 
 
-override func viewDidLoad() {
-        super.viewDidLoad()
-        testAccelerometers()
-        startGyros()
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
-          // can do things in here if user did or didnt allow notificatins
-        })
-        
-        
-    }
+
     // this can also go in a viewDidApear to start the tracking as soon as the app is shown
     func testAccelerometer() {
         print("in start accc")
