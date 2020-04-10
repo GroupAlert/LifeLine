@@ -78,7 +78,7 @@ LifeLine is an app where users are able to see where groups of people are on a m
 </p>
 
 **[BONUS] Digital Wireframes & Mockups**
-<br><img src="https://github.com/GroupAlert/Documentation/blob/master/wireframe.png" width=250>
+<br><img src="https://github.com/GroupAlert/Documentation/blob/master/wireframe.png" width=250><br>
 <img src="https://github.com/GroupAlert/Documentation/blob/master/LifeLine.gif" width=250><br>
 
 https://www.figma.com/proto/jE3KKpTsZBvMxOezelbsN7/LifeLine?node-id=19%3A3&scaling=scale-down
@@ -107,5 +107,5 @@ Dictionaries to recieve information.
 - http://ec2-54-241-187-187.us-west-1.compute.amazonaws.com/lifeline/testapi.html
 
 ## Video Walkthrough
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories: <br>
 <img src='https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/readmeGif.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
