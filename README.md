@@ -107,5 +107,5 @@ Dictionaries to recieve information.
 - http://ec2-54-241-187-187.us-west-1.compute.amazonaws.com/lifeline/testapi.html
 
 ## Video Walkthrough
-Here's a walkthrough of implemented user stories: <br>
-<img src='https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/readmeGif.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+Here's a walkthrough of implemented user stories: <br><br>
+<img src='https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/readmeGif.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
