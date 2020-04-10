@@ -76,7 +76,7 @@ LifeLine is an app where users are able to see where groups of people are on a m
 <img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_Profile_Contacts.png" width=100>
 <img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_MapDisplay.png" width=100>
 <img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_Countdown.png" width=100>
-
+<br><br><br>
 **[BONUS] Digital Wireframes & Mockups**
 <img src="https://github.com/GroupAlert/Documentation/blob/master/LifeLine%20Mockup.png" width=250>
 <img src="https://github.com/GroupAlert/Documentation/blob/master/wireframe.png" width=250>
