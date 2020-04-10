@@ -40,7 +40,6 @@ LifeLine is an app where users are able to see where groups of people are on a m
 * [ ] As a granddaughter I want to see when my grandmother's phone is on low batery so I can remind her to charge it.
 
 ### 2. Screen Archetypes
-
 * Login Screen
    * User can sign up 
    * User can log in
@@ -57,15 +56,12 @@ LifeLine is an app where users are able to see where groups of people are on a m
     * User can see people on the map
     * User can filter by group
 
-
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
-
 * Groups tab
 * Settings tab
 * Map tab
-
 
 **Flow Navigation** (Screen to Screen)
 * Signup/SignIn screen; Displays logo with splash page. Ability to SignUp for service or Log in to an account.
@@ -73,14 +69,13 @@ LifeLine is an app where users are able to see where groups of people are on a m
 * Map screen; Displays current location of user. With Search function, user can locate those in their contacts list.
 * Countdown screen; Countdown appears after a sufficient impact, and will cycle down then alert those nearby for assitance unless the stop button is used to negate the countdown.
 
-
-
-
 ## Wireframes
-* <img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_SignUp_SignIn.png" width=100>
-* <img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_Profile_Contacts.png" width=100>
-* <img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_MapDisplay.png" width=100>
-* <img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_Countdown.png" width=100>
+<p float="left">
+<img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_SignUp_SignIn.png" width=100>
+<img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_Profile_Contacts.png" width=100>
+<img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_MapDisplay.png" width=100>
+<img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_Countdown.png" width=100>
+</p>
 
 **[BONUS] Digital Wireframes & Mockups**
 <img src="https://github.com/GroupAlert/Documentation/blob/master/LifeLine%20Mockup.png" width=250>
@@ -112,10 +107,6 @@ Dictionaries to recieve information.
 - Read zone information functions: Windows Server 2019 on AWS, PHP & MySQL
 - http://ec2-54-241-187-187.us-west-1.compute.amazonaws.com/lifeline/testapi.html
 
-
-
 ## Video Walkthrough
-
 Here's a walkthrough of implemented user stories:
-
 <img src='https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/readmeGif.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
