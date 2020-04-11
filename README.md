@@ -27,19 +27,19 @@ LifeLine is an app where users are able to see where groups of people are on a m
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-
-* As a dad I want to know when my child leaves the curfew radius to know if they are somewhere they shouldn't be
-* As a mom I want to know where my children are on the map to know they got to the destination safe
-* As a friend I want to see when my friends are speeding to tell them to drive responsibly
+* [x] As someone with multiple phones I want to be able to create an account so that I can use the application from different devices.
+* [x] As someone who wants to change phones I want to be able to change my account phone number so that I can keep the groups associated with that account.
+* [ ] As a dad I want to know when my child leaves the curfew radius so that I know if they're going somewhere they shouldn't.
+* [ ] As a mom I want to know where my children are on the map so that I know they got to the destination safe.
+* [ ] As a friend I want to see when my friends are speeding so that I can tell them to drive responsibly.
 
 **Optional Nice-to-have Stories**
-
-* As a parent I want to be notified if my child is texting and driving so I can tell them not to text and drive.
-* As a business owner I want to be alerted when my delivery driver goes off route so I can make sure my drivers are working.
-* As a granddaughter I want to see when my grandmother's phone is on low batery so I can remind her to charge it.
+* [x] As a regular user I want a profile settings options so that I can customize my profile.
+* [ ] As a parent I want to be notified if my child is texting and driving so I can tell them not to text and drive.
+* [ ] As a business owner I want to be alerted when my delivery driver goes off route so I can make sure my drivers are working.
+* [ ] As a granddaughter I want to see when my grandmother's phone is on low batery so I can remind her to charge it.
 
 ### 2. Screen Archetypes
-
 * Login Screen
    * User can sign up 
    * User can log in
@@ -56,31 +56,31 @@ LifeLine is an app where users are able to see where groups of people are on a m
     * User can see people on the map
     * User can filter by group
 
-
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
-
-* groups tap
-* Setting tab
+* Groups tab
+* Settings tab
 * Map tab
 
-
 **Flow Navigation** (Screen to Screen)
-
-* <img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_SignUp_SignIn.png" width=250><br>
-   * Signup/SignIn screen; Displays logo with splash page. Ability to SignUp for service or Log in to an account.
-* <img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_Profile_Contacts.png" width=250><br>
-   * User Profile screen; Displays user information with profile image, countdown timer edit function, and user contacts editing    function.
-* <img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_MapDisplay.png" width=250><br>
-   * Map screen; Displays current location of user. With Search function, user can locate those in their contacts list.
-* <img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_Countdown.png" width=250><br>
-   * Countdown screen; Countdown appears after a sufficient impact, and will cycle down then alert those nearby for assitance unless the stop button is used to negate the countdown.
+* Signup/SignIn screen; Displays logo with splash page. Ability to SignUp for service or Log in to an account.
+* User Profile screen; Displays user information with profile image, countdown timer edit function, and user contacts editing    function.
+* Map screen; Displays current location of user. With Search function, user can locate those in their contacts list.
+* Countdown screen; Countdown appears after a sufficient impact, and will cycle down then alert those nearby for assitance unless the stop button is used to negate the countdown.
 
 ## Wireframes
-<img src="https://github.com/GroupAlert/Documentation/blob/master/LifeLine%20Mockup.png" width=250>
-<img src="https://github.com/GroupAlert/Documentation/blob/master/wireframe.png" width=250>
+<p float="left">
+<img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_SignUp_SignIn.png" width=100>
+<img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_Profile_Contacts.png" width=100>
+<img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_MapDisplay.png" width=100>
+<img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LL_Countdown.png" width=100>
+</p>
+
+**[BONUS] Digital Wireframes & Mockups**
+<br><img src="https://github.com/GroupAlert/Documentation/blob/master/wireframe.png" width=250><br>
 <img src="https://github.com/GroupAlert/Documentation/blob/master/LifeLine.gif" width=250><br>
+
 https://www.figma.com/proto/jE3KKpTsZBvMxOezelbsN7/LifeLine?node-id=19%3A3&scaling=scale-down
 
 ## Schema 
@@ -105,3 +105,7 @@ Dictionaries to recieve information.
 - Post zone information functions: Windows Server 2019 on AWS, PHP & MySQL
 - Read zone information functions: Windows Server 2019 on AWS, PHP & MySQL
 - http://ec2-54-241-187-187.us-west-1.compute.amazonaws.com/lifeline/testapi.html
+
+## Video Walkthrough
+Here's a walkthrough of implemented user stories: <br><br>
+<img src='https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/readmeGif.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
