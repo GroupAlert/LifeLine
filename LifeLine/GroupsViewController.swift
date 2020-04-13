@@ -38,8 +38,11 @@ class GroupsViewController: UIViewController, UITableViewDataSource, UITableView
            }
         }
         task.resume()
-        AccelerometerController().startGyros()
-        AccelerometerController().testAccelerometer()
+        //calling the AccelerometerController class
+        AccelerometerController().startGyros()//start gyro
+        AccelerometerController().testAccelerometer()//start acc
+        //calling the speed class
+        speed().testSpeed()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
