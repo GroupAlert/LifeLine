@@ -10,18 +10,35 @@ import UIKit
 
 class DeleteAccountViewController: UIViewController {
 
-    @IBOutlet weak var phone: UILabel!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var password2: UITextField!
-    @IBOutlet weak var acknowledge: UISwitch!
-    @IBOutlet var result: UIView!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var acknowledgeSwitch: UISwitch!
+    @IBOutlet var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        resultLabel.addObserver(self, forKeyPath: "text", options: [.old, .new], context: nil)
     }
     
     @IBAction func deleteAccount(_ sender: Any) {
+        let acknowledge = acknowledgeSwitch.isOn
+        let phone = phoneLabel.text!
+        let password = passwordField.text!
+        passwordField.text?.removeAll()
+        if (acknowledge) {
+            LifeLineAPICaller().deleteAccount(phone: phone, password: password, resultLabel: resultLabel)
+        } else {
+            resultLabel.text = "Click the acknowledge switch"
+        }
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if resultLabel.text == "success" {
+            phoneLabel.text = "None"
+            resultLabel.text = ""
+            acknowledgeSwitch.setOn(false, animated: true)
+            self.performSegue(withIdentifier: "DeleteAccountSegue", sender: self)
+        }
     }
     
 }

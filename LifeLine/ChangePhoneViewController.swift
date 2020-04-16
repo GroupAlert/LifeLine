@@ -10,18 +10,20 @@ import UIKit
 
 class ChangePhoneViewController: UIViewController {
 
-    @IBOutlet weak var oldPhone: UILabel!
-    @IBOutlet weak var newPhone: UITextField!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var result: UILabel!
-    
+    @IBOutlet weak var oldPhoneField: UILabel!
+    @IBOutlet weak var newPhoneField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction func updatePhone(_ sender: Any) {
-        //LifeLineAPICaller().changePhone(oldPhone: <#T##String#>, newPhone: String, password: <#T##String#>, resultLabel: <#T##UILabel#>)
+        let oldphone = oldPhoneField.text!
+        let newPhone = newPhoneField.text!
+        let password = passwordField.text!
+        LifeLineAPICaller().changePhone(oldPhone: oldphone, newPhone: newPhone, password: password, resultLabel: resultLabel)
     }
-    
 }
+
