@@ -10,20 +10,19 @@ import UIKit
 
 class ChangePasswordViewController: UIViewController {
 
-    @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var oldPasswordField: UITextField!
     @IBOutlet weak var newPasswordField: UITextField!
     @IBOutlet weak var newPassword2Field: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
+    var phone = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
-        phoneLabel.text = (dict["phone"] as! String)
+        phone = (dict["phone"] as! String)
     }
     
     @IBAction func updatePassword(_ sender: Any) {
-        let phone = phoneLabel.text!
         let oldPassword = oldPasswordField.text!
         let newPassword = newPasswordField.text!
         let newPassword2 = newPassword2Field.text!
