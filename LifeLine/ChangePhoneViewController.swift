@@ -26,4 +26,3 @@ class ChangePhoneViewController: UIViewController {
         LifeLineAPICaller().changePhone(oldPhone: oldphone, newPhone: newPhone, password: password, resultLabel: resultLabel)
     }
 }
-

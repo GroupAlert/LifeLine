@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		04010633242079420085F3E3 /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04010632242079420085F3E3 /* AccountSettingsViewController.swift */; };
+		0439774E24494D3500E501D3 /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439774D24494D3500E501D3 /* Accelerometer.swift */; };
+		0439775024494E7700E501D3 /* MapDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439774F24494E7700E501D3 /* MapDisplayViewController.swift */; };
+		043977522449500B00E501D3 /* speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043977512449500B00E501D3 /* speed.swift */; };
 		043F207524162F8600F25D1D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F207424162F8600F25D1D /* SignUpViewController.swift */; };
 		0483B1292421A804003BF6DB /* ChangePhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483B1282421A804003BF6DB /* ChangePhoneViewController.swift */; };
 		0483B12B2421A819003BF6DB /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483B12A2421A819003BF6DB /* ChangePasswordViewController.swift */; };
@@ -28,7 +31,6 @@
 		0494B0472415E32E0016DEE8 /* LifeLineAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494B0462415E32E0016DEE8 /* LifeLineAPICaller.swift */; };
 		0B1A2C046D1783BE3CF86AC8 /* Pods_LifeLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A707D4E0B7C7F6CC378F2B /* Pods_LifeLineTests.framework */; };
 		7C0D2C504BDD2A45E585B7AE /* Pods_LifeLine_LifeLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196728FECA5F5D71D3A69D61 /* Pods_LifeLine_LifeLineUITests.framework */; };
-		893C30A62440181C007E83EC /* AccelerometerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893C30A52440181C007E83EC /* AccelerometerController.swift */; };
 		F4AB5EBC0859A50F22A6E16F /* Pods_LifeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03CBDDF0F9D3CEA32B80963 /* Pods_LifeLine.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,9 @@
 
 /* Begin PBXFileReference section */
 		04010632242079420085F3E3 /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
+		0439774D24494D3500E501D3 /* Accelerometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accelerometer.swift; sourceTree = "<group>"; };
+		0439774F24494E7700E501D3 /* MapDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDisplayViewController.swift; sourceTree = "<group>"; };
+		043977512449500B00E501D3 /* speed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speed.swift; sourceTree = "<group>"; };
 		043F207424162F8600F25D1D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0483B1282421A804003BF6DB /* ChangePhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePhoneViewController.swift; sourceTree = "<group>"; };
 		0483B12A2421A819003BF6DB /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +84,6 @@
 		1C5A63635A6251307C8E8E2A /* Pods-LifeLineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLineTests.debug.xcconfig"; path = "Target Support Files/Pods-LifeLineTests/Pods-LifeLineTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68B27F1B28920A771180D25F /* Pods-LifeLine-LifeLineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine-LifeLineUITests.release.xcconfig"; path = "Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests.release.xcconfig"; sourceTree = "<group>"; };
 		70A707D4E0B7C7F6CC378F2B /* Pods_LifeLineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		893C30A52440181C007E83EC /* AccelerometerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccelerometerController.swift; path = ../../GitHub/LifeLine/LifeLine/AccelerometerController.swift; sourceTree = "<group>"; };
 		A03CBDDF0F9D3CEA32B80963 /* Pods_LifeLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE27882082D16D1F13D8FB4D /* Pods-LifeLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine.release.xcconfig"; path = "Target Support Files/Pods-LifeLine/Pods-LifeLine.release.xcconfig"; sourceTree = "<group>"; };
 		C28322599AF7EBDB7454AD03 /* Pods-LifeLineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLineTests.release.xcconfig"; path = "Target Support Files/Pods-LifeLineTests/Pods-LifeLineTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,9 +149,11 @@
 				0494B0182415CD9A0016DEE8 /* Main.storyboard */,
 				04938AAF24293E5900B82DFB /* GroupViewCell.swift */,
 				04938AB12429424600B82DFB /* GroupDetailsViewController.swift */,
-				893C30A52440181C007E83EC /* AccelerometerController.swift */,
 				04928F2B24282F1C002C3549 /* ForgotPasswordViewController.swift */,
 				048F8182242555060090FE28 /* DeleteAccountViewController.swift */,
+				0439774F24494E7700E501D3 /* MapDisplayViewController.swift */,
+				0439774D24494D3500E501D3 /* Accelerometer.swift */,
+				043977512449500B00E501D3 /* speed.swift */,
 				0494B0462415E32E0016DEE8 /* LifeLineAPICaller.swift */,
 				0491A29924244AAA00A3A404 /* Archiver.swift */,
 				04010632242079420085F3E3 /* AccountSettingsViewController.swift */,
@@ -451,11 +457,13 @@
 				04938AB024293E5900B82DFB /* GroupViewCell.swift in Sources */,
 				0494B0152415CD9A0016DEE8 /* SceneDelegate.swift in Sources */,
 				048F8183242555060090FE28 /* DeleteAccountViewController.swift in Sources */,
+				043977522449500B00E501D3 /* speed.swift in Sources */,
 				0491A29A24244AAA00A3A404 /* Archiver.swift in Sources */,
 				04928F2E24282F78002C3549 /* GroupsViewController.swift in Sources */,
-				893C30A62440181C007E83EC /* AccelerometerController.swift in Sources */,
 				04938AB22429424600B82DFB /* GroupDetailsViewController.swift in Sources */,
 				0494B0472415E32E0016DEE8 /* LifeLineAPICaller.swift in Sources */,
+				0439775024494E7700E501D3 /* MapDisplayViewController.swift in Sources */,
+				0439774E24494D3500E501D3 /* Accelerometer.swift in Sources */,
 				043F207524162F8600F25D1D /* SignUpViewController.swift in Sources */,
 				04010633242079420085F3E3 /* AccountSettingsViewController.swift in Sources */,
 			);

@@ -38,8 +38,8 @@ class GroupsViewController: UIViewController, UITableViewDataSource, UITableView
            }
         }
         task.resume()
-        AccelerometerController().startGyros()
-        AccelerometerController().testAccelerometer()
+        //AccelerometerController().startGyros()
+        //AccelerometerController().testAccelerometer()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
