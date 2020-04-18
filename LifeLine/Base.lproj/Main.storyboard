@@ -51,7 +51,7 @@
                                     <action selector="signinBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ixc-vP-pNi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySq-7U-FtG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySq-7U-FtG">
                                 <rect key="frame" x="69" y="537" width="277" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="0k5-83-7rF"/>
@@ -197,7 +197,7 @@
                                     <action selector="updatePicture:" destination="805-61-AOF" eventType="touchUpInside" id="JE3-Qt-cfF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXa-Z3-cHC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXa-Z3-cHC">
                                 <rect key="frame" x="20" y="640" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -362,10 +362,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Change Number" id="TUL-yY-3gX"/>
                     <connections>
-                        <outlet property="newPhone" destination="2wl-zU-L4B" id="fQV-gq-mEQ"/>
-                        <outlet property="oldPhone" destination="Kc6-p9-ddB" id="qj0-jg-woN"/>
-                        <outlet property="password" destination="7PY-dg-Fq2" id="7XW-GO-iGH"/>
-                        <outlet property="result" destination="l6C-dd-8Sa" id="E5K-NU-KZq"/>
+                        <outlet property="newPhoneField" destination="2wl-zU-L4B" id="h6s-ep-zID"/>
+                        <outlet property="oldPhoneLabel" destination="Kc6-p9-ddB" id="aw3-s3-gI3"/>
+                        <outlet property="passwordField" destination="7PY-dg-Fq2" id="4ee-nh-4Fr"/>
+                        <outlet property="resultLabel" destination="l6C-dd-8Sa" id="Ly1-fz-1hN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHL-ry-AVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -440,10 +440,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Change Password" id="IOa-0b-v3d"/>
                     <connections>
-                        <outlet property="newPassword" destination="Wht-QR-vT7" id="ECd-I4-Cpk"/>
-                        <outlet property="newPassword2" destination="3D7-ad-bfc" id="Uoi-7l-YPe"/>
-                        <outlet property="oldPassword" destination="aO3-R2-7vN" id="ZW3-K9-KCW"/>
-                        <outlet property="result" destination="mLh-iC-cEa" id="NXT-iY-Rqg"/>
+                        <outlet property="newPassword2Field" destination="3D7-ad-bfc" id="Mzw-e0-LXz"/>
+                        <outlet property="newPasswordField" destination="Wht-QR-vT7" id="Mlj-ab-X8e"/>
+                        <outlet property="oldPasswordField" destination="aO3-R2-7vN" id="oUr-Ce-KEV"/>
+                        <outlet property="resultLabel" destination="mLh-iC-cEa" id="ICn-Qh-mUk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPT-lC-AJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -573,7 +573,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="GroupName" destination="MBg-mX-cIs" id="i5y-yS-lAG"/>
-                                            <segue destination="hqS-lT-2ux" kind="show" id="1W1-iO-d8j"/>
+                                            <segue destination="hqS-lT-2ux" kind="show" identifier="GroupsToGroup" id="1W1-iO-d8j"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -663,15 +663,6 @@
                                     <action selector="submitBtn:" destination="YMN-bG-Npk" eventType="touchUpInside" id="tc6-Vd-m0A"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilp-Kw-Dbl">
-                                <rect key="frame" x="69" y="702" width="277" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="D9G-GG-1v6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHD-7g-C1C">
                                 <rect key="frame" x="183" y="697" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -680,6 +671,15 @@
                                     <segue destination="BYZ-38-t0r" kind="showDetail" id="r6d-e9-UMZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilp-Kw-Dbl">
+                                <rect key="frame" x="69" y="674" width="277" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="D9G-GG-1v6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -756,6 +756,7 @@
                                 <state key="normal" title="Go Back"/>
                                 <connections>
                                     <action selector="goBack:" destination="7T6-dl-aKM" eventType="touchUpInside" id="jSA-Wh-Ua0"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="nqb-4L-bVI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fS8-Jb-Ign">
@@ -805,6 +806,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rJJ-x2-YB4"/>
-        <segue reference="r6d-e9-UMZ"/>
+        <segue reference="nqb-4L-bVI"/>
     </inferredMetricsTieBreakers>
 </document>
