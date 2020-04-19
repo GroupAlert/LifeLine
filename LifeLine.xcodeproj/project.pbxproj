@@ -29,9 +29,9 @@
 		0494B0352415CD9C0016DEE8 /* LifeLineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494B0342415CD9C0016DEE8 /* LifeLineUITests.swift */; };
 		0494B0432415CFD30016DEE8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494B0422415CFD30016DEE8 /* LoginViewController.swift */; };
 		0494B0472415E32E0016DEE8 /* LifeLineAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494B0462415E32E0016DEE8 /* LifeLineAPICaller.swift */; };
-		0B1A2C046D1783BE3CF86AC8 /* Pods_LifeLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A707D4E0B7C7F6CC378F2B /* Pods_LifeLineTests.framework */; };
-		7C0D2C504BDD2A45E585B7AE /* Pods_LifeLine_LifeLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196728FECA5F5D71D3A69D61 /* Pods_LifeLine_LifeLineUITests.framework */; };
-		F4AB5EBC0859A50F22A6E16F /* Pods_LifeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03CBDDF0F9D3CEA32B80963 /* Pods_LifeLine.framework */; };
+		50C3ED835B838D8A7ECD1013 /* Pods_LifeLine_LifeLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D8FDAC450095415D2C7460 /* Pods_LifeLine_LifeLineUITests.framework */; };
+		A998C1F4BEF661D1156A4898 /* Pods_LifeLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE09ABC82619EBAA4EB6C75 /* Pods_LifeLineTests.framework */; };
+		F1936E5DE1A72352D8918143 /* Pods_LifeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9799172D76BAAE40F4A7F5 /* Pods_LifeLine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,15 +80,15 @@
 		0494B0362415CD9C0016DEE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0494B0422415CFD30016DEE8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0494B0462415E32E0016DEE8 /* LifeLineAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeLineAPICaller.swift; sourceTree = "<group>"; };
-		196728FECA5F5D71D3A69D61 /* Pods_LifeLine_LifeLineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLine_LifeLineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C5A63635A6251307C8E8E2A /* Pods-LifeLineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLineTests.debug.xcconfig"; path = "Target Support Files/Pods-LifeLineTests/Pods-LifeLineTests.debug.xcconfig"; sourceTree = "<group>"; };
-		68B27F1B28920A771180D25F /* Pods-LifeLine-LifeLineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine-LifeLineUITests.release.xcconfig"; path = "Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests.release.xcconfig"; sourceTree = "<group>"; };
-		70A707D4E0B7C7F6CC378F2B /* Pods_LifeLineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A03CBDDF0F9D3CEA32B80963 /* Pods_LifeLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE27882082D16D1F13D8FB4D /* Pods-LifeLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine.release.xcconfig"; path = "Target Support Files/Pods-LifeLine/Pods-LifeLine.release.xcconfig"; sourceTree = "<group>"; };
-		C28322599AF7EBDB7454AD03 /* Pods-LifeLineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLineTests.release.xcconfig"; path = "Target Support Files/Pods-LifeLineTests/Pods-LifeLineTests.release.xcconfig"; sourceTree = "<group>"; };
-		C559DB329DFD0D48AE9BB8CB /* Pods-LifeLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine.debug.xcconfig"; path = "Target Support Files/Pods-LifeLine/Pods-LifeLine.debug.xcconfig"; sourceTree = "<group>"; };
-		F901817ED0BC805B3ED51CA0 /* Pods-LifeLine-LifeLineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine-LifeLineUITests.debug.xcconfig"; path = "Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0BE09ABC82619EBAA4EB6C75 /* Pods_LifeLineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		343AB68377A91F982583BC3B /* Pods-LifeLine-LifeLineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine-LifeLineUITests.debug.xcconfig"; path = "Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		45F38C2456F6C9A4475C14C2 /* Pods-LifeLineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLineTests.debug.xcconfig"; path = "Target Support Files/Pods-LifeLineTests/Pods-LifeLineTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CBCE72FA2CC064E3EAE1462 /* Pods-LifeLineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLineTests.release.xcconfig"; path = "Target Support Files/Pods-LifeLineTests/Pods-LifeLineTests.release.xcconfig"; sourceTree = "<group>"; };
+		5D9799172D76BAAE40F4A7F5 /* Pods_LifeLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D8FDAC450095415D2C7460 /* Pods_LifeLine_LifeLineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLine_LifeLineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93476FF56DD4EA8CFBD85D34 /* Pods-LifeLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine.debug.xcconfig"; path = "Target Support Files/Pods-LifeLine/Pods-LifeLine.debug.xcconfig"; sourceTree = "<group>"; };
+		D5AAC7AB5C76475A812E7AA0 /* Pods-LifeLine-LifeLineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine-LifeLineUITests.release.xcconfig"; path = "Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DAA12C9DC0C19433F59BD103 /* Pods-LifeLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine.release.xcconfig"; path = "Target Support Files/Pods-LifeLine/Pods-LifeLine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4AB5EBC0859A50F22A6E16F /* Pods_LifeLine.framework in Frameworks */,
+				F1936E5DE1A72352D8918143 /* Pods_LifeLine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B1A2C046D1783BE3CF86AC8 /* Pods_LifeLineTests.framework in Frameworks */,
+				A998C1F4BEF661D1156A4898 /* Pods_LifeLineTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C0D2C504BDD2A45E585B7AE /* Pods_LifeLine_LifeLineUITests.framework in Frameworks */,
+				50C3ED835B838D8A7ECD1013 /* Pods_LifeLine_LifeLineUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +127,7 @@
 				0494B0332415CD9C0016DEE8 /* LifeLineUITests */,
 				0494B0102415CD9A0016DEE8 /* Products */,
 				F837438F16910C6F4262AD41 /* Pods */,
-				6B6A305C3FD400E0F9BE8D48 /* Frameworks */,
+				18D4E86E3DB9C84E05A3B539 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,12 +187,12 @@
 			path = LifeLineUITests;
 			sourceTree = "<group>";
 		};
-		6B6A305C3FD400E0F9BE8D48 /* Frameworks */ = {
+		18D4E86E3DB9C84E05A3B539 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A03CBDDF0F9D3CEA32B80963 /* Pods_LifeLine.framework */,
-				196728FECA5F5D71D3A69D61 /* Pods_LifeLine_LifeLineUITests.framework */,
-				70A707D4E0B7C7F6CC378F2B /* Pods_LifeLineTests.framework */,
+				5D9799172D76BAAE40F4A7F5 /* Pods_LifeLine.framework */,
+				69D8FDAC450095415D2C7460 /* Pods_LifeLine_LifeLineUITests.framework */,
+				0BE09ABC82619EBAA4EB6C75 /* Pods_LifeLineTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,12 +200,12 @@
 		F837438F16910C6F4262AD41 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C559DB329DFD0D48AE9BB8CB /* Pods-LifeLine.debug.xcconfig */,
-				AE27882082D16D1F13D8FB4D /* Pods-LifeLine.release.xcconfig */,
-				F901817ED0BC805B3ED51CA0 /* Pods-LifeLine-LifeLineUITests.debug.xcconfig */,
-				68B27F1B28920A771180D25F /* Pods-LifeLine-LifeLineUITests.release.xcconfig */,
-				1C5A63635A6251307C8E8E2A /* Pods-LifeLineTests.debug.xcconfig */,
-				C28322599AF7EBDB7454AD03 /* Pods-LifeLineTests.release.xcconfig */,
+				93476FF56DD4EA8CFBD85D34 /* Pods-LifeLine.debug.xcconfig */,
+				DAA12C9DC0C19433F59BD103 /* Pods-LifeLine.release.xcconfig */,
+				343AB68377A91F982583BC3B /* Pods-LifeLine-LifeLineUITests.debug.xcconfig */,
+				D5AAC7AB5C76475A812E7AA0 /* Pods-LifeLine-LifeLineUITests.release.xcconfig */,
+				45F38C2456F6C9A4475C14C2 /* Pods-LifeLineTests.debug.xcconfig */,
+				5CBCE72FA2CC064E3EAE1462 /* Pods-LifeLineTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -217,11 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0494B0392415CD9C0016DEE8 /* Build configuration list for PBXNativeTarget "LifeLine" */;
 			buildPhases = (
-				5C49E720D6081BC88429DDC0 /* [CP] Check Pods Manifest.lock */,
+				0C1FCF84FF5DC0E0C7854B16 /* [CP] Check Pods Manifest.lock */,
 				0494B00B2415CD9A0016DEE8 /* Sources */,
 				0494B00C2415CD9A0016DEE8 /* Frameworks */,
 				0494B00D2415CD9A0016DEE8 /* Resources */,
-				5531BCEEB5DBF4A57A498AC8 /* [CP] Embed Pods Frameworks */,
+				F86E095AC18439151B6F905D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,7 +236,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0494B03C2415CD9C0016DEE8 /* Build configuration list for PBXNativeTarget "LifeLineTests" */;
 			buildPhases = (
-				EA4E1297FC26BF2CF21238E7 /* [CP] Check Pods Manifest.lock */,
+				8F13734C17E4C19667769400 /* [CP] Check Pods Manifest.lock */,
 				0494B0212415CD9C0016DEE8 /* Sources */,
 				0494B0222415CD9C0016DEE8 /* Frameworks */,
 				0494B0232415CD9C0016DEE8 /* Resources */,
@@ -255,11 +255,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0494B03F2415CD9C0016DEE8 /* Build configuration list for PBXNativeTarget "LifeLineUITests" */;
 			buildPhases = (
-				13740B2A2F303A2129A7AEE4 /* [CP] Check Pods Manifest.lock */,
+				D9256589649C284C901A1010 /* [CP] Check Pods Manifest.lock */,
 				0494B02C2415CD9C0016DEE8 /* Sources */,
 				0494B02D2415CD9C0016DEE8 /* Frameworks */,
 				0494B02E2415CD9C0016DEE8 /* Resources */,
-				699726C16335AABF280DF15C /* [CP] Embed Pods Frameworks */,
+				F8F41347162AFA4483FF47BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,46 +342,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13740B2A2F303A2129A7AEE4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LifeLine-LifeLineUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5531BCEEB5DBF4A57A498AC8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LifeLine/Pods-LifeLine-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LifeLine/Pods-LifeLine-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeLine/Pods-LifeLine-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5C49E720D6081BC88429DDC0 /* [CP] Check Pods Manifest.lock */ = {
+		0C1FCF84FF5DC0E0C7854B16 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -403,24 +364,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		699726C16335AABF280DF15C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA4E1297FC26BF2CF21238E7 /* [CP] Check Pods Manifest.lock */ = {
+		8F13734C17E4C19667769400 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -440,6 +384,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9256589649C284C901A1010 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LifeLine-LifeLineUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F86E095AC18439151B6F905D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeLine/Pods-LifeLine-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeLine/Pods-LifeLine-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeLine/Pods-LifeLine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8F41347162AFA4483FF47BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -636,7 +636,7 @@
 		};
 		0494B03A2415CD9C0016DEE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C559DB329DFD0D48AE9BB8CB /* Pods-LifeLine.debug.xcconfig */;
+			baseConfigurationReference = 93476FF56DD4EA8CFBD85D34 /* Pods-LifeLine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -655,7 +655,7 @@
 		};
 		0494B03B2415CD9C0016DEE8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE27882082D16D1F13D8FB4D /* Pods-LifeLine.release.xcconfig */;
+			baseConfigurationReference = DAA12C9DC0C19433F59BD103 /* Pods-LifeLine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -674,7 +674,7 @@
 		};
 		0494B03D2415CD9C0016DEE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C5A63635A6251307C8E8E2A /* Pods-LifeLineTests.debug.xcconfig */;
+			baseConfigurationReference = 45F38C2456F6C9A4475C14C2 /* Pods-LifeLineTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -697,7 +697,7 @@
 		};
 		0494B03E2415CD9C0016DEE8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C28322599AF7EBDB7454AD03 /* Pods-LifeLineTests.release.xcconfig */;
+			baseConfigurationReference = 5CBCE72FA2CC064E3EAE1462 /* Pods-LifeLineTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -720,7 +720,7 @@
 		};
 		0494B0402415CD9C0016DEE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F901817ED0BC805B3ED51CA0 /* Pods-LifeLine-LifeLineUITests.debug.xcconfig */;
+			baseConfigurationReference = 343AB68377A91F982583BC3B /* Pods-LifeLine-LifeLineUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -741,7 +741,7 @@
 		};
 		0494B0412415CD9C0016DEE8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68B27F1B28920A771180D25F /* Pods-LifeLine-LifeLineUITests.release.xcconfig */;
+			baseConfigurationReference = D5AAC7AB5C76475A812E7AA0 /* Pods-LifeLine-LifeLineUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
