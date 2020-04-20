@@ -260,7 +260,7 @@ class LifeLineAPICaller {
             data, response, error in
             
             let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
-            let result = dataDictionary["result"] as? String
+            let result = dataDictionary["result"] as! String
             print(result)
         }
         task.resume()
