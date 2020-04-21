@@ -49,10 +49,13 @@ class GroupDetailsViewController: UIViewController, UITableViewDataSource, UITab
         let cell = UITableViewCell()
 
         let groupMember = dict[String(indexPath.row)] as! [String:Any]
-        let memberPhone = groupMember["member_phone"] as! String
+        let memberPhone = groupMember["phone"] as! String
         let memberRole = groupMember["role"] as! String
+        let memberLatitude = groupMember["latitude"] as! String
+        let memberLongitude = groupMember["longitude"] as! String
+        let memberLastSeen = groupMember["when"] as! String
         
-        cell.textLabel?.text = "Member Phone: \(memberPhone), Role: \(memberRole)"
+        cell.textLabel?.text = "Member Phone: \(memberPhone), Role: \(memberRole), Latitude: \(memberLatitude), Longitude: \(memberLongitude), Time: \(memberLastSeen)"
         
         return cell
     }

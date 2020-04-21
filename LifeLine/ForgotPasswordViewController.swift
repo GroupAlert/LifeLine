@@ -10,12 +10,16 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
 
+    @IBOutlet weak var phoneField: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func goBack(_ sender: Any) {
-        //dismiss
+    @IBAction func resetPassword(_ sender: Any) {
+        let phone = phoneField.text!
+        LifeLineAPICaller().forgetPassword(phone: phone, resultLabel: resultLabel)
     }
-
+    
 }

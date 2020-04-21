@@ -25,7 +25,8 @@ class LifeLineAPICaller {
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
-            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            var dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            dataDictionary["password"] = password
             self.setUserInfo(number: phone, dict: dataDictionary, label: resultLabel)
         }
         task.resume()
@@ -42,7 +43,8 @@ class LifeLineAPICaller {
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
 
-            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            var dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            dataDictionary["password"] = password
             self.setUserInfo(number: phone, dict: dataDictionary, label: resultLabel)
         }
         task.resume()
@@ -190,40 +192,58 @@ class LifeLineAPICaller {
         task.resume()
     }
     
-    func getGroups(phone:String, name:String, password:String, password2:String, resultLabel:UILabel) {
-        let url = baseURL + "person/personinsert.php"
+    func updateLocation(phone:String, latitude:String, longitude:String, when:String) {
+        let url = baseURL + "person/personsetlocation.php"
         
         let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
         request.httpMethod = "POST"
-        let postString = "phone=\(phone)&acc_pass=\(password)"
+        let postString = "phone=\(phone)&latitude=\(latitude)&longitude=\(longitude)&when=\(when)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
 
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
-            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!
-            DispatchQueue.main.async {
-                resultLabel.text = responseString as String
-            }
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            let result = dataDictionary["result"] as! String
+            print(result)
         }
         task.resume()
     }
     
-    func getGroupMembers(phone:String, name:String, password:String, password2:String, resultLabel:UILabel) {
-        let url = baseURL + "person/personinsert.php"
+    func forgetPassword(phone:String, resultLabel:UILabel) {
+        let url = baseURL + "person/personforgotpassword.php"
         
         let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
         request.httpMethod = "POST"
-        let postString = "phone=\(phone)&acc_pass=\(password)"
+        let postString = "phone=\(phone)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
 
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
-            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
             DispatchQueue.main.async {
-                resultLabel.text = responseString as String
+                let result = dataDictionary["result"] as? String
+                resultLabel.text = result
             }
+        }
+        task.resume()
+    }
+    //Test this with phone: 234, password: 234
+    func getAccidentAlert(phone:String) {
+        let url = baseURL + "group/groupaccidentalert.php"
+        
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        let postString = "phone=\(phone)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            let result = dataDictionary["result"] as! String
+            print(result)
         }
         task.resume()
     }
