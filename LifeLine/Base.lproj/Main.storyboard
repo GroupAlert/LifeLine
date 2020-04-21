@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -837,79 +837,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password will be set to a random value which will be texted to you" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGk-Ok-Xsf">
-                                <rect key="frame" x="80" y="242" width="254" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvO-K3-m5a">
-                                <rect key="frame" x="153" y="421" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvO-K3-m5a">
+                                <rect key="frame" x="153" y="421" width="110" height="30"/>
                                 <state key="normal" title="Reset Password"/>
                                 <connections>
                                     <action selector="resetPassword:" destination="7T6-dl-aKM" eventType="touchUpInside" id="dWc-N1-LdW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Qn-IQ-4w4">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Qn-IQ-4w4">
                                 <rect key="frame" x="109" y="379" width="195" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ke-Dq-gBV">
-                                <rect key="frame" x="148" y="350" width="115" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ke-Dq-gBV">
+                                <rect key="frame" x="148" y="350" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWV-WR-Ug3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWV-WR-Ug3">
                                 <rect key="frame" x="184" y="459" width="48" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iru-a0-alr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iru-a0-alr">
                                 <rect key="frame" x="176" y="500" width="58" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                              
                                 <state key="normal" title="Go Back"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="showDetail" id="nqb-4L-bVI"/>
                                 </connections>
                             </button>
-                              
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fS8-Jb-Ign">
-                                <rect key="frame" x="90" y="317" width="235" height="169"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password will be set to a random value which will be texted to you" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGk-Ok-Xsf">
+                                <rect key="frame" x="77" y="241" width="256" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="169" id="1AI-t2-INX"/>
+                                    <constraint firstAttribute="height" constant="65" id="zUW-7A-xyR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DnH-6b-ABl" firstAttribute="top" secondItem="5g7-jN-cSF" secondAttribute="top" constant="191" id="1Kn-Hy-9al"/>
-                            <constraint firstItem="Iru-a0-alr" firstAttribute="top" secondItem="Ke0-hg-65h" secondAttribute="bottom" constant="8" id="3Oe-Pd-Flw"/>
-                            <constraint firstItem="siK-ow-czh" firstAttribute="leading" secondItem="5g7-jN-cSF" secondAttribute="leading" id="GCz-Z4-Uny"/>
-                            <constraint firstItem="fS8-Jb-Ign" firstAttribute="top" secondItem="5g7-jN-cSF" secondAttribute="top" constant="273" id="IPL-jb-Cmt"/>
-                            <constraint firstItem="fS8-Jb-Ign" firstAttribute="leading" secondItem="5g7-jN-cSF" secondAttribute="leading" constant="90" id="PJY-4P-Um8"/>
-                            <constraint firstItem="siK-ow-czh" firstAttribute="centerX" secondItem="eoA-Rb-Rwa" secondAttribute="centerX" id="Pj0-rH-q5C"/>
-                            <constraint firstItem="Ke0-hg-65h" firstAttribute="top" secondItem="DnH-6b-ABl" secondAttribute="bottom" constant="75" id="T6o-SG-feg"/>
-                            <constraint firstItem="fS8-Jb-Ign" firstAttribute="centerX" secondItem="Ke0-hg-65h" secondAttribute="centerX" id="aEI-uL-qNT"/>
-                            <constraint firstItem="siK-ow-czh" firstAttribute="centerX" secondItem="Ke0-hg-65h" secondAttribute="centerX" id="fHp-rv-qyB"/>
-                            <constraint firstItem="Ke0-hg-65h" firstAttribute="centerX" secondItem="Iru-a0-alr" secondAttribute="centerX" id="uCO-b9-MKa"/>
-                            <constraint firstItem="siK-ow-czh" firstAttribute="centerY" secondItem="eoA-Rb-Rwa" secondAttribute="centerY" id="vQA-NH-rFu"/>
-                            <constraint firstItem="Ke0-hg-65h" firstAttribute="leading" secondItem="5g7-jN-cSF" secondAttribute="leading" constant="27" id="vTF-hd-Sg3"/>
-                            <constraint firstItem="siK-ow-czh" firstAttribute="top" secondItem="eoA-Rb-Rwa" secondAttribute="topMargin" constant="-44" id="vYZ-KO-Lqa"/>
-                            <constraint firstItem="DnH-6b-ABl" firstAttribute="centerX" secondItem="fS8-Jb-Ign" secondAttribute="centerX" id="zH4-S2-bwh"/>
+                            <constraint firstItem="QWV-WR-Ug3" firstAttribute="leading" secondItem="5g7-jN-cSF" secondAttribute="leading" constant="184" id="1Q9-wQ-ux6"/>
+                            <constraint firstItem="1Qn-IQ-4w4" firstAttribute="leading" secondItem="5g7-jN-cSF" secondAttribute="leading" constant="109" id="2DG-Hi-HWu"/>
+                            <constraint firstItem="rGk-Ok-Xsf" firstAttribute="centerX" secondItem="2Ke-Dq-gBV" secondAttribute="centerX" id="703-15-qNW"/>
+                            <constraint firstItem="Iru-a0-alr" firstAttribute="top" secondItem="QWV-WR-Ug3" secondAttribute="bottom" constant="20" id="85n-De-2hm"/>
+                            <constraint firstItem="rGk-Ok-Xsf" firstAttribute="top" secondItem="5g7-jN-cSF" secondAttribute="top" constant="197" id="96j-Qn-cVS"/>
+                            <constraint firstAttribute="leading" secondItem="5g7-jN-cSF" secondAttribute="leading" id="GCz-Z4-Uny"/>
+                            <constraint firstItem="MvO-K3-m5a" firstAttribute="centerX" secondItem="QWV-WR-Ug3" secondAttribute="centerX" id="GQV-Yy-hcA"/>
+                            <constraint firstItem="rGk-Ok-Xsf" firstAttribute="leading" secondItem="5g7-jN-cSF" secondAttribute="leading" constant="77" id="HT4-af-oZq"/>
+                            <constraint firstItem="5g7-jN-cSF" firstAttribute="bottom" secondItem="Iru-a0-alr" secondAttribute="bottom" constant="332" id="Onq-Lx-FK2"/>
+                            <constraint firstAttribute="centerX" secondItem="eoA-Rb-Rwa" secondAttribute="centerX" id="Pj0-rH-q5C"/>
+                            <constraint firstItem="MvO-K3-m5a" firstAttribute="top" secondItem="1Qn-IQ-4w4" secondAttribute="bottom" constant="8" id="Rcj-oH-w3B"/>
+                            <constraint firstItem="MvO-K3-m5a" firstAttribute="leading" secondItem="5g7-jN-cSF" secondAttribute="leading" constant="153" id="Vdk-wH-0ZP"/>
+                            <constraint firstItem="Iru-a0-alr" firstAttribute="centerX" secondItem="2Ke-Dq-gBV" secondAttribute="centerX" id="cX7-g9-QYf"/>
+                            <constraint firstItem="QWV-WR-Ug3" firstAttribute="top" secondItem="MvO-K3-m5a" secondAttribute="bottom" constant="8" id="j8r-h0-qhc"/>
+                            <constraint firstItem="2Ke-Dq-gBV" firstAttribute="leading" secondItem="5g7-jN-cSF" secondAttribute="leading" constant="148" id="rXt-sd-XRI"/>
+                            <constraint firstAttribute="centerX" secondItem="Iru-a0-alr" secondAttribute="centerX" constant="2" id="uCO-b9-MKa"/>
+                            <constraint firstAttribute="centerY" secondItem="eoA-Rb-Rwa" secondAttribute="centerY" id="vQA-NH-rFu"/>
+                            <constraint firstAttribute="top" secondItem="eoA-Rb-Rwa" secondAttribute="topMargin" constant="-44" id="vYZ-KO-Lqa"/>
+                            <constraint firstItem="1Qn-IQ-4w4" firstAttribute="top" secondItem="2Ke-Dq-gBV" secondAttribute="bottom" constant="8" id="y1B-qd-IYK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5g7-jN-cSF"/>
                     </view>
@@ -952,12 +941,12 @@
             <point key="canvasLocation" x="150.72463768115944" y="138.61607142857142"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="yK8-Sl-3f3"/>
-        <segue reference="P8n-QY-8IH"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="LL Wallpaper" width="1125" height="2436"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yK8-Sl-3f3"/>
+        <segue reference="nqb-4L-bVI"/>
+    </inferredMetricsTieBreakers>
 </document>
