@@ -22,7 +22,7 @@ class SignUpViewController: UIViewController {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if resultLabel.text == "User created" {
+        if resultLabel.text == "success" {
             UserDefaults.standard.set(phoneField.text, forKey: "Phone")
             UserDefaults.standard.set(nameField.text, forKey: "Name")
             phoneField.text?.removeAll()
