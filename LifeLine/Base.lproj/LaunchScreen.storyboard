@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,16 +18,16 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LL Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="6px-rc-e2l">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LL Icon" translatesAutoresizingMaskIntoConstraints="NO" id="MTT-Wo-pZP">
-                                <rect key="frame" x="57" y="225" width="300" height="300"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LL Icon2" translatesAutoresizingMaskIntoConstraints="NO" id="MTT-Wo-pZP">
+                                <rect key="frame" x="32" y="225" width="350" height="350"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6px-rc-e2l" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="-44" id="6cX-nc-fr3"/>
                             <constraint firstItem="6px-rc-e2l" firstAttribute="centerX" secondItem="MTT-Wo-pZP" secondAttribute="centerX" id="9Ib-t9-bcN"/>
-                            <constraint firstItem="MTT-Wo-pZP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="FHs-Mc-JpG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MTT-Wo-pZP" secondAttribute="bottom" constant="337" id="K1C-lT-Hf8"/>
+                            <constraint firstItem="MTT-Wo-pZP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="FHs-Mc-JpG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MTT-Wo-pZP" secondAttribute="bottom" constant="287" id="K1C-lT-Hf8"/>
                             <constraint firstItem="6px-rc-e2l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S2j-k1-x5Z"/>
                             <constraint firstItem="6px-rc-e2l" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cTd-mn-eLw"/>
                             <constraint firstItem="MTT-Wo-pZP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="181" id="gKZ-4u-8zr"/>
@@ -42,7 +42,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LL Icon" width="500" height="500"/>
+        <image name="LL Icon2" width="1050" height="1050"/>
         <image name="LL Wallpaper" width="1125" height="2436"/>
     </resources>
 </document>
