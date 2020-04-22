@@ -291,12 +291,9 @@
                         <viewLayoutGuide key="safeArea" id="A5s-1q-JTS"/>
                     </view>
                     <navigationItem key="navigationItem" id="cAU-Ee-iyf">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Settings" id="lHw-y5-9UP">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                            <barButtonItem title="Chat" id="vT1-D6-5Pm"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="lHw-y5-9UP">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="vI5-hV-b6Z" id="thH-Ra-FQh"/>
