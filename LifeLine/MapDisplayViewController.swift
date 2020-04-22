@@ -13,12 +13,22 @@ class MapDisplayViewController: UIViewController, MKMapViewDelegate, CLLocationM
     @IBOutlet weak var mapView: MKMapView!
 
     let locationManager = CLLocationManager()
-    var currentLocation = CLLocation()
-    let zoomedRegionInMeters: Double = 1
+    var userLocation = CLLocation()
+    let zoomedRegionInMeters: Double = 1000
+	var user = NSDictionary()
+	var userName = String()
+	var userPhone = String()
+	
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		user = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+		userName = user["name"] as! String
+		userPhone = user["phone"] as! String
+		
+		
         checkLocationServices()
         mapView.delegate = self
 
@@ -42,6 +52,7 @@ class MapDisplayViewController: UIViewController, MKMapViewDelegate, CLLocationM
 
     func centerViewOnUserLocation() {
         if let locationCoordinate = locationManager.location?.coordinate {
+			userLocation = locationManager.location!
             let region = MKCoordinateRegion(center: locationCoordinate, latitudinalMeters: zoomedRegionInMeters, longitudinalMeters: zoomedRegionInMeters)
             mapView.setRegion(region, animated: true)
         }
@@ -67,7 +78,7 @@ class MapDisplayViewController: UIViewController, MKMapViewDelegate, CLLocationM
         case .authorizedWhenInUse:
             centerViewOnUserLocation()
             locationManager.startUpdatingLocation()
-            monitorRegionAtLocation(center: locationManager.location!.coordinate, identifier: "current")
+            //monitorRegionAtLocation(center: locationManager.location!.coordinate, identifier: "current")
 
 
             break
@@ -108,10 +119,13 @@ class MapDisplayViewController: UIViewController, MKMapViewDelegate, CLLocationM
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        //let region = MKCoordinateRegion(center: center, latitudinalMeters: zoomedRegionInMeters, longitudinalMeters: zoomedRegionInMeters)
-        //mapView.setRegion(region, animated: true)
+		userLocation = locations.last!
+		let center = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, latitudinalMeters: zoomedRegionInMeters, longitudinalMeters: zoomedRegionInMeters)
+			mapView.setRegion(region, animated: true)
+		
+		LifeLineAPICaller().updateLocation(phone: userPhone, latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude, when: "\(userLocation.timestamp)")
+		
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
