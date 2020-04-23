@@ -12,10 +12,14 @@ import CoreMotion
 import CoreLocation
 import UserNotifications
 
+
+// ******** TODO*******
+// CALL THE AUTOSPEED FUNCTION IN THE
+
 class Speed: NSObject, CLLocationManagerDelegate {
     let manager = CLLocationManager()
     let notificationController = UNMutableNotificationContent()
-    //let sendSpeedAlert = ChatViewController()
+    let sendSpeedAlert = ChatViewController()
     func testSpeed() {
         print("started speed watch")
 
@@ -32,7 +36,8 @@ class Speed: NSObject, CLLocationManagerDelegate {
         //self.speedDisplay.text! = String(location.speed)
         if speed > 10{
             notificationController.body = "slow down you are going  \(speed)"
-           // sendSpeedAlert.autoSpeedMessage(speed)
+            
+            sendSpeedAlert.autoSpeedMessage(speed: speed)
             
         }
 

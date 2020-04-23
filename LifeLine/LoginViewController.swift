@@ -40,6 +40,7 @@ class LoginViewController: UIViewController {
         let password = self.passwordField.text!
         passwordField.text?.removeAll()
         LifeLineAPICaller().signin(phone: phone, password: password, resultLabel: resultLabel)
+        
     }
     
 }
