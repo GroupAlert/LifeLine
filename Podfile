@@ -7,6 +7,7 @@ target 'LifeLine' do
 
   # Pods for LifeLine
   pod 'Alamofire', '~> 4.8.2'
+  pod 'Parse'
 
   target 'LifeLineTests' do
     inherit! :search_paths
