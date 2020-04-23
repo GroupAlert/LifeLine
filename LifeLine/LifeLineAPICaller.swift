@@ -173,7 +173,7 @@ class LifeLineAPICaller {
             let result = dataDictionary["result"] as? String
             
             if result == "success" {
-                var dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+                var dict = Archiver().getObject(fileName: "userinfo") as! [String: Any]
                 dict["password"] = newPassword
             }
             
