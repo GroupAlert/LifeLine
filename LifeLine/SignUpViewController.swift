@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SignUpViewController: UIViewController {
 
@@ -23,8 +24,26 @@ class SignUpViewController: UIViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if resultLabel.text == "success" {
-            UserDefaults.standard.set(phoneField.text, forKey: "Phone")
-            UserDefaults.standard.set(nameField.text, forKey: "Name")
+            let phone = phoneField.text
+            let name = nameField.text
+            
+            let user = PFUser()
+            user.username = phone
+            user.password = phone
+            
+            user.signUpInBackground { (success, error) in
+                //UIViewController.removeSpinner(spinner: sv)
+                if success{
+                    user["name"] = name
+                    user.saveInBackground()
+                    print("Created PFUser")
+                }else{
+                    if let descrip = error?.localizedDescription{
+                        print(descrip)
+                    }
+                }
+            }
+            
             phoneField.text?.removeAll()
             nameField.text?.removeAll()
             passwordField.text?.removeAll()
