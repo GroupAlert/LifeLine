@@ -25,6 +25,10 @@ class LoginViewController: UIViewController {
         let loggedin = dict["loggedin"] as! String
         if (loggedin == "yes") {
             let phone = dict["phone"] as! String
+            LifeLineAPICaller().signin(phone: phone, password: dict["password"] as! String, resultLabel: resultLabel)
+            if resultLabel.text != "success" {
+                return
+            }
             let currentUser = PFUser.current()
             if currentUser == nil {
                 PFUser.logInWithUsername(inBackground: phone, password: phone) { (user, error) in
@@ -35,8 +39,6 @@ class LoginViewController: UIViewController {
                         user.signUpInBackground { (success, error) in
                             //UIViewController.removeSpinner(spinner: sv)
                             if success{
-                                user["name"] = dict["name"] as! String
-                                user.saveInBackground()
                                 print("Created PFUser")
                             }else{
                                 if let descrip = error?.localizedDescription{
@@ -64,9 +66,6 @@ class LoginViewController: UIViewController {
                         user.signUpInBackground { (success, error) in
                             //UIViewController.removeSpinner(spinner: sv)
                             if success{
-                                let dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
-                                user["name"] = dict["name"] as! String
-                                user.saveInBackground()
                                 print("Created PFUser")
                             }else{
                                 if let descrip = error?.localizedDescription{
@@ -77,7 +76,6 @@ class LoginViewController: UIViewController {
                     }
                 }
             }
-            
             phoneField.text?.removeAll()
             resultLabel.text = ""
             self.performSegue(withIdentifier: "SignInSegue", sender: self)

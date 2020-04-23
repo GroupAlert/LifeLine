@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ChangePhoneViewController: UIViewController {
 
@@ -26,5 +27,11 @@ class ChangePhoneViewController: UIViewController {
         let newPhone = newPhoneField.text!
         let password = passwordField.text!
         LifeLineAPICaller().changePhone(oldPhone: oldphone, newPhone: newPhone, password: password, resultLabel: resultLabel)
+        if resultLabel.text == "success" {
+            let user = PFUser.current()
+            user!.username = newPhone
+            user!.password = newPhone
+            user!.saveInBackground()
+        }
     }
 }

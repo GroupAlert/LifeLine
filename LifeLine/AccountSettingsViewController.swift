@@ -61,7 +61,6 @@ class AccountSettingsViewController: UIViewController {
                 }else{
                     print("error logging out of chat")
                 }
-
             }
         }
         let dict:[String:String] = ["loggedin":"no"]

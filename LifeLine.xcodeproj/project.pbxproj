@@ -32,11 +32,12 @@
 		04DE239E244FADD7008E4DC6 /* AddGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE239D244FADD7008E4DC6 /* AddGroupViewController.swift */; };
 		04DE23A0244FB526008E4DC6 /* MemberViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE239F244FB526008E4DC6 /* MemberViewCell.swift */; };
 		04DE23A2244FB878008E4DC6 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE23A1244FB878008E4DC6 /* MembersViewController.swift */; };
+		04EC0ED424525C3D00D27D8C /* GroupMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC0ED324525C3D00D27D8C /* GroupMemberViewController.swift */; };
+		04EC0ED624525CA600D27D8C /* ZonesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC0ED524525CA600D27D8C /* ZonesViewController.swift */; };
 		50C3ED835B838D8A7ECD1013 /* Pods_LifeLine_LifeLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D8FDAC450095415D2C7460 /* Pods_LifeLine_LifeLineUITests.framework */; };
 		7064693E244F768B009A6E3A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7064693D244F768B009A6E3A /* ChatViewController.swift */; };
 		70646940244F76E0009A6E3A /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7064693F244F76E0009A6E3A /* ChatCell.swift */; };
 		70646942244F780A009A6E3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70646941244F780A009A6E3A /* Constants.swift */; };
-		70646944244F796F009A6E3A /* NotificationAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70646943244F796F009A6E3A /* NotificationAPICaller.swift */; };
 		A998C1F4BEF661D1156A4898 /* Pods_LifeLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE09ABC82619EBAA4EB6C75 /* Pods_LifeLineTests.framework */; };
 		F1936E5DE1A72352D8918143 /* Pods_LifeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9799172D76BAAE40F4A7F5 /* Pods_LifeLine.framework */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,8 @@
 		04DE239D244FADD7008E4DC6 /* AddGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroupViewController.swift; sourceTree = "<group>"; };
 		04DE239F244FB526008E4DC6 /* MemberViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewCell.swift; sourceTree = "<group>"; };
 		04DE23A1244FB878008E4DC6 /* MembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
+		04EC0ED324525C3D00D27D8C /* GroupMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMemberViewController.swift; sourceTree = "<group>"; };
+		04EC0ED524525CA600D27D8C /* ZonesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonesViewController.swift; sourceTree = "<group>"; };
 		0BE09ABC82619EBAA4EB6C75 /* Pods_LifeLineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343AB68377A91F982583BC3B /* Pods-LifeLine-LifeLineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine-LifeLineUITests.debug.xcconfig"; path = "Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		45F38C2456F6C9A4475C14C2 /* Pods-LifeLineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLineTests.debug.xcconfig"; path = "Target Support Files/Pods-LifeLineTests/Pods-LifeLineTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,7 +102,6 @@
 		7064693D244F768B009A6E3A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		7064693F244F76E0009A6E3A /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		70646941244F780A009A6E3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		70646943244F796F009A6E3A /* NotificationAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAPICaller.swift; sourceTree = "<group>"; };
 		93476FF56DD4EA8CFBD85D34 /* Pods-LifeLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine.debug.xcconfig"; path = "Target Support Files/Pods-LifeLine/Pods-LifeLine.debug.xcconfig"; sourceTree = "<group>"; };
 		D5AAC7AB5C76475A812E7AA0 /* Pods-LifeLine-LifeLineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine-LifeLineUITests.release.xcconfig"; path = "Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DAA12C9DC0C19433F59BD103 /* Pods-LifeLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine.release.xcconfig"; path = "Target Support Files/Pods-LifeLine/Pods-LifeLine.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,34 +160,35 @@
 		0494B0112415CD9A0016DEE8 /* LifeLine */ = {
 			isa = PBXGroup;
 			children = (
+				0494B01B2415CD9C0016DEE8 /* Assets.xcassets */,
+				0439774D24494D3500E501D3 /* Accelerometer.swift */,
+				04010632242079420085F3E3 /* AccountSettingsViewController.swift */,
 				04DE239D244FADD7008E4DC6 /* AddGroupViewController.swift */,
 				0494B0122415CD9A0016DEE8 /* AppDelegate.swift */,
-				0494B0142415CD9A0016DEE8 /* SceneDelegate.swift */,
-				0494B0182415CD9A0016DEE8 /* Main.storyboard */,
-				04938AAF24293E5900B82DFB /* GroupViewCell.swift */,
-				04938AB12429424600B82DFB /* GroupDetailsViewController.swift */,
-				04DE23A1244FB878008E4DC6 /* MembersViewController.swift */,
-				04928F2B24282F1C002C3549 /* ForgotPasswordViewController.swift */,
-				048F8182242555060090FE28 /* DeleteAccountViewController.swift */,
-				0439774F24494E7700E501D3 /* MapDisplayViewController.swift */,
-				0439774D24494D3500E501D3 /* Accelerometer.swift */,
-				04DE239F244FB526008E4DC6 /* MemberViewCell.swift */,
-				043977512449500B00E501D3 /* Speed.swift */,
-				0494B0462415E32E0016DEE8 /* LifeLineAPICaller.swift */,
 				0491A29924244AAA00A3A404 /* Archiver.swift */,
-				04010632242079420085F3E3 /* AccountSettingsViewController.swift */,
-				0494B0422415CFD30016DEE8 /* LoginViewController.swift */,
-				043F207424162F8600F25D1D /* SignUpViewController.swift */,
-				0494B01B2415CD9C0016DEE8 /* Assets.xcassets */,
-				0494B01D2415CD9C0016DEE8 /* LaunchScreen.storyboard */,
-				0494B0202415CD9C0016DEE8 /* Info.plist */,
-				0483B1282421A804003BF6DB /* ChangePhoneViewController.swift */,
 				0483B12A2421A819003BF6DB /* ChangePasswordViewController.swift */,
-				04928F2D24282F78002C3549 /* GroupsViewController.swift */,
-				7064693D244F768B009A6E3A /* ChatViewController.swift */,
+				0483B1282421A804003BF6DB /* ChangePhoneViewController.swift */,
 				7064693F244F76E0009A6E3A /* ChatCell.swift */,
+				7064693D244F768B009A6E3A /* ChatViewController.swift */,
 				70646941244F780A009A6E3A /* Constants.swift */,
-				70646943244F796F009A6E3A /* NotificationAPICaller.swift */,
+				048F8182242555060090FE28 /* DeleteAccountViewController.swift */,
+				04928F2B24282F1C002C3549 /* ForgotPasswordViewController.swift */,
+				04938AB12429424600B82DFB /* GroupDetailsViewController.swift */,
+				04EC0ED324525C3D00D27D8C /* GroupMemberViewController.swift */,
+				04928F2D24282F78002C3549 /* GroupsViewController.swift */,
+				04938AAF24293E5900B82DFB /* GroupViewCell.swift */,
+				0494B0462415E32E0016DEE8 /* LifeLineAPICaller.swift */,
+				0494B0422415CFD30016DEE8 /* LoginViewController.swift */,
+				0439774F24494E7700E501D3 /* MapDisplayViewController.swift */,
+				04DE23A1244FB878008E4DC6 /* MembersViewController.swift */,
+				04DE239F244FB526008E4DC6 /* MemberViewCell.swift */,
+				0494B0142415CD9A0016DEE8 /* SceneDelegate.swift */,
+				043F207424162F8600F25D1D /* SignUpViewController.swift */,
+				043977512449500B00E501D3 /* Speed.swift */,
+				04EC0ED524525CA600D27D8C /* ZonesViewController.swift */,
+				0494B01D2415CD9C0016DEE8 /* LaunchScreen.storyboard */,
+				0494B0182415CD9A0016DEE8 /* Main.storyboard */,
+				0494B0202415CD9C0016DEE8 /* Info.plist */,
 			);
 			path = LifeLine;
 			sourceTree = "<group>";
@@ -471,13 +474,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0483B1292421A804003BF6DB /* ChangePhoneViewController.swift in Sources */,
+				04EC0ED624525CA600D27D8C /* ZonesViewController.swift in Sources */,
 				0483B12B2421A819003BF6DB /* ChangePasswordViewController.swift in Sources */,
 				04928F2C24282F1C002C3549 /* ForgotPasswordViewController.swift in Sources */,
 				70646940244F76E0009A6E3A /* ChatCell.swift in Sources */,
 				0494B0432415CFD30016DEE8 /* LoginViewController.swift in Sources */,
 				0494B0132415CD9A0016DEE8 /* AppDelegate.swift in Sources */,
 				04938AB024293E5900B82DFB /* GroupViewCell.swift in Sources */,
-				70646944244F796F009A6E3A /* NotificationAPICaller.swift in Sources */,
 				0494B0152415CD9A0016DEE8 /* SceneDelegate.swift in Sources */,
 				04DE23A0244FB526008E4DC6 /* MemberViewCell.swift in Sources */,
 				048F8183242555060090FE28 /* DeleteAccountViewController.swift in Sources */,
@@ -485,6 +488,7 @@
 				0491A29A24244AAA00A3A404 /* Archiver.swift in Sources */,
 				04928F2E24282F78002C3549 /* GroupsViewController.swift in Sources */,
 				04DE23A2244FB878008E4DC6 /* MembersViewController.swift in Sources */,
+				04EC0ED424525C3D00D27D8C /* GroupMemberViewController.swift in Sources */,
 				04938AB22429424600B82DFB /* GroupDetailsViewController.swift in Sources */,
 				0494B0472415E32E0016DEE8 /* LifeLineAPICaller.swift in Sources */,
 				0439775024494E7700E501D3 /* MapDisplayViewController.swift in Sources */,

@@ -67,7 +67,10 @@ class LifeLineAPICaller {
                 switch encodingResult {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
-                        if let dataDictionary = response.result.value as? [String: Any] {
+                        if var dataDictionary = response.result.value as? [String: Any] {
+                            let dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+                            let password = dict["password"] as! String
+                            dataDictionary["password"] = password
                             self.setUserInfo(number: phone, dict: dataDictionary, label: resultLabel)
                         }
                     }
@@ -89,7 +92,10 @@ class LifeLineAPICaller {
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
-            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            var dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            let dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+            let password = dict["password"] as! String
+            dataDictionary["password"] = password
             self.setUserInfo(number: phone, dict: dataDictionary, label: resultLabel)
         }
         task.resume()
@@ -106,7 +112,10 @@ class LifeLineAPICaller {
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
-            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            var dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            let dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+            let password = dict["password"] as! String
+            dataDictionary["password"] = password
             self.setUserInfo(number: phone, dict: dataDictionary, label: resultLabel)
         }
         task.resume()
@@ -123,7 +132,10 @@ class LifeLineAPICaller {
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
-            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            var dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            let dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+            let password = dict["password"] as! String
+            dataDictionary["password"] = password
             self.setUserInfo(number: newPhone, dict: dataDictionary, label: resultLabel)
         }
         task.resume()
@@ -136,8 +148,9 @@ class LifeLineAPICaller {
             if (result == "success") {
                 let name = dict["name"] as! String
                 let picture = dict["picture"] as! String
+                let password = dict["password"] as! String
                 
-                let dict:[String:String] = ["loggedin":"yes", "phone":number, "name":name, "picture":picture]
+                let dict:[String:String] = ["loggedin":"yes", "phone":number, "name":name, "picture":picture, "password":password]
                 if (!Archiver().saveObject(fileName: "userinfo", object: dict)) {
                     print("Unable to save userinfo")
                 }
@@ -157,8 +170,14 @@ class LifeLineAPICaller {
             data, response, error in
             
             let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            let result = dataDictionary["result"] as? String
+            
+            if result == "success" {
+                var dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+                dict["password"] = newPassword
+            }
+            
             DispatchQueue.main.async {
-                let result = dataDictionary["result"] as? String
                 resultLabel.text = result
             }
         }
