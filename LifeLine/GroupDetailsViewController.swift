@@ -59,5 +59,15 @@ class GroupDetailsViewController: UIViewController, UITableViewDataSource, UITab
         
         return cell
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+        if segue.identifier == "GroupToChat" {
+            let groupID = group["group_id"] as! String
+            let detailsViewController = segue.destination as! ChatViewController
+            detailsViewController.groupID = groupID
+            
+            
+        }
+    }
 
 }
