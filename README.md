@@ -111,3 +111,4 @@ Dictionaries to recieve information.
 Here's a walkthrough of implemented user stories: <br><br>
 <img src='https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/readmeGif.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
 <img src='http://g.recordit.co/QLicfzrm4H.gif' title='Video Walkthrough' width='200' height='370' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/0i1wQuBP8U.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
