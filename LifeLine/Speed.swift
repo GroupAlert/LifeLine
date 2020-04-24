@@ -32,7 +32,7 @@ class Speed: NSObject, CLLocationManagerDelegate {
         //self.speedDisplay.text! = String(location.speed)
         if speed > 10{
             notificationController.body = "slow down you are going  \(speed)"
-           // sendSpeedAlert.autoSpeedMessage(speed)
+           //sendSpeedAlert.autoSpeedMessage(speed)
             
         }
 
