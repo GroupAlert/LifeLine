@@ -100,7 +100,7 @@
                                     <constraint firstAttribute="height" constant="24" id="X5U-oh-XPW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Forgot Passowrd"/>
+                                <state key="normal" title="Forgot Password"/>
                                 <connections>
                                     <segue destination="7T6-dl-aKM" kind="presentation" modalPresentationStyle="fullScreen" id="leh-yg-1MP"/>
                                 </connections>
@@ -1450,8 +1450,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rJJ-x2-YB4"/>
-        <segue reference="nqb-4L-bVI"/>
+        <segue reference="yK8-Sl-3f3"/>
+        <segue reference="P8n-QY-8IH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Camera" width="432" height="432"/>
