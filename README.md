@@ -32,7 +32,7 @@ LifeLine is an app where users are able to see where groups of people are on a m
 * [x] As a group member I want to see my group geofences in a map view so that I can abide by them.
 * [ ] As a dad I want to know when my child leaves the curfew radius so that I know if they're going somewhere they shouldn't.
 * [ ] As a mom I want to know where my children are on the map so that I know they got to the destination safe.
-* [ ] As a friend I want to see when my friends are speeding so that I can tell them to drive responsibly.
+* [x] As a friend I want to see when my friends are speeding so that I can tell them to drive responsibly.
 
 **Optional Nice-to-have Stories**
 * [x] As a regular user I want a profile settings options so that I can customize my profile.
@@ -79,8 +79,8 @@ LifeLine is an app where users are able to see where groups of people are on a m
 </p>
 
 **[BONUS] Digital Wireframes & Mockups**
-<br><img src="https://github.com/GroupAlert/Documentation/blob/master/wireframe.png" width=250><br>
-<img src="https://github.com/GroupAlert/Documentation/blob/master/LifeLine.gif" width=250><br>
+<br><img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/wireframe.png" width=250><br>
+<img src="https://github.com/GroupAlert/LifeLine/blob/master/ReadMe%20Assets/LifeLine.gif" width=250><br>
 
 https://www.figma.com/proto/jE3KKpTsZBvMxOezelbsN7/LifeLine?node-id=19%3A3&scaling=scale-down
 
