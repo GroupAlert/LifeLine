@@ -581,12 +581,19 @@
                         <viewLayoutGuide key="safeArea" id="A5s-1q-JTS"/>
                     </view>
                     <navigationItem key="navigationItem" id="cAU-Ee-iyf">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="lHw-y5-9UP">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="yz8-Lf-Vmn" kind="show" id="H3d-19-IFq"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Settings" id="lHw-y5-9UP">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="yz8-Lf-Vmn" kind="show" id="H3d-19-IFq"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Chat" id="KLe-9K-Yik">
+                                <connections>
+                                    <segue destination="AUy-Wy-pbG" kind="showDetail" identifier="GroupsToChat" id="kpE-Ox-04g"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="vI5-hV-b6Z" id="thH-Ra-FQh"/>
@@ -1593,7 +1600,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lkx-I7-R6N">
-                                <rect key="frame" x="16" y="60" width="382" height="30"/>
+                                <rect key="frame" x="16" y="104" width="382" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s9D-DG-t0U">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="30"/>
@@ -1618,7 +1625,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DMn-cQ-sLb">
-                                <rect key="frame" x="0.0" y="106" width="414" height="756"/>
+                                <rect key="frame" x="0.0" y="150" width="414" height="663"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="96" id="8JN-Gi-AhK" customClass="ChatCell" customModule="LifeLine" customModuleProvider="target">
@@ -1671,6 +1678,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w4D-jd-tpf"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="gWP-PV-Cpa"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="w2W-2p-1ld">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="GlU-4q-u8K">
                             <color key="tintColor" red="0.99215686270000003" green="0.6705882353" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1679,6 +1689,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="messageTextField" destination="s9D-DG-t0U" id="PtU-nC-lWs"/>
                         <outlet property="tableView" destination="DMn-cQ-sLb" id="9JI-91-szU"/>
@@ -1686,7 +1697,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHy-xe-zHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-597" y="2241"/>
+            <point key="canvasLocation" x="-3067" y="1130"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
