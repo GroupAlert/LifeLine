@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Parse
 
 class AccountSettingsViewController: UIViewController {
     
@@ -51,6 +52,18 @@ class AccountSettingsViewController: UIViewController {
     }
     
     @IBAction func signOut(_ sender: Any) {
+        //let sv = UIViewController.displaySpinner(onView: self.view)
+        PFUser.logOutInBackground { (error: Error?) in
+            //UIViewController.removeSpinner(spinner: sv)
+            if (error != nil) {
+                if let descrip = error?.localizedDescription{
+                    print(descrip)
+                }else{
+                    print("error logging out of chat")
+                }
+
+            }
+        }
         let dict:[String:String] = ["loggedin":"no"]
         if (!Archiver().saveObject(fileName: "userinfo", object: dict)) {
             print("Unable to save userinfo")

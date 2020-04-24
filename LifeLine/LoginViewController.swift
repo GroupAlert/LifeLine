@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
     
@@ -23,12 +24,60 @@ class LoginViewController: UIViewController {
         let dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
         let loggedin = dict["loggedin"] as! String
         if (loggedin == "yes") {
+            let phone = dict["phone"] as! String
+            let currentUser = PFUser.current()
+            if currentUser == nil {
+                PFUser.logInWithUsername(inBackground: phone, password: phone) { (user, error) in
+                    if user == nil {
+                        let user = PFUser()
+                        user.username = phone
+                        user.password = phone
+                        user.signUpInBackground { (success, error) in
+                            //UIViewController.removeSpinner(spinner: sv)
+                            if success{
+                                user["name"] = dict["name"] as! String
+                                user.saveInBackground()
+                                print("Created PFUser")
+                            }else{
+                                if let descrip = error?.localizedDescription{
+                                    print(descrip)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             self.performSegue(withIdentifier: "SignInSegue", sender: self)
         }
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if resultLabel.text == "success" {
+            let phone = self.phoneField.text!
+            let currentUser = PFUser.current()
+            if currentUser == nil {
+                PFUser.logInWithUsername(inBackground: phone, password: phone) { (user, error) in
+                    if user == nil {
+                        let user = PFUser()
+                        user.username = phone
+                        user.password = phone
+                        user.signUpInBackground { (success, error) in
+                            //UIViewController.removeSpinner(spinner: sv)
+                            if success{
+                                let dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+                                user["name"] = dict["name"] as! String
+                                user.saveInBackground()
+                                print("Created PFUser")
+                            }else{
+                                if let descrip = error?.localizedDescription{
+                                    print(descrip)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
             phoneField.text?.removeAll()
             resultLabel.text = ""
             self.performSegue(withIdentifier: "SignInSegue", sender: self)

@@ -192,7 +192,7 @@ class LifeLineAPICaller {
         task.resume()
     }
     
-    func updateLocation(phone:String, latitude:String, longitude:String, when:String) {
+    func updateLocation(phone:String, latitude:Double, longitude:Double, when:String) {
         let url = baseURL + "person/personsetlocation.php"
         
         let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
