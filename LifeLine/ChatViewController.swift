@@ -25,12 +25,16 @@ class ChatViewController: UIViewController {
     // TODO: CREATE CHAT MESSAGE OBJECT
     var groupID: String = ""
     let chatMessage = PFObject(className: "groupID")
+    let userDict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+    var userName: String = ""
     var timer = Timer()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.userName = userDict["name"]as! String
+        print("in chat")
+       print(userName)
         tableView.dataSource = self
         tableView.delegate = self
 
@@ -83,25 +87,37 @@ class ChatViewController: UIViewController {
             }
         } else {
             print("\nMessage cannot be empty\n")
-            let chatMessage = PFObject(className: "groupID") // className = group chat
-            chatMessage["text"] = "test1"
-            chatMessage["user"] = PFUser.current()
-            chatMessage.saveInBackground()
+            // test the auto func
+            autoMessage()
+//            let chatMessage = PFObject(className: "groupID") // className = group chat
+//            chatMessage["text"] = "test1"
+//            chatMessage["user"] = PFUser.current()
+//            chatMessage.saveInBackground()
 
         }
         tableView.reloadData()
     }
+    // auto test message
     func autoMessage(){
+        print("auto message")
         let chatMessage = PFObject(className: "groupID") // className = group id
-        //chatMessage["text"] = "username" + was speeding at location time "
-        chatMessage["test"] = "group1"
+        chatMessage["text"] = "\(userName) was speeding at location time "
+        //chatMessage["text"] = "this is a "
+        //chatMessage["user"] = PF
+        chatMessage.saveInBackground()
+    }
+    // methond to send a chat when a user is speeding
+    func autoSpeedMessage(speed: String, location: CLLocation){
+        let chatMessage = PFObject(className: "groupID") // className = group id
+        chatMessage["text"] = "username" + "was goinh \(speed) "
+        
         chatMessage["user"] = PFUser.current()
         chatMessage.saveInBackground()
     }
-    func autoSpeedMessage(speed: String){
-        let chatMessage = PFObject(className: "groupID") // className = group id
-        chatMessage["text"] = "username" + "was goinh \(speed) "
-        chatMessage["test"] = "group1"
+    //method for map radius
+    func autoGeoFenceMessage(location: CLLocation){
+        let chatMessage = PFObject(className: "groupID")
+        chatMessage["text"] = " left the geofence and is at: \(location) "
         chatMessage["user"] = PFUser.current()
         chatMessage.saveInBackground()
     }

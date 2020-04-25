@@ -15,7 +15,7 @@ import UserNotifications
 class Speed: NSObject, CLLocationManagerDelegate {
     let manager = CLLocationManager()
     let notificationController = UNMutableNotificationContent()
-    //let sendSpeedAlert = ChatViewController()
+    let sendSpeedAlert = ChatViewController()
     func testSpeed() {
         print("started speed watch")
 
@@ -29,10 +29,11 @@ class Speed: NSObject, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations:[CLLocation]) {
         let location = locations[0]
         var speed = location.speed
+        print (speed)
         //self.speedDisplay.text! = String(location.speed)
         if speed > 10{
-            notificationController.body = "slow down you are going  \(speed)"
-           //sendSpeedAlert.autoSpeedMessage(speed)
+            notificationController.body = "slow down you are going  \(speed) at location \(location) "
+            sendSpeedAlert.autoSpeedMessage(speed: "speed", location: location)
             
         }
 
