@@ -25,14 +25,16 @@ class ChatViewController: UIViewController {
     // TODO: CREATE CHAT MESSAGE OBJECT
     var groupID: String = ""
     let chatMessage = PFObject(className: "groupID")
-    
+    let userDict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+    var userName: String = ""
     var timer = Timer()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.userName = userDict["name"]as! String
         print("in chat")
-
+       print(userName)
         tableView.dataSource = self
         tableView.delegate = self
 
@@ -99,9 +101,9 @@ class ChatViewController: UIViewController {
     func autoMessage(){
         print("auto message")
         let chatMessage = PFObject(className: "groupID") // className = group id
-        chatMessage["text"] = "\(PFUser.current()) was speeding at location time "
+        chatMessage["text"] = "\(userName) was speeding at location time "
         //chatMessage["text"] = "this is a "
-        chatMessage["user"] = PFUser.current()
+        //chatMessage["user"] = PF
         chatMessage.saveInBackground()
     }
     // methond to send a chat when a user is speeding
