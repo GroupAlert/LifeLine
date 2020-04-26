@@ -34,7 +34,7 @@ class DeleteAccountViewController: UIViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if resultLabel.text == "success" {
-            phoneLabel.text = "None"
+            phoneLabel.text = ""
             resultLabel.text = ""
             acknowledgeSwitch.setOn(false, animated: true)
             self.performSegue(withIdentifier: "DeleteAccountSegue", sender: self)

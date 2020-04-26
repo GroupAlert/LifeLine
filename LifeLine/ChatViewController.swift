@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import Alamofire
 
 class ChatViewController: UIViewController {
 
@@ -16,7 +17,6 @@ class ChatViewController: UIViewController {
     /*------ Outlets + Variables ------*/
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-
 
 
     // TODO: CREATE ARRAY FOR MESSAGES
@@ -32,15 +32,14 @@ class ChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.userName = userDict["name"]as! String
+        self.userName = (userDict["name"] as! String) + " @ " + (userDict["phone"] as! String)
         print("in chat")
-       print(userName)
+        print(userName)
         tableView.dataSource = self
         tableView.delegate = self
 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50
-
 
         // Reload messages every second (interval of 1 second) NOT WORKING
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.retrieveChatMessages), userInfo: nil, repeats: true)
@@ -77,6 +76,9 @@ class ChatViewController: UIViewController {
             let chatMessage = PFObject(className: "groupID") // className = group chat
             chatMessage["text"] = messageTextField.text ?? ""
             chatMessage["user"] = PFUser.current()
+            chatMessage["nameField"] = self.userName
+            chatMessage["picture"] = userDict["picture"]
+            
             chatMessage.saveInBackground { (success, error) in
                 if success {
                     print("The message was saved!")
@@ -87,13 +89,6 @@ class ChatViewController: UIViewController {
             }
         } else {
             print("\nMessage cannot be empty\n")
-            // test the auto func
-            autoMessage()
-//            let chatMessage = PFObject(className: "groupID") // className = group chat
-//            chatMessage["text"] = "test1"
-//            chatMessage["user"] = PFUser.current()
-//            chatMessage.saveInBackground()
-
         }
         tableView.reloadData()
     }
@@ -102,15 +97,16 @@ class ChatViewController: UIViewController {
         print("auto message")
         let chatMessage = PFObject(className: "groupID") // className = group id
         chatMessage["text"] = "\(userName) was speeding at location time "
-        //chatMessage["text"] = "this is a "
-        //chatMessage["user"] = PF
+        chatMessage["nameField"] = self.userName
+        chatMessage["picture"] = userDict["picture"]
         chatMessage.saveInBackground()
     }
     // methond to send a chat when a user is speeding
     func autoSpeedMessage(speed: String, location: CLLocation){
         let chatMessage = PFObject(className: "groupID") // className = group id
-        chatMessage["text"] = "username" + "was goinh \(speed) "
-        
+        chatMessage["text"] = "Speeding at \(speed) mph"
+        chatMessage["nameField"] = self.userName
+        chatMessage["picture"] = userDict["picture"]
         chatMessage["user"] = PFUser.current()
         chatMessage.saveInBackground()
     }
@@ -119,12 +115,10 @@ class ChatViewController: UIViewController {
         let chatMessage = PFObject(className: "groupID")
         chatMessage["text"] = " left the geofence and is at: \(location) "
         chatMessage["user"] = PFUser.current()
+        chatMessage["nameField"] = self.userName
+        chatMessage["picture"] = userDict["picture"]
         chatMessage.saveInBackground()
     }
-
-
-
-
 
     /*------ Dismiss Keyboard and Logout ------*/
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -142,6 +136,10 @@ class ChatViewController: UIViewController {
 
 
 /*------ TableView Extension Functions ------*/
+struct Cells {
+    static let chatCell = "ChatCell"
+}
+
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 
@@ -159,15 +157,19 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 
         let message = messages[indexPath.row]
         cell.messageLabel.text = message["text"] as? String
-
-        // set the username
-        if let user = message["user"] as? PFUser {
-            cell.usernameLabel.text = user.username
-        } else {
-            cell.usernameLabel.text = "?"
+        cell.usernameLabel.text = message["nameField"] as? String
+        
+        let picStr = message["picture"] as? String
+        if picStr != nil {
+            let pictureUrl = URL(string: picStr!)!
+            Alamofire.request(pictureUrl).responseData { (response) in
+                if response.error == nil {
+                        if let data = response.data {
+                            cell.picture.image = UIImage(data: data)
+                        }
+                    }
+                }
         }
-
-
 
         return cell
     }
