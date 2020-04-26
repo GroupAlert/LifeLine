@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1636,30 +1636,41 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTj-qW-lfO">
-                                                    <rect key="frame" x="16" y="33" width="414" height="19.5"/>
+                                                    <rect key="frame" x="16" y="32" width="414" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u3-zx-lYg">
-                                                    <rect key="frame" x="16" y="8" width="382" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u3-zx-lYg">
+                                                    <rect key="frame" x="52" y="8" width="346" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oep-uf-lgt">
+                                                    <rect key="frame" x="16" y="2" width="28" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="28" id="N5l-Nt-gCh"/>
+                                                        <constraint firstAttribute="height" constant="28" id="njW-PS-Pdj"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="5u3-zx-lYg" secondAttribute="trailing" constant="16" id="1IO-qy-Km4"/>
+                                                <constraint firstItem="Oep-uf-lgt" firstAttribute="top" secondItem="r68-7J-XsA" secondAttribute="top" constant="2" id="4os-iW-8GU"/>
                                                 <constraint firstAttribute="trailing" secondItem="oTj-qW-lfO" secondAttribute="trailing" constant="-16" id="Gd2-7D-ev5"/>
                                                 <constraint firstItem="oTj-qW-lfO" firstAttribute="top" secondItem="5u3-zx-lYg" secondAttribute="bottom" constant="8" id="VTQ-SW-Ai4"/>
                                                 <constraint firstItem="5u3-zx-lYg" firstAttribute="top" secondItem="r68-7J-XsA" secondAttribute="top" constant="8" id="Xuz-OX-O3R"/>
+                                                <constraint firstItem="5u3-zx-lYg" firstAttribute="leading" secondItem="Oep-uf-lgt" secondAttribute="trailing" constant="8" id="fEq-Yh-RfG"/>
+                                                <constraint firstItem="Oep-uf-lgt" firstAttribute="centerY" secondItem="5u3-zx-lYg" secondAttribute="centerY" id="gU3-yT-JM0"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oTj-qW-lfO" secondAttribute="bottom" constant="8" id="lcF-WY-lwC"/>
-                                                <constraint firstItem="5u3-zx-lYg" firstAttribute="leading" secondItem="r68-7J-XsA" secondAttribute="leading" constant="16" id="oD5-6f-3XM"/>
+                                                <constraint firstItem="Oep-uf-lgt" firstAttribute="leading" secondItem="oTj-qW-lfO" secondAttribute="leading" id="qxk-9j-lPX"/>
                                                 <constraint firstItem="oTj-qW-lfO" firstAttribute="leading" secondItem="r68-7J-XsA" secondAttribute="leading" constant="16" id="tdF-Y0-1C4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="messageLabel" destination="oTj-qW-lfO" id="EG9-gi-REv"/>
+                                            <outlet property="picture" destination="Oep-uf-lgt" id="ycn-6U-Uyo"/>
                                             <outlet property="usernameLabel" destination="5u3-zx-lYg" id="P58-30-7Uk"/>
                                         </connections>
                                     </tableViewCell>
@@ -1697,18 +1708,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHy-xe-zHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3067" y="1130"/>
+            <point key="canvasLocation" x="-3068.115942028986" y="1129.6875"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="yK8-Sl-3f3"/>
-        <segue reference="r6d-e9-UMZ"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Camera" width="432" height="432"/>
         <image name="LL Icon2" width="1050" height="1050"/>
         <image name="LL Logo" width="1544" height="258"/>
         <image name="LL Wallpaper" width="1125" height="2436"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yK8-Sl-3f3"/>
+        <segue reference="r6d-e9-UMZ"/>
+    </inferredMetricsTieBreakers>
 </document>
