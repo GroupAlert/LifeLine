@@ -61,9 +61,9 @@ class GroupDetailsViewController: UIViewController, UITableViewDataSource, UITab
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
-     if segue.identifier == "GroupToChat" {
+     if segue.identifier == "GroupsToChat" {
          let groupID = group["group_id"] as! String
-         let groupDetailsViewController = segue.destination as! ChatViewController
+        let groupDetailsViewController = segue.destination as! ChatViewController
          groupDetailsViewController.groupID = groupID
          
          
