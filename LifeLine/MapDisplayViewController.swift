@@ -14,28 +14,48 @@ class MapDisplayViewController: UIViewController, MKMapViewDelegate, CLLocationM
 
     let locationManager = CLLocationManager()
     var userLocation = CLLocation()
-    let zoomedRegionInMeters: Double = 1000
-	var user = NSDictionary()
-	var userName = String()
+    let zoomedRegionInMeters: Double = 1500
+	var groupID = String()
 	var userPhone = String()
 	
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		user = Archiver().getObject(fileName: "userinfo") as! NSDictionary
-		userName = user["name"] as! String
-		userPhone = user["phone"] as! String
+		 //Get the current user's information
+		let userinfo = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+		self.userPhone = (userinfo["phone"] as! String)
 		
 		
         checkLocationServices()
         mapView.delegate = self
+		mapView.showsUserLocation = true
+		print(mapView.isUserLocationVisible)
+		displayGroupMembers()
 
         // Do any additional setup after loading the view.
     }
 
-
+	func displayGroupMembers () {
+        
+        let url = URL(string: LifeLineAPICaller().baseURL + "group/groupmembergetmembers.php")!
+        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        request.httpMethod = "POST"
+        let postString = "group_id=\(groupID)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+           if let error = error {
+              print(error.localizedDescription)
+           } else if let data = data {
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+			let group = dataDictionary
+			print(group)
+           }
+        }
+        task.resume()
+		
+	}
 
     func setupLocationManager () {
         locationManager.delegate = self
@@ -51,11 +71,12 @@ class MapDisplayViewController: UIViewController, MKMapViewDelegate, CLLocationM
     }
 
     func centerViewOnUserLocation() {
-        if let locationCoordinate = locationManager.location?.coordinate {
-			userLocation = locationManager.location!
-            let region = MKCoordinateRegion(center: locationCoordinate, latitudinalMeters: zoomedRegionInMeters, longitudinalMeters: zoomedRegionInMeters)
-            mapView.setRegion(region, animated: true)
-        }
+		if (locationManager.location?.coordinate) != nil{
+			
+		let region = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: zoomedRegionInMeters, longitudinalMeters: zoomedRegionInMeters)
+		
+		mapView.setRegion(region, animated: true)
+		}
     }
 
     func monitorRegionAtLocation(center: CLLocationCoordinate2D, identifier: String ) {
@@ -76,8 +97,9 @@ class MapDisplayViewController: UIViewController, MKMapViewDelegate, CLLocationM
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
+			locationManager.startUpdatingLocation()
             centerViewOnUserLocation()
-            locationManager.startUpdatingLocation()
+            
             //monitorRegionAtLocation(center: locationManager.location!.coordinate, identifier: "current")
 
 
@@ -117,6 +139,8 @@ class MapDisplayViewController: UIViewController, MKMapViewDelegate, CLLocationM
             break
         }
     }
+	
+
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 		userLocation = locations.last!

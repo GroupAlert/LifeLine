@@ -73,6 +73,17 @@ class GroupsViewController: UIViewController, UITableViewDataSource, UITableView
             
             table.deselectRow(at: indexPath, animated: true)
         }
+		
+		if segue.identifier == "GroupsToMap" {
+			let cell = sender as! UITableViewCell
+            let indexPath = table.indexPath(for: cell)!
+            let group = dict[String(indexPath.row)] as! [String:Any]
+			let groupID = group["group_id"]
+            
+            let mapDisplayViewController = segue.destination as! MapDisplayViewController
+			mapDisplayViewController.groupID = groupID as! String
+            table.deselectRow(at: indexPath, animated: true)
+		}
     }
     
 }
