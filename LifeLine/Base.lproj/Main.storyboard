@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -349,14 +349,14 @@
             <objects>
                 <viewController title="GroupMemberViewController" id="UNk-1k-h46" customClass="GroupMemberViewController" customModule="LifeLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8iv-wS-DF7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LL Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="cgD-Nc-0Iz">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-88" width="414" height="1018"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsg-Cg-gus">
-                                <rect key="frame" x="179" y="750" width="56" height="24"/>
+                                <rect key="frame" x="179" y="696" width="56" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="hW0-o1-BoH"/>
                                 </constraints>
@@ -365,7 +365,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="rfG-iM-UXE">
-                                <rect key="frame" x="107" y="125" width="200" height="200"/>
+                                <rect key="frame" x="107" y="37" width="200" height="234"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyQ-PR-0N4">
                                 <rect key="frame" x="69" y="540" width="277" height="24"/>
@@ -403,7 +403,7 @@
                                 <state key="normal" title="Set Role"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-hP-NWf">
-                                <rect key="frame" x="129" y="645" width="156" height="24"/>
+                                <rect key="frame" x="129" y="591" width="156" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="VK3-he-obO"/>
                                 </constraints>
@@ -488,11 +488,11 @@
             <objects>
                 <viewController title="MembersViewController" id="yz8-Lf-Vmn" customClass="MembersViewController" customModule="LifeLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c6a-hx-ci1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ugS-4b-2ai">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberViewCell" rowHeight="98" id="t99-Tw-MaP" customClass="MemberViewCell" customModule="LifeLine" customModuleProvider="target">
@@ -601,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fim-4P-FJH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2330" y="1144"/>
+            <point key="canvasLocation" x="-2161" y="1170"/>
         </scene>
         <!--Map Display View Controller-->
         <scene sceneID="mVq-SI-oOi">
@@ -611,21 +611,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9yR-Ab-1SK">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yR-Ab-1SK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="IRg-et-1Jv"/>
                     </view>
+                    <navigationItem key="navigationItem" id="yYp-ZB-LOF"/>
                     <connections>
                         <outlet property="mapView" destination="9yR-Ab-1SK" id="ddl-rE-DWh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvE-LI-c2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="1552"/>
+            <point key="canvasLocation" x="150.72463768115944" y="1551.5625"/>
         </scene>
         <!--ChangePhoneViewController-->
         <scene sceneID="z73-mK-KK3">
@@ -1294,7 +1295,7 @@
                                         <color key="backgroundColor" red="0.73333333329999995" green="0.87450980389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="GroupName" destination="MBg-mX-cIs" id="i5y-yS-lAG"/>
-                                            <segue destination="hqS-lT-2ux" kind="show" identifier="GroupsToGroup" id="1W1-iO-d8j"/>
+                                            <segue destination="Lu7-uv-CM2" kind="show" identifier="GroupsToMap" id="wf7-BB-XkB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1596,11 +1597,11 @@
             <objects>
                 <viewController title="ParseChat" id="AUy-Wy-pbG" customClass="ChatViewController" customModule="LifeLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HeY-oJ-aJh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lkx-I7-R6N">
-                                <rect key="frame" x="16" y="104" width="382" height="30"/>
+                                <rect key="frame" x="16" y="16" width="382" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s9D-DG-t0U">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="30"/>
@@ -1625,7 +1626,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DMn-cQ-sLb">
-                                <rect key="frame" x="0.0" y="150" width="414" height="663"/>
+                                <rect key="frame" x="0.0" y="62" width="414" height="697"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="96" id="8JN-Gi-AhK" customClass="ChatCell" customModule="LifeLine" customModuleProvider="target">
@@ -1711,15 +1712,15 @@
             <point key="canvasLocation" x="-3068.115942028986" y="1129.6875"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yK8-Sl-3f3"/>
+        <segue reference="r6d-e9-UMZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Camera" width="432" height="432"/>
         <image name="LL Icon2" width="1050" height="1050"/>
         <image name="LL Logo" width="1544" height="258"/>
         <image name="LL Wallpaper" width="1125" height="2436"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="yK8-Sl-3f3"/>
-        <segue reference="r6d-e9-UMZ"/>
-    </inferredMetricsTieBreakers>
 </document>
