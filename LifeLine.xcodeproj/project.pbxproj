@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04010633242079420085F3E3 /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04010632242079420085F3E3 /* AccountSettingsViewController.swift */; };
+		04099FFE2458D69800139366 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04099FFD2458D69800139366 /* RoundButton.swift */; };
 		0439774E24494D3500E501D3 /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439774D24494D3500E501D3 /* Accelerometer.swift */; };
 		0439775024494E7700E501D3 /* MapDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439774F24494E7700E501D3 /* MapDisplayViewController.swift */; };
 		043977522449500B00E501D3 /* Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043977512449500B00E501D3 /* Speed.swift */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		04010632242079420085F3E3 /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
+		04099FFD2458D69800139366 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		0439774D24494D3500E501D3 /* Accelerometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accelerometer.swift; sourceTree = "<group>"; };
 		0439774F24494E7700E501D3 /* MapDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDisplayViewController.swift; sourceTree = "<group>"; };
 		043977512449500B00E501D3 /* Speed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speed.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				7064693F244F76E0009A6E3A /* ChatCell.swift */,
 				7064693D244F768B009A6E3A /* ChatViewController.swift */,
 				048F8182242555060090FE28 /* DeleteAccountViewController.swift */,
+				04099FFD2458D69800139366 /* RoundButton.swift */,
 				04928F2B24282F1C002C3549 /* ForgotPasswordViewController.swift */,
 				04938AB12429424600B82DFB /* GroupDetailsViewController.swift */,
 				04EC0ED324525C3D00D27D8C /* GroupMemberViewController.swift */,
@@ -481,6 +484,7 @@
 				0494B0152415CD9A0016DEE8 /* SceneDelegate.swift in Sources */,
 				04DE23A0244FB526008E4DC6 /* MemberViewCell.swift in Sources */,
 				048F8183242555060090FE28 /* DeleteAccountViewController.swift in Sources */,
+				04099FFE2458D69800139366 /* RoundButton.swift in Sources */,
 				043977522449500B00E501D3 /* Speed.swift in Sources */,
 				0491A29A24244AAA00A3A404 /* Archiver.swift in Sources */,
 				04928F2E24282F78002C3549 /* GroupsViewController.swift in Sources */,
