@@ -462,14 +462,14 @@
             <objects>
                 <viewController title="GroupMemberViewController" id="UNk-1k-h46" customClass="GroupMemberViewController" customModule="LifeLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8iv-wS-DF7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Wallpaper5" translatesAutoresizingMaskIntoConstraints="NO" id="cgD-Nc-0Iz">
-                                <rect key="frame" x="0.0" y="-88" width="414" height="1018"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsg-Cg-gus">
-                                <rect key="frame" x="179" y="696" width="56" height="24"/>
+                                <rect key="frame" x="179" y="750" width="56" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="BpD-sw-9y9"/>
                                 </constraints>
@@ -478,7 +478,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rfG-iM-UXE">
-                                <rect key="frame" x="107" y="125.5" width="200" height="158"/>
+                                <rect key="frame" x="107" y="213.5" width="200" height="124"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyQ-PR-0N4">
@@ -510,7 +510,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-hP-NWf">
-                                <rect key="frame" x="129" y="591" width="156" height="24"/>
+                                <rect key="frame" x="129" y="645" width="156" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Sys-I1-3wH"/>
                                 </constraints>
@@ -603,11 +603,11 @@
             <objects>
                 <viewController title="MembersViewController" id="yz8-Lf-Vmn" customClass="MembersViewController" customModule="LifeLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c6a-hx-ci1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ugS-4b-2ai">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberViewCell" rowHeight="98" id="t99-Tw-MaP" customClass="MemberViewCell" customModule="LifeLine" customModuleProvider="target">
@@ -743,7 +743,7 @@
                     <navigationItem key="navigationItem" id="yYp-ZB-LOF">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="Psg-tx-JC5">
                             <connections>
-                                <segue destination="yz8-Lf-Vmn" kind="show" id="sB8-bC-T7D"/>
+                                <segue destination="yz8-Lf-Vmn" kind="show" identifier="GroupsToMember" id="sB8-bC-T7D"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1925,7 +1925,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yK8-Sl-3f3"/>
-        <segue reference="H3d-19-IFq"/>
+        <segue reference="sB8-bC-T7D"/>
         <segue reference="P8n-QY-8IH"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -176,7 +176,18 @@ class MapDisplayViewController: UIViewController, MKMapViewDelegate, CLLocationM
             }
         }
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+     if segue.identifier == "GroupsToMember" {
+        let group_ID = groupID
+        let groupDetailsViewController = segue.destination as! MembersViewController
+        groupDetailsViewController.groupID = group_ID
+      
+               
+         
+         
+     }
+    }
 
     /*
     // MARK: - Navigation
