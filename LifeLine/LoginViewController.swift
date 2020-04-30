@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
         let dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
         let loggedin = dict["loggedin"] as! String
         if (loggedin == "yes") {
+            self.view.addSubview(UIView().customActivityIndicator(view: self.view,backgroundColor: UIColor.green))
             let phone = dict["phone"] as! String
             LifeLineAPICaller().signin(phone: phone, password: dict["password"] as! String, resultLabel: resultLabel)
             if resultLabel.text != "success" {
@@ -55,6 +56,7 @@ class LoginViewController: UIViewController {
                     }
                 }
             }
+            self.view.subviews.last?.removeFromSuperview()
             self.performSegue(withIdentifier: "SignInSegue", sender: self)
         }
     }
