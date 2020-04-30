@@ -495,7 +495,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberViewCell" rowHeight="98" id="t99-Tw-MaP" customClass="MemberViewCell" customModule="LifeLine" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MemberViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberViewCell" rowHeight="98" id="t99-Tw-MaP" customClass="MemberViewCell" customModule="LifeLine" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="98"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t99-Tw-MaP" id="2aN-sM-lEJ">
@@ -538,7 +538,11 @@
                                                 <constraint firstItem="N0g-bz-276" firstAttribute="leading" secondItem="2aN-sM-lEJ" secondAttribute="leadingMargin" id="xkv-Z9-6nH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="MemberViewCell"/>
                                         <connections>
+                                            <outlet property="bodyLabel" destination="b5a-Dc-ktQ" id="QZ0-a1-LnA"/>
+                                            <outlet property="nameLabel" destination="lq1-VY-2kP" id="6rM-R6-q0e"/>
+                                            <outlet property="picture" destination="N0g-bz-276" id="Ent-uC-OLb"/>
                                             <segue destination="UNk-1k-h46" kind="show" id="dfh-Sc-D51"/>
                                         </connections>
                                     </tableViewCell>
@@ -557,6 +561,9 @@
                     <navigationItem key="navigationItem" id="adc-Pi-fHI">
                         <barButtonItem key="rightBarButtonItem" title="Temp" id="VSf-g6-cTw"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ugS-4b-2ai" id="dZe-4N-zrw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZU0-2t-RPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1295,7 +1302,7 @@
                                         <color key="backgroundColor" red="0.73333333329999995" green="0.87450980389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="GroupName" destination="MBg-mX-cIs" id="i5y-yS-lAG"/>
-                                            <segue destination="Lu7-uv-CM2" kind="show" identifier="GroupsToMap" id="wf7-BB-XkB"/>
+                                            <segue destination="yz8-Lf-Vmn" kind="show" identifier="GroupsToMembers" id="xjP-Ny-ie0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1714,6 +1721,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yK8-Sl-3f3"/>
+        <segue reference="H3d-19-IFq"/>
         <segue reference="r6d-e9-UMZ"/>
     </inferredMetricsTieBreakers>
     <resources>
