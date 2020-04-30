@@ -596,7 +596,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6FX-Ck-tVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1333.3333333333335" y="1551.5625"/>
+            <point key="canvasLocation" x="-1720" y="1878"/>
         </scene>
         <!--MembersViewController-->
         <scene sceneID="q7h-Ao-PTh">
@@ -639,6 +639,32 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.49067955949999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PCu-Zf-8dU">
+                                                    <rect key="frame" x="184" y="34" width="0.0" height="0.0"/>
+                                                    <subviews>
+                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuD-BG-c7Y">
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                                            <state key="normal" title="Delete"/>
+                                                        </button>
+                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMH-X4-BdQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                                            <state key="normal" title="View Member"/>
+                                                        </button>
+                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulc-NE-a5q">
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                                            <state key="normal" title="Add Zone"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huf-Vs-fdG">
+                                                    <rect key="frame" x="291" y="26" width="87" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Member info"/>
+                                                    <connections>
+                                                        <action selector="selectedItem:" destination="t99-Tw-MaP" eventType="touchUpInside" id="2t5-G4-sho"/>
+                                                        <action selector="showButtonItems:" destination="t99-Tw-MaP" eventType="touchUpInside" id="RUr-Se-R7s"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.73333333329999995" green="0.87450980389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -657,6 +683,9 @@
                                             <outlet property="nameLabel" destination="b5a-Dc-ktQ" id="D3J-1t-B8s"/>
                                             <outlet property="phoneLabel" destination="lq1-VY-2kP" id="k97-6b-QjC"/>
                                             <outlet property="photoImage" destination="N0g-bz-276" id="vLt-xv-Sbn"/>
+                                            <outletCollection property="Choice" destination="IuD-BG-c7Y" collectionClass="NSMutableArray" id="mma-WX-L2P"/>
+                                            <outletCollection property="Choice" destination="nMH-X4-BdQ" collectionClass="NSMutableArray" id="I5g-vz-9vD"/>
+                                            <outletCollection property="Choice" destination="Ulc-NE-a5q" collectionClass="NSMutableArray" id="Kxq-9L-Ycs"/>
                                             <segue destination="UNk-1k-h46" kind="show" id="dfh-Sc-D51"/>
                                         </connections>
                                     </tableViewCell>
@@ -741,7 +770,7 @@
                         <viewLayoutGuide key="safeArea" id="IRg-et-1Jv"/>
                     </view>
                     <navigationItem key="navigationItem" id="yYp-ZB-LOF">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Psg-tx-JC5">
+                        <barButtonItem key="rightBarButtonItem" title="Members" id="Psg-tx-JC5">
                             <connections>
                                 <segue destination="yz8-Lf-Vmn" kind="show" identifier="GroupsToMember" id="sB8-bC-T7D"/>
                             </connections>
