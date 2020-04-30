@@ -12,23 +12,15 @@ import Alamofire
 
 class ChatViewController: UIViewController {
 
-
-
-    /*------ Outlets + Variables ------*/
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
 
-
-    
-    var messages: [PFObject] = []
-
-    
-    var groupID: String = ""
     let userDict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+    var messages: [PFObject] = []
     var userName: String = ""
-    var timer = Timer()
+    var groupID: String = ""
     var groupNum = ""
-
+    var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,16 +30,12 @@ class ChatViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 50
-        // Reload messages every second (interval of 1 second) NOT WORKING
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.retrieveChatMessages), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.retrieveChatMessages), userInfo: nil, repeats: true)
         tableView.reloadData()
     }
 
-    /*------  Message Functionality ------*/
-
-    // TODO: ADD FUNCTIONALITY TO retrieveChatMessages()
     @objc func retrieveChatMessages() {
-        let query = PFQuery(className: groupNum) // className = group chat
+        let query = PFQuery(className: groupNum)
         query.addDescendingOrder("createdAt")
         query.limit = 20
         query.includeKey("user")
@@ -62,13 +50,10 @@ class ChatViewController: UIViewController {
         }
     }
 
-
-    // TODO: SEND MESSAGE TO SERVER AFTER onSend IS CLICKED
     @IBAction func onSend(_ sender: Any) {
-        // Send message
         if messageTextField.text!.isEmpty == false {
             print(groupNum)
-            let chatMessage = PFObject(className: groupNum) // className = group chat
+            let chatMessage = PFObject(className: groupNum)
             chatMessage["text"] = messageTextField.text ?? ""
             chatMessage["user"] = PFUser.current()
             chatMessage["nameField"] = self.userName
@@ -88,30 +73,28 @@ class ChatViewController: UIViewController {
         tableView.reloadData()
     }
     
-    // auto taccident
     func autoAccident(location: CLLocation, groupID: String){
-
-         let groupNum = "group" + groupID
-               let chatMessage = PFObject(className: groupNum) // className = group id
+        let groupNum = "group" + groupID
+        let chatMessage = PFObject(className: groupNum)
         chatMessage["text"] = " I may have been in an accident at \(location)"
-               chatMessage["nameField"] = self.userName
-               chatMessage["picture"] = userDict["picture"]
-               chatMessage["user"] = PFUser.current()
-               chatMessage.saveInBackground()
+        chatMessage["nameField"] = self.userName
+        chatMessage["picture"] = userDict["picture"]
+        chatMessage["user"] = PFUser.current()
+        chatMessage.saveInBackground()
     }
-    // methond to send a chat when a user is speeding
+
     func autoSpeedMessage(speed: String, location: CLLocation, groupID: String){
         let groupNum = "group" + groupID
-        let chatMessage = PFObject(className: groupNum) // className = group id
+        let chatMessage = PFObject(className: groupNum)
         chatMessage["text"] = "Speeding at \(speed) mph"
         chatMessage["nameField"] = self.userName
         chatMessage["picture"] = userDict["picture"]
         chatMessage["user"] = PFUser.current()
         chatMessage.saveInBackground()
     }
-    //method for map radius
+
     func autoGeoFenceMessage(location: CLLocation, groupID: String){
-         let groupNum = "group" + groupID
+        let groupNum = "group" + groupID
         let chatMessage = PFObject(className: groupNum)
         chatMessage["text"] = " left the geofence and is at: \(location) "
         chatMessage["user"] = PFUser.current()
@@ -120,41 +103,30 @@ class ChatViewController: UIViewController {
         chatMessage.saveInBackground()
     }
 
-    /*------ Dismiss Keyboard and Logout ------*/
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
 
-
     @IBAction func onLogout(_ sender: Any) {
         NotificationCenter.default.post(name: NSNotification.Name("didLogout"), object: nil)
     }
 
-
 }
-
-
-/*------ TableView Extension Functions ------*/
-struct Cells {
-    static let chatCell = "ChatCell"
-}
-
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 
-
+    struct Cells {
+        static let chatCell = "ChatCell"
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
 
-
-
-    // BONUS: IMPLEMENT CELL DIDSET
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: Cells.chatCell, for: indexPath) as! ChatCell
-
         let message = messages[indexPath.row]
         cell.messageLabel.text = message["text"] as? String
         cell.usernameLabel.text = message["nameField"] as? String
@@ -174,5 +146,4 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
-    
 }
