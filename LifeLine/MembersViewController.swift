@@ -52,6 +52,14 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
 		
     }
 	
+	func getDate(date: String) -> Date? {
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
+		dateFormatter.timeZone = TimeZone.current
+		dateFormatter.locale = Locale.current
+		return dateFormatter.date(from: "2015-04-01T11:42:00") // replace Date String
+	}
+	
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		let size = dict["size"] as? Int ?? 0
@@ -87,12 +95,20 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
 		let name = selectedUser["name"] as! String
 		let latitude = Double(selectedUser["latitude"] as! String)
 		let longitude = Double(selectedUser["longitude"] as! String)
-		
+		let lastUpdated = selectedUser["when"] as! String
+		/* Make the time user friendly from a String
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'0000"
+		let date = dateFormatter.date(from: lastUpdated)
+		print(date?.debugDescription)
+		*/
 		
 		let selectedUserLocation = CLLocation(latitude: latitude!, longitude: longitude!)
 		let region = MKCoordinateRegion(center: selectedUserLocation.coordinate, latitudinalMeters: 500.0, longitudinalMeters: 500.0)
 		
-		let userLocationAnnotation = UsersLocationAnnotation(title: name, subtitle: "Subtitle", coordinate: selectedUserLocation.coordinate)
+		let subtitleString = "Last updated: \(lastUpdated)"
+		
+		let userLocationAnnotation = UsersLocationAnnotation(title: name, subtitle: subtitleString, coordinate: selectedUserLocation.coordinate)
 		
 		mapView.addAnnotation(userLocationAnnotation)
 
@@ -112,6 +128,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
 				   annotationView.canShowCallout = true
 				   let button = UIButton(type: .detailDisclosure)
 				   annotationView.rightCalloutAccessoryView = button
+			
 				   
 				   return annotationView
 			   }
