@@ -27,9 +27,11 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view,backgroundColor: UIColor.green)) // Spinner start
         let dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
         let loggedin = dict["loggedin"] as! String
         if (loggedin == "yes") {
+            
             let phone = dict["phone"] as! String
             LifeLineAPICaller().signin(phone: phone, password: dict["password"] as! String, resultLabel: resultLabel)
             if resultLabel.text != "success" {
@@ -55,8 +57,10 @@ class LoginViewController: UIViewController {
                     }
                 }
             }
+            self.view.subviews.last?.removeFromSuperview()
             self.performSegue(withIdentifier: "SignInSegue", sender: self)
         }
+        self.view.subviews.last?.removeFromSuperview() // Spinner end
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -89,10 +93,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signinBtn(_ sender: Any) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view,backgroundColor: UIColor.green))
         let phone = self.phoneField.text!
         let password = self.passwordField.text!
         passwordField.text?.removeAll()
         LifeLineAPICaller().signin(phone: phone, password: password, resultLabel: resultLabel)
+        self.view.subviews.last?.removeFromSuperview()
     }
     
 }

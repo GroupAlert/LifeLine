@@ -13,6 +13,7 @@
 		0439775024494E7700E501D3 /* MapDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439774F24494E7700E501D3 /* MapDisplayViewController.swift */; };
 		043977522449500B00E501D3 /* Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043977512449500B00E501D3 /* Speed.swift */; };
 		043F207524162F8600F25D1D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F207424162F8600F25D1D /* SignUpViewController.swift */; };
+		048008D2245A4D8F006AE329 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048008D1245A4D8F006AE329 /* Spinner.swift */; };
 		0483B1292421A804003BF6DB /* ChangePhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483B1282421A804003BF6DB /* ChangePhoneViewController.swift */; };
 		0483B12B2421A819003BF6DB /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483B12A2421A819003BF6DB /* ChangePasswordViewController.swift */; };
 		048F8183242555060090FE28 /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F8182242555060090FE28 /* DeleteAccountViewController.swift */; };
@@ -66,6 +67,7 @@
 		0439774F24494E7700E501D3 /* MapDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDisplayViewController.swift; sourceTree = "<group>"; };
 		043977512449500B00E501D3 /* Speed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speed.swift; sourceTree = "<group>"; };
 		043F207424162F8600F25D1D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		048008D1245A4D8F006AE329 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		0483B1282421A804003BF6DB /* ChangePhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePhoneViewController.swift; sourceTree = "<group>"; };
 		0483B12A2421A819003BF6DB /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		048F8182242555060090FE28 /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				04938AAF24293E5900B82DFB /* GroupViewCell.swift */,
 				0494B0462415E32E0016DEE8 /* LifeLineAPICaller.swift */,
 				0494B0422415CFD30016DEE8 /* LoginViewController.swift */,
+				048008D1245A4D8F006AE329 /* Spinner.swift */,
 				0439774F24494E7700E501D3 /* MapDisplayViewController.swift */,
 				04DE23A1244FB878008E4DC6 /* MembersViewController.swift */,
 				04DE239F244FB526008E4DC6 /* MemberViewCell.swift */,
@@ -490,6 +493,7 @@
 				04928F2E24282F78002C3549 /* GroupsViewController.swift in Sources */,
 				04DE23A2244FB878008E4DC6 /* MembersViewController.swift in Sources */,
 				04EC0ED424525C3D00D27D8C /* GroupMemberViewController.swift in Sources */,
+				048008D2245A4D8F006AE329 /* Spinner.swift in Sources */,
 				04938AB22429424600B82DFB /* GroupDetailsViewController.swift in Sources */,
 				0494B0472415E32E0016DEE8 /* LifeLineAPICaller.swift in Sources */,
 				0439775024494E7700E501D3 /* MapDisplayViewController.swift in Sources */,
