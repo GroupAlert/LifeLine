@@ -74,14 +74,15 @@ class GroupsViewController: UIViewController, UITableViewDataSource, UITableView
             table.deselectRow(at: indexPath, animated: true)
         }
 		
-		if segue.identifier == "GroupsToMap" {
+		if segue.identifier == "GroupsToMembers" {
 			let cell = sender as! UITableViewCell
             let indexPath = table.indexPath(for: cell)!
             let group = dict[String(indexPath.row)] as! [String:Any]
 			let groupID = group["group_id"]
+			//print(group)
             
-            let mapDisplayViewController = segue.destination as! MapDisplayViewController
-			mapDisplayViewController.groupID = groupID as! String
+            let membersViewController = segue.destination as! MembersViewController
+			membersViewController.groupID = groupID as! String
             table.deselectRow(at: indexPath, animated: true)
 		}
     }
