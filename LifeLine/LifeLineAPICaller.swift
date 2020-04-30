@@ -12,7 +12,7 @@ import Alamofire
 
 class LifeLineAPICaller {
     
-    let baseURL = "http://ec2-54-241-187-187.us-west-1.compute.amazonaws.com/lifeline/"
+    let baseURL = "http://praveenv.org/lifeline/"
     
     func signin(phone:String, password:String, resultLabel:UILabel) {
         let url = baseURL + "person/personlogin.php"
@@ -248,7 +248,7 @@ class LifeLineAPICaller {
         }
         task.resume()
     }
-    //Test this with phone: 234, password: 234
+
     func getAccidentAlert(phone:String) {
         let url = baseURL + "group/groupaccidentalert.php"
         
@@ -266,6 +266,7 @@ class LifeLineAPICaller {
         }
         task.resume()
     }
+    
     func createGroup(groupName:String, phone:String){
         let url = baseURL + "group/groupinsert.php"
 
@@ -282,7 +283,86 @@ class LifeLineAPICaller {
             print(result)
         }
         task.resume()
+    }
+    
+    func changeRole(groupID:String, admin:String, member:String, role:String, resultLabel:UILabel) {
+        let url = baseURL + "group/groupmembersetrole.php"
+        
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        let postString = "group_id=\(groupID)&admin_phone=\(admin)&phone=\(member)&role=\(role)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
 
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            DispatchQueue.main.async {
+                let result = dataDictionary["result"] as? String
+                resultLabel.text = result
+            }
+        }
+        task.resume()
+    }
+    
+    func deleteMember(groupID:String, admin:String, member:String, resultLabel:UILabel) {
+        let url = baseURL + "group/groupmemberdelete.php"
+        
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        let postString = "group_id=\(groupID)&admin_phone=\(admin)&phone=\(member)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            DispatchQueue.main.async {
+                let result = dataDictionary["result"] as? String
+                resultLabel.text = result
+            }
+        }
+        task.resume()
+    }
+    
+    func changeGroupOwner(groupID:String, owner:String, newOwner:String, resultLabel:UILabel) {
+        let url = baseURL + "group/groupchangeowner.php"
+        
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        let postString = "group_id=\(groupID)&old_owner=\(owner)&new_owner=\(newOwner)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            DispatchQueue.main.async {
+                let result = dataDictionary["result"] as? String
+                resultLabel.text = result
+            }
+        }
+        task.resume()
+    }
+    
+    func changeGroupName(groupID:String, owner:String, name:String, resultLabel:UILabel) {
+        let url = baseURL + "group/groupsetname.php"
+        
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        let postString = "group_id=\(groupID)&owner_phone=\(owner)&name=\(name)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            DispatchQueue.main.async {
+                let result = dataDictionary["result"] as? String
+                resultLabel.text = result
+            }
+        }
+        task.resume()
     }
     
 }

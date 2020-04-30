@@ -10,21 +10,32 @@ import UIKit
 
 class GroupMemberViewController: UIViewController {
 
+    @IBOutlet weak var picture: UIImageView!
+    @IBOutlet weak var roleField: UITextField!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var result: UILabel!
+    @IBOutlet weak var roles: UIPickerView!
+    
+    var group: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        // Do any additional setup after loading the view.
+    @IBAction func setRole(_ sender: Any) {
+        let user = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+        let adminStr = user["phone"] as! String
+        let phoneStr = phone.text!
+        let role = roleField.text!
+        LifeLineAPICaller().changeRole(groupID: group, admin: adminStr, member: phoneStr, role: role, resultLabel: result)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func removeUser(_ sender: Any) {
+        let user = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+        let adminStr = user["phone"] as! String
+        let phoneStr = phone.text!
+        LifeLineAPICaller().deleteMember(groupID: group, admin: adminStr, member: phoneStr, resultLabel: result)
     }
-    */
-
+    
 }
