@@ -1346,6 +1346,9 @@
                                 <state key="normal" title="Create Group">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.49067955949999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="CreateGroupButton:" destination="ubh-au-Zun" eventType="touchUpInside" id="oaD-db-PJK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ch-kx-7Xf">
                                 <rect key="frame" x="183" y="780" width="48" height="21"/>
@@ -1374,6 +1377,9 @@
                         <viewLayoutGuide key="safeArea" id="xxA-Z9-Une"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Group" id="AaG-0T-hqm"/>
+                    <connections>
+                        <outlet property="GroupNameField" destination="VGn-TT-CvS" id="9sQ-25-MSF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fsc-UN-dKT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
