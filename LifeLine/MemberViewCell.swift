@@ -10,6 +10,10 @@ import UIKit
 
 class MemberViewCell: UITableViewCell {
 
+    @IBOutlet weak var photoImage: UIImageView!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

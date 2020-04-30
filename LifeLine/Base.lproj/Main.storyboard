@@ -654,6 +654,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="nameLabel" destination="b5a-Dc-ktQ" id="D3J-1t-B8s"/>
+                                            <outlet property="phoneLabel" destination="lq1-VY-2kP" id="k97-6b-QjC"/>
+                                            <outlet property="photoImage" destination="N0g-bz-276" id="vLt-xv-Sbn"/>
                                             <segue destination="UNk-1k-h46" kind="show" id="dfh-Sc-D51"/>
                                         </connections>
                                     </tableViewCell>
@@ -672,6 +675,9 @@
                     <navigationItem key="navigationItem" id="adc-Pi-fHI">
                         <barButtonItem key="rightBarButtonItem" title="Temp" id="VSf-g6-cTw"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="ugS-4b-2ai" id="HrF-sL-k9U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZU0-2t-RPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -734,7 +740,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="IRg-et-1Jv"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yYp-ZB-LOF"/>
+                    <navigationItem key="navigationItem" id="yYp-ZB-LOF">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Psg-tx-JC5">
+                            <connections>
+                                <segue destination="yz8-Lf-Vmn" kind="show" id="sB8-bC-T7D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="9yR-Ab-1SK" id="ddl-rE-DWh"/>
                     </connections>
@@ -1429,7 +1441,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.73333333329999995" green="0.87450980389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="GroupName" destination="MBg-mX-cIs" id="i5y-yS-lAG"/>
+                                            <outlet property="groupName" destination="MBg-mX-cIs" id="PGj-z5-aGS"/>
                                             <segue destination="Lu7-uv-CM2" kind="show" identifier="GroupsToMap" id="wf7-BB-XkB"/>
                                         </connections>
                                     </tableViewCell>
@@ -1913,6 +1925,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yK8-Sl-3f3"/>
+        <segue reference="H3d-19-IFq"/>
         <segue reference="P8n-QY-8IH"/>
     </inferredMetricsTieBreakers>
     <resources>
