@@ -16,17 +16,7 @@ class MemberViewCell: UITableViewCell {
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-		/* Get the picture 
-		let pictureUrl = URL(string: dict["picture"] as! String)!
-		Alamofire.request(pictureUrl).responseData { (response) in
-		if response.error == nil {
-			print(response.result)
-				if let data = response.data {
-					self.picture.image = UIImage(data: data)
-				}
-			}
-		}
- */
+		
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

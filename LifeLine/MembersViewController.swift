@@ -5,7 +5,7 @@
 //  Created by Praveen V on 4/21/20.
 //  Copyright © 2020 Praveen Vandeyar. All rights reserved.
 //
-
+import Alamofire
 import UIKit
 
 class MembersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -55,6 +55,16 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
 		print(groupMember)
 		let name = groupMember["name"] as! String
 		let phone = groupMember["phone"] as! String
+		
+		let pictureUrl = URL(string: groupMember["picture"] as! String)!
+			Alamofire.request(pictureUrl).responseData { (response) in
+			if response.error == nil {
+				print(response.result)
+					if let data = response.data {
+						cell.picture.image = UIImage(data: data)
+					}
+				}
+			}
 		
 		cell.nameLabel.text = name
 		cell.bodyLabel.text = phone
