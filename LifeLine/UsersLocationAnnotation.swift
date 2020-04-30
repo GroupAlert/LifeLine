@@ -6,7 +6,6 @@
 //  Copyright © 2020 Praveen Vandeyar. All rights reserved.
 //
 
-
 import UIKit
 import MapKit
 
@@ -27,4 +26,3 @@ class UsersLocationAnnotation: NSObject, MKAnnotation {
         title = newTitle
     }
 }
-
