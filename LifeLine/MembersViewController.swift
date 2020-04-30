@@ -27,6 +27,9 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
 		
 		tableView.dataSource = self
 		tableView.delegate = self
+		mapView.delegate = self
+		mapView.showsUserLocation = true
+		
 		 
 		
 	let url = URL(string: LifeLineAPICaller().baseURL + "group/groupmembergetmembers.php")!
@@ -77,6 +80,43 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
 		cell.bodyLabel.text = phone
 		
 		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let selectedUser = dict[String(indexPath.row)] as! [String:Any]
+		let name = selectedUser["name"] as! String
+		let latitude = Double(selectedUser["latitude"] as! String)
+		let longitude = Double(selectedUser["longitude"] as! String)
+		
+		
+		let selectedUserLocation = CLLocation(latitude: latitude!, longitude: longitude!)
+		let region = MKCoordinateRegion(center: selectedUserLocation.coordinate, latitudinalMeters: 500.0, longitudinalMeters: 500.0)
+		
+		let userLocationAnnotation = UsersLocationAnnotation(title: name, subtitle: "Subtitle", coordinate: selectedUserLocation.coordinate)
+		
+		mapView.addAnnotation(userLocationAnnotation)
+
+		
+		mapView.setRegion(region, animated: true)
+	}
+	
+	func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+		
+		if annotation.isKind(of: MKUserLocation.self) {
+			return nil
+		}
+		 if annotation.isKind(of: UsersLocationAnnotation.self) {
+				   let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "userPin")
+
+				   annotationView.pinTintColor = UIColor.green
+				   annotationView.canShowCallout = true
+				   let button = UIButton(type: .detailDisclosure)
+				   annotationView.rightCalloutAccessoryView = button
+				   
+				   return annotationView
+			   }
+
+			   return nil
 	}
     
 

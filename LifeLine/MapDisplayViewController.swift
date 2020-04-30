@@ -66,7 +66,8 @@ class MapDisplayViewController: UIViewController, MKMapViewDelegate, CLLocationM
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
             checkLocationAuthorization()
-        }
+
+		}
 
     }
 
