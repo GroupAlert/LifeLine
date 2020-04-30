@@ -5,11 +5,14 @@
 //  Created by Praveen V on 4/21/20.
 //  Copyright © 2020 Praveen Vandeyar. All rights reserved.
 //
+import CoreLocation
+import MapKit
 import Alamofire
 import UIKit
 
-class MembersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MembersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate  {
 	
+	@IBOutlet var mapView: MKMapView!
 	@IBOutlet var tableView: UITableView!
 	
 	var groupID = String()
@@ -17,6 +20,10 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
 		
 		tableView.dataSource = self
 		tableView.delegate = self

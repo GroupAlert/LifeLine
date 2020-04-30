@@ -491,8 +491,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ugS-4b-2ai">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ugS-4b-2ai">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="314"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MemberViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberViewCell" rowHeight="98" id="t99-Tw-MaP" customClass="MemberViewCell" customModule="LifeLine" customModuleProvider="target">
@@ -548,6 +548,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GxR-Mq-XNO">
+                                <rect key="frame" x="0.0" y="322" width="414" height="486"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -562,6 +566,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Temp" id="VSf-g6-cTw"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="mapView" destination="GxR-Mq-XNO" id="0uk-Hb-BxW"/>
                         <outlet property="tableView" destination="ugS-4b-2ai" id="dZe-4N-zrw"/>
                     </connections>
                 </viewController>
