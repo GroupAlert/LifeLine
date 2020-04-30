@@ -266,5 +266,23 @@ class LifeLineAPICaller {
         }
         task.resume()
     }
+    func createGroup(groupName:String, phone:String){
+        let url = baseURL + "group/groupinsert.php"
+
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        let postString = "phone=\(phone)&name=\(groupName)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            let result = dataDictionary["result"] as! String
+            print(result)
+        }
+        task.resume()
+
+    }
     
 }
