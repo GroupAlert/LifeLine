@@ -21,7 +21,7 @@ class LifeLineAPICaller {
         request.httpMethod = "POST"
         let postString = "phone=\(phone)&acc_pass=\(password)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
-
+        
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -39,10 +39,10 @@ class LifeLineAPICaller {
         request.httpMethod = "POST"
         let postString = "phone=\(phone)&name=\(name)&acc_pass=\(password)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
-
+        
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
-
+            
             var dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
             dataDictionary["password"] = password
             self.setUserInfo(number: phone, dict: dataDictionary, label: resultLabel)
@@ -52,7 +52,7 @@ class LifeLineAPICaller {
     
     func changePicture(phone:String, image: Data?, resultLabel:UILabel) {
         let url = baseURL + "person/personpictureupload.php"
-
+        
         let parameters = ["phone": phone]
         
         Alamofire.upload(
@@ -61,7 +61,7 @@ class LifeLineAPICaller {
                     multipartFormData.append(val.data(using: String.Encoding.utf8)!, withName: key)
                 }
                 multipartFormData.append(image!, withName: "fileToUpload", fileName: "poop.png", mimeType: "image/png")
-            },
+        },
             to: url,
             encodingCompletion: { encodingResult in
                 switch encodingResult {
@@ -77,7 +77,7 @@ class LifeLineAPICaller {
                 case .failure(let encodingError):
                     print(encodingError)
                 }
-            }
+        }
         )
     }
     
@@ -88,7 +88,7 @@ class LifeLineAPICaller {
         request.httpMethod = "POST"
         let postString = "phone=\(phone)&name=\(name)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
-
+        
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -108,7 +108,7 @@ class LifeLineAPICaller {
         request.httpMethod = "POST"
         let postString = "phone=\(phone)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
-
+        
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -128,7 +128,7 @@ class LifeLineAPICaller {
         request.httpMethod = "POST"
         let postString = "old_phone=\(oldPhone)&new_phone=\(newPhone)&acc_pass=\(password)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
-
+        
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -165,7 +165,7 @@ class LifeLineAPICaller {
         request.httpMethod = "POST"
         let postString = "phone=\(phone)&old_pass=\(oldPassword)&new_pass=\(newPassword)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
-
+        
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -191,7 +191,7 @@ class LifeLineAPICaller {
         request.httpMethod = "POST"
         let postString = "phone=\(phone)&acc_pass=\(password)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
-
+        
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -218,7 +218,7 @@ class LifeLineAPICaller {
         request.httpMethod = "POST"
         let postString = "phone=\(phone)&latitude=\(latitude)&longitude=\(longitude)&when=\(when)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
-
+        
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -236,7 +236,7 @@ class LifeLineAPICaller {
         request.httpMethod = "POST"
         let postString = "phone=\(phone)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
-
+        
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -256,7 +256,7 @@ class LifeLineAPICaller {
         request.httpMethod = "POST"
         let postString = "phone=\(phone)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
-
+        
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -265,6 +265,25 @@ class LifeLineAPICaller {
             print(result)
         }
         task.resume()
+    }
+    
+    func createGroup(groupName:String, phone:String){
+        let url = baseURL + "group/groupinsert.php"
+        
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        let postString = "phone=\(phone)&name=\(groupName)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            let result = dataDictionary["result"] as! String
+            print(result)
+        }
+        task.resume()
+        
     }
     
 }

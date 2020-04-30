@@ -7,24 +7,42 @@
 //
 
 import UIKit
+import Parse
 
 class AddGroupViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var GroupNameField: UITextField!
+    var dict = NSDictionary()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        let userinfo = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+//        let phone = userinfo["phone"]
+        let user = PFUser()
+     
+        
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func AddGroupButton(_ sender: Any) {
+        let name = GroupNameField.text!
+        let userinfo = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+               let phone = userinfo["phone"]
+           
+        if (name == nil ){
+            print("needs to not be empty")
+                   
+        }else{
+            LifeLineAPICaller().createGroup(groupName: name, phone: phone as! String)
+        }
     }
-    */
-
+    
+    
+    
+    
+    
+    
+    
 }
