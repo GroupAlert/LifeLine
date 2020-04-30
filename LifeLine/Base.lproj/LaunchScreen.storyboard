@@ -15,10 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LL Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="6px-rc-e2l">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Wallpaper5" translatesAutoresizingMaskIntoConstraints="NO" id="6px-rc-e2l">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LL Icon2" translatesAutoresizingMaskIntoConstraints="NO" id="MTT-Wo-pZP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LL Icon5" translatesAutoresizingMaskIntoConstraints="NO" id="MTT-Wo-pZP">
                                 <rect key="frame" x="32" y="225" width="350" height="350"/>
                             </imageView>
                         </subviews>
@@ -42,7 +42,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LL Icon2" width="1050" height="1050"/>
-        <image name="LL Wallpaper" width="1125" height="2436"/>
+        <image name="LL Icon5" width="391" height="393"/>
+        <image name="Wallpaper5" width="1125" height="2436"/>
     </resources>
 </document>
