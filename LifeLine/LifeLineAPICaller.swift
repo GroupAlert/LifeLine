@@ -383,4 +383,40 @@ class LifeLineAPICaller {
         task.resume()
     }
     
+    func addZone(groupID:String, admin:String, member:String, latitude:String, longitude:String, start:String, end:String, radius:Double, safe:Int, resultLabel:UILabel) {
+        let url = baseURL + "zone/zoneinsert.php"
+        
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        let postString = "group_id=\(groupID)&admin_phone=\(admin)&phone=\(member)&latitude=\(latitude)&longitude=\(longitude)&timing_start=\(start)&timing_end=\(end)&radius=\(radius)&safe=\(safe)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            let result = dataDictionary["result"] as! String
+            resultLabel.text = result
+        }
+        task.resume()
+    }
+        
+    func deleteZone(groupID:String, admin:String, member:String, latitude:String, longitude:String, resultLabel:UILabel) {
+        let url = baseURL + "zone/zonedelete.php"
+        
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        let postString = "group_id=\(groupID)&admin_phone=\(admin)&phone=\(member)&latitude=\(latitude)&longitude=\(longitude)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            let result = dataDictionary["result"] as! String
+            resultLabel.text = result
+        }
+        task.resume()
+    }
+    
 }
