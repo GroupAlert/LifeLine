@@ -42,6 +42,7 @@ class GroupsViewController: UIViewController, UITableViewDataSource, UITableView
            }
         }
         task.resume()
+		
         //AccelerometerController().startGyros()
         //AccelerometerController().testAccelerometer()
     }
