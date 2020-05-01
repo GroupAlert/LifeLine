@@ -27,7 +27,8 @@ class AccountSettingsViewController: UIViewController {
         self.phone.text = (self.dict["phone"] as! String)
         
         let pictureUrl = URL(string: dict["picture"] as! String)!
-
+        
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view, backgroundColor: UIColor.green))
         Alamofire.request(pictureUrl).responseData { (response) in
             if response.error == nil {
                 print(response.result)
@@ -36,6 +37,7 @@ class AccountSettingsViewController: UIViewController {
                     }
                 }
             }
+        self.view.subviews.last?.removeFromSuperview()
     }
     
     @IBAction func defaultPicture(_ sender: Any) {

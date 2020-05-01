@@ -10,14 +10,14 @@ import UIKit
 
 class GroupMemberViewController: UIViewController {
 
+    var group = String()
+    
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var roleField: UITextField!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var result: UILabel!
     @IBOutlet weak var roles: UIPickerView!
-    
-    var group: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

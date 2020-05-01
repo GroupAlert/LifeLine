@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -508,6 +508,9 @@
                                 <state key="normal" title="Set Role">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="setRole:" destination="UNk-1k-h46" eventType="touchUpInside" id="DxG-Wh-bcZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-hP-NWf">
                                 <rect key="frame" x="129" y="645" width="156" height="24"/>
@@ -516,6 +519,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Delete Member"/>
+                                <connections>
+                                    <action selector="removeUser:" destination="UNk-1k-h46" eventType="touchUpInside" id="xwJ-sT-Ih6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kld-s9-dcE">
                                 <rect key="frame" x="69" y="565" width="277" height="34"/>
@@ -547,6 +553,11 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7l-bu-Auf">
+                                <rect key="frame" x="230" y="577" width="154" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -593,6 +604,14 @@
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="name" destination="fh2-Jc-zDe" id="Azl-PC-tVE"/>
+                        <outlet property="phone" destination="kld-s9-dcE" id="RXj-mZ-hEY"/>
+                        <outlet property="picture" destination="rfG-iM-UXE" id="09K-jz-mfG"/>
+                        <outlet property="result" destination="Zsg-Cg-gus" id="U9M-M2-nrJ"/>
+                        <outlet property="roleField" destination="BTL-sn-EgG" id="mQG-bv-abg"/>
+                        <outlet property="roles" destination="c7l-bu-Auf" id="rB7-qa-OeL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6FX-Ck-tVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -709,9 +728,6 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Settings" id="lHw-y5-9UP">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <segue destination="yz8-Lf-Vmn" kind="show" id="H3d-19-IFq"/>
-                                </connections>
                             </barButtonItem>
                             <barButtonItem title="Chat" id="KLe-9K-Yik">
                                 <connections>
@@ -744,7 +760,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="IRg-et-1Jv"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yYp-ZB-LOF"/>
+                    <navigationItem key="navigationItem" id="yYp-ZB-LOF">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="e7r-Hy-3fK">
+                            <connections>
+                                <segue destination="yz8-Lf-Vmn" kind="show" id="kYq-Pa-fBc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="9yR-Ab-1SK" id="ddl-rE-DWh"/>
                     </connections>
@@ -877,6 +899,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Wallpaper5" translatesAutoresizingMaskIntoConstraints="NO" id="EzQ-lr-zpu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQa-jZ-ufF">
                                 <rect key="frame" x="104" y="162" width="115" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -982,10 +1008,6 @@
                                 <rect key="frame" x="114" y="629" width="183" height="46"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Wallpaper5" translatesAutoresizingMaskIntoConstraints="NO" id="EzQ-lr-zpu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7wN-I1-QA0"/>
@@ -1931,7 +1953,11 @@
         <image name="LL Icon5" width="391" height="393"/>
         <image name="LL Logo2" width="500" height="174"/>
         <image name="Wallpaper5" width="1125" height="2436"/>
-        <image name="camera" catalog="system" width="128" height="96"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="camera" catalog="system" width="64" height="48"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yK8-Sl-3f3"/>
+        <segue reference="P8n-QY-8IH"/>
+    </inferredMetricsTieBreakers>
 </document>
