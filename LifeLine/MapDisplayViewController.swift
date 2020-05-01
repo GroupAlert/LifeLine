@@ -4,7 +4,7 @@
 //  Created by Stephen Baity on 3/7/20.
 //  Copyright © 2020 GroupAlert. All rights reserved.
 //commit
-
+/*
 import UIKit
 import MapKit
 import CoreLocation
@@ -95,7 +95,9 @@ class MapDisplayViewController: UIViewController, MKMapViewDelegate, CLLocationM
     }
 
     func checkLocationAuthorization() {
-        switch CLLocationManager.authorizationStatus() {
+
+		print("starting update of location")
+		switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
 			locationManager.startUpdatingLocation()
             centerViewOnUserLocation()
@@ -188,3 +190,4 @@ class MapDisplayViewController: UIViewController, MKMapViewDelegate, CLLocationM
     */
 
 }
+*/

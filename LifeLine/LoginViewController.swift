@@ -31,9 +31,14 @@ class LoginViewController: UIViewController {
         let dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
         let loggedin = dict["loggedin"] as! String
         if (loggedin == "yes") {
-            
+			
+		
             let phone = dict["phone"] as! String
             LifeLineAPICaller().signin(phone: phone, password: dict["password"] as! String, resultLabel: resultLabel)
+			
+			Location.manager.checkLocationServices()
+			
+			
             if resultLabel.text != "success" {
                 return
             }
@@ -98,6 +103,8 @@ class LoginViewController: UIViewController {
         let password = self.passwordField.text!
         passwordField.text?.removeAll()
         LifeLineAPICaller().signin(phone: phone, password: password, resultLabel: resultLabel)
+		Location.manager.checkLocationServices()
+
         self.view.subviews.last?.removeFromSuperview()
     }
     
