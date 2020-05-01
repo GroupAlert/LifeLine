@@ -86,7 +86,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
 			}
 		
 		cell.nameLabel.text = name
-		cell.bodyLabel.text = phone
+		cell.phoneLabel.text = phone
 		
 		return cell
 	}
