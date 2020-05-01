@@ -12,8 +12,7 @@ extension UIView{
     
     func customActivityIndicator(view: UIView, widthView: CGFloat? = nil,backgroundColor: UIColor? = nil, message: String? = nil,colorMessage:UIColor? = nil ) -> UIView {
 
-        //Config UIView
-        self.backgroundColor = UIColor.white.withAlphaComponent(0.5) // UIColor is color and alpha component is transparency
+        self.backgroundColor = UIColor.black.withAlphaComponent(0.7) // UIColor is color and alpha component is transparency
 
         var selfWidth = view.frame.width
         if widthView != nil{
@@ -26,14 +25,14 @@ extension UIView{
         let loopImages = UIImageView()
 
         //ConfigCustomLoading with secuence images
-        let imageListArray = [UIImage(named:"LL Icon"),UIImage(named:"LL Icon2")] // This is an array, keep adding images to add to the animation
+        let imageListArray = [UIImage(named:"Load_1"), UIImage(named:"Load_2"), UIImage(named:"Load_3"), UIImage(named:"Load_4"), UIImage(named:"Load_5"), UIImage(named:"Load_6"), UIImage(named:"Load_7"), UIImage(named:"Load_8")] // This is an array, keep adding images to add to the animation
         loopImages.animationImages = imageListArray as? [UIImage]
-        loopImages.animationDuration = TimeInterval(1.3) // Seconds between each image
+        loopImages.animationDuration = TimeInterval(0.3) // Seconds between each image
         loopImages.startAnimating()
-        let imageFrameX = (selfWidth / 2) - 17 // Placement of image
-        let imageFrameY = (selfHeigh / 2) - 35 // Placement of image
-        var imageWidth = CGFloat(35) // Size of image
-        var imageHeight = CGFloat(35) // Size of image
+        let imageFrameX = (selfWidth / 2) - 75 // Placement of image
+        let imageFrameY = (selfHeigh / 2) - 150 // Placement of image
+        var imageWidth = CGFloat(150) // Size of image
+        var imageHeight = CGFloat(150) // Size of image
 
         if widthView != nil{
             imageWidth = widthView ?? imageWidth
