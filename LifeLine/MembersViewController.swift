@@ -136,7 +136,16 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
 
 			   return nil
 	}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
+     if segue.identifier == "GroupsToChat" {
+         
+        let membersViewController = segue.destination as! ChatViewController
+         membersViewController.groupID = groupID
+         
+         
+     }
+    }
 
     /*
     // MARK: - Navigation

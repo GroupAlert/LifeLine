@@ -469,7 +469,7 @@
                                 <rect key="frame" x="0.0" y="-88" width="414" height="1018"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsg-Cg-gus">
-                                <rect key="frame" x="179" y="696" width="56" height="24"/>
+                                <rect key="frame" x="179" y="647" width="56" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="BpD-sw-9y9"/>
                                 </constraints>
@@ -478,7 +478,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rfG-iM-UXE">
-                                <rect key="frame" x="107" y="125.5" width="200" height="158"/>
+                                <rect key="frame" x="107" y="125.5" width="200" height="109"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyQ-PR-0N4">
@@ -513,7 +513,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-hP-NWf">
-                                <rect key="frame" x="129" y="591" width="156" height="24"/>
+                                <rect key="frame" x="129" y="542" width="156" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Sys-I1-3wH"/>
                                 </constraints>
@@ -724,9 +724,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7PR-3t-pbj"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="adc-Pi-fHI">
-                        <barButtonItem key="rightBarButtonItem" title="Temp" id="VSf-g6-cTw"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Chat" id="b3u-ef-EDo" userLabel="Chat">
+                                <connections>
+                                    <segue destination="AUy-Wy-pbG" kind="show" identifier="GroupsToChat" id="k2R-E0-xO2"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Temp" id="VSf-g6-cTw"/>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="CrW-AO-bSt" id="573-Up-Hhj"/>
                         <outlet property="tableView" destination="ugS-4b-2ai" id="rV6-4m-0e1"/>
@@ -759,11 +768,7 @@
                             <barButtonItem title="Settings" id="lHw-y5-9UP">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
-                            <barButtonItem title="Chat" id="KLe-9K-Yik">
-                                <connections>
-                                    <segue destination="AUy-Wy-pbG" kind="showDetail" identifier="GroupsToChat" id="kpE-Ox-04g"/>
-                                </connections>
-                            </barButtonItem>
+                            <barButtonItem title="Chat" id="KLe-9K-Yik"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -1955,14 +1960,7 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="gWP-PV-Cpa"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="w2W-2p-1ld">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="GlU-4q-u8K">
-                            <color key="tintColor" red="0.99215686270000003" green="0.6705882353" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="onLogout:" destination="AUy-Wy-pbG" id="EmT-Mb-JZx"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="w2W-2p-1ld"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="messageTextField" destination="s9D-DG-t0U" id="PtU-nC-lWs"/>
