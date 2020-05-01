@@ -17,9 +17,9 @@ class ChatViewController: UIViewController {
 
     let userDict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
     var messages: [PFObject] = []
-    var userName: String = ""
-    var groupID: String = ""
-    var groupNum = ""
+    var userName = String()
+    var groupID = String()
+    var groupNum  = String()
     var timer = Timer()
 
     override func viewDidLoad() {

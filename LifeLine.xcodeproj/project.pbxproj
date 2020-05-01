@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04010633242079420085F3E3 /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04010632242079420085F3E3 /* AccountSettingsViewController.swift */; };
 		04099FFE2458D69800139366 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04099FFD2458D69800139366 /* RoundButton.swift */; };
+		04114332245B918C009499A1 /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04114331245B918C009499A1 /* AddMemberViewController.swift */; };
 		0439774E24494D3500E501D3 /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439774D24494D3500E501D3 /* Accelerometer.swift */; };
 		0439775024494E7700E501D3 /* MapDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439774F24494E7700E501D3 /* MapDisplayViewController.swift */; };
 		043977522449500B00E501D3 /* Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043977512449500B00E501D3 /* Speed.swift */; };
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		04010632242079420085F3E3 /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
 		04099FFD2458D69800139366 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		04114331245B918C009499A1 /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
 		0439774D24494D3500E501D3 /* Accelerometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accelerometer.swift; sourceTree = "<group>"; };
 		0439774F24494E7700E501D3 /* MapDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDisplayViewController.swift; sourceTree = "<group>"; };
 		043977512449500B00E501D3 /* Speed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speed.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				0439774D24494D3500E501D3 /* Accelerometer.swift */,
 				04010632242079420085F3E3 /* AccountSettingsViewController.swift */,
 				04DE239D244FADD7008E4DC6 /* AddGroupViewController.swift */,
+				04114331245B918C009499A1 /* AddMemberViewController.swift */,
 				0494B0122415CD9A0016DEE8 /* AppDelegate.swift */,
 				0491A29924244AAA00A3A404 /* Archiver.swift */,
 				0483B12A2421A819003BF6DB /* ChangePasswordViewController.swift */,
@@ -479,6 +482,7 @@
 				0483B1292421A804003BF6DB /* ChangePhoneViewController.swift in Sources */,
 				04EC0ED624525CA600D27D8C /* ZonesViewController.swift in Sources */,
 				0483B12B2421A819003BF6DB /* ChangePasswordViewController.swift in Sources */,
+				04114332245B918C009499A1 /* AddMemberViewController.swift in Sources */,
 				04928F2C24282F1C002C3549 /* ForgotPasswordViewController.swift in Sources */,
 				70646940244F76E0009A6E3A /* ChatCell.swift in Sources */,
 				0494B0432415CFD30016DEE8 /* LoginViewController.swift in Sources */,

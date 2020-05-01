@@ -365,4 +365,22 @@ class LifeLineAPICaller {
         task.resume()
     }
     
+    func addMember(groupID:String, admin:String, member:String, role:String, resultLabel:UILabel) {
+        let url = baseURL + "group/groupmemberinsert.php"
+        
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        let postString = "group_id=\(groupID)&admin_phone=\(admin)&phone=\(member)&role=\(role)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            let result = dataDictionary["result"] as! String
+            resultLabel.text = result
+        }
+        task.resume()
+    }
+    
 }
