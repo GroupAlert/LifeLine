@@ -12,13 +12,30 @@ class MemberViewCell: UITableViewCell {
 
 	@IBOutlet var picture: UIImageView!
 	@IBOutlet var nameLabel: UILabel!
-	@IBOutlet var bodyLabel: UILabel!
+	@IBOutlet var phoneLabel: UILabel!
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
 		
     }
+    @IBOutlet var Choice: [UIButton]!
+    
+    @IBAction func handleSelection(_ sender: UIButton) {
+        Choice.forEach { (button) in
+            UIView.animate(withDuration: 0.5, animations:{
+                button.isHidden = !button.isHidden
+            })
+        }
+    }
+    
 
+    
+    @IBAction func selectedItem(_ sender: UIButton) {
+        let title = sender.currentTitle
+              print(title)
+        
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

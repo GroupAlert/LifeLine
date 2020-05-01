@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -622,7 +622,7 @@
             <objects>
                 <viewController title="MembersViewController" id="yz8-Lf-Vmn" customClass="MembersViewController" customModule="LifeLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c6a-hx-ci1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ugS-4b-2ai">
@@ -658,6 +658,32 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.49067955949999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="N7h-9h-8bS">
+                                                    <rect key="frame" x="316" y="35" width="44" height="30"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amE-fP-o0C">
+                                                            <rect key="frame" x="0.0" y="0.0" width="44" height="30"/>
+                                                            <state key="normal" title="more"/>
+                                                            <connections>
+                                                                <action selector="handleSelection:" destination="t99-Tw-MaP" eventType="touchUpInside" id="j0X-IE-gb5"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75Z-ND-3nW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="44" height="0.0"/>
+                                                            <state key="normal" title="Profile"/>
+                                                            <connections>
+                                                                <action selector="selectedItem:" destination="t99-Tw-MaP" eventType="touchUpInside" id="R3A-li-CTo"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rq-sz-Qdg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="44" height="0.0"/>
+                                                            <state key="normal" title="Zones"/>
+                                                            <connections>
+                                                                <action selector="selectedItem:" destination="t99-Tw-MaP" eventType="touchUpInside" id="fhE-fi-lSd"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.73333333329999995" green="0.87450980389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -676,12 +702,14 @@
                                             <outlet property="bodyLabel" destination="b5a-Dc-ktQ" id="2rQ-ae-mnx"/>
                                             <outlet property="nameLabel" destination="lq1-VY-2kP" id="DLa-Oc-oIH"/>
                                             <outlet property="picture" destination="N0g-bz-276" id="Ndw-TE-fAY"/>
+                                            <outletCollection property="Choice" destination="75Z-ND-3nW" collectionClass="NSMutableArray" id="hrV-ae-bKr"/>
+                                            <outletCollection property="Choice" destination="0rq-sz-Qdg" collectionClass="NSMutableArray" id="dba-8h-Or5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CrW-AO-bSt">
-                                <rect key="frame" x="0.0" y="327" width="414" height="481"/>
+                                <rect key="frame" x="0.0" y="313" width="414" height="481"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
@@ -1945,7 +1973,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yK8-Sl-3f3"/>
-        <segue reference="ii0-AG-Vbn"/>
+        <segue reference="kYq-Pa-fBc"/>
         <segue reference="P8n-QY-8IH"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1953,11 +1981,7 @@
         <image name="LL Icon5" width="391" height="393"/>
         <image name="LL Logo2" width="500" height="174"/>
         <image name="Wallpaper5" width="1125" height="2436"/>
-        <image name="camera" catalog="system" width="64" height="48"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="yK8-Sl-3f3"/>
-        <segue reference="P8n-QY-8IH"/>
-    </inferredMetricsTieBreakers>
 </document>
