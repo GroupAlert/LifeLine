@@ -11,16 +11,19 @@ import UIKit
 class GroupMemberViewController: UIViewController {
 
     var group = String()
+    var member = [String:Any]()
     
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var roleField: UITextField!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var result: UILabel!
-    @IBOutlet weak var roles: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(group)
+        name.text = group
+        print(member)
     }
 
     @IBAction func setRole(_ sender: Any) {
