@@ -462,14 +462,14 @@
             <objects>
                 <viewController title="GroupMemberViewController" id="UNk-1k-h46" customClass="GroupMemberViewController" customModule="LifeLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8iv-wS-DF7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Wallpaper5" translatesAutoresizingMaskIntoConstraints="NO" id="cgD-Nc-0Iz">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="984"/>
+                                <rect key="frame" x="0.0" y="-88" width="414" height="1018"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsg-Cg-gus">
-                                <rect key="frame" x="179" y="750" width="56" height="24"/>
+                                <rect key="frame" x="179" y="696" width="56" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="BpD-sw-9y9"/>
                                 </constraints>
@@ -478,7 +478,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rfG-iM-UXE">
-                                <rect key="frame" x="107" y="169.5" width="200" height="168"/>
+                                <rect key="frame" x="107" y="125.5" width="200" height="158"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyQ-PR-0N4">
@@ -513,7 +513,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-hP-NWf">
-                                <rect key="frame" x="129" y="645" width="156" height="24"/>
+                                <rect key="frame" x="129" y="591" width="156" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Sys-I1-3wH"/>
                                 </constraints>
@@ -673,6 +673,7 @@
                                                             <state key="normal" title="Profile"/>
                                                             <connections>
                                                                 <action selector="selectedItem:" destination="t99-Tw-MaP" eventType="touchUpInside" id="R3A-li-CTo"/>
+                                                                <segue destination="UNk-1k-h46" kind="show" id="FU3-kc-ARk"/>
                                                             </connections>
                                                         </button>
                                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rq-sz-Qdg">
@@ -680,6 +681,7 @@
                                                             <state key="normal" title="Zones"/>
                                                             <connections>
                                                                 <action selector="selectedItem:" destination="t99-Tw-MaP" eventType="touchUpInside" id="fhE-fi-lSd"/>
+                                                                <segue destination="VM9-Hk-RAA" kind="show" id="44I-oe-6hi"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -699,8 +701,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="bodyLabel" destination="b5a-Dc-ktQ" id="2rQ-ae-mnx"/>
                                             <outlet property="nameLabel" destination="lq1-VY-2kP" id="DLa-Oc-oIH"/>
+                                            <outlet property="phoneLabel" destination="b5a-Dc-ktQ" id="2rQ-ae-mnx"/>
                                             <outlet property="picture" destination="N0g-bz-276" id="Ndw-TE-fAY"/>
                                             <outletCollection property="Choice" destination="75Z-ND-3nW" collectionClass="NSMutableArray" id="hrV-ae-bKr"/>
                                             <outletCollection property="Choice" destination="0rq-sz-Qdg" collectionClass="NSMutableArray" id="dba-8h-Or5"/>
@@ -1050,7 +1052,7 @@
             <objects>
                 <viewController title="ZonesViewController" id="VM9-Hk-RAA" customClass="ZonesViewController" customModule="LifeLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="drO-oK-JSH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sE7-Sq-4RN">
@@ -1062,6 +1064,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5S3-o6-9MB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="biz-X0-L0P"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXH-BC-TfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
