@@ -419,4 +419,51 @@ class LifeLineAPICaller {
         task.resume()
     }
     
+    func leaveGroup(groupID:String, phone:String, resultLabel:UILabel) {
+        let url = baseURL + "group/groupmemberleave.php"
+        
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        let postString = "group_id=\(groupID)&phone=\(phone)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
+            let result = dataDictionary["result"] as! String
+            resultLabel.text = result
+        }
+        task.resume()
+    }
+    
+    func changeGroupPicture(groupID:String, image: Data?, resultLabel:UILabel) {
+        let url = baseURL + "group/grouppictureupload.php"
+
+        let parameters = ["group_id": groupID]
+        
+        Alamofire.upload(
+            multipartFormData: { multipartFormData in
+                for (key, val) in parameters {
+                    multipartFormData.append(val.data(using: String.Encoding.utf8)!, withName: key)
+                }
+                multipartFormData.append(image!, withName: "fileToUpload", fileName: "poop.png", mimeType: "image/png")
+            },
+            to: url,
+            encodingCompletion: { encodingResult in
+                switch encodingResult {
+                case .success(let upload, _, _):
+                    upload.responseJSON { response in
+                        if var dataDictionary = response.result.value as? [String: Any] {
+                            let result = dataDictionary["result"] as! String
+                            resultLabel.text = result
+                        }
+                    }
+                case .failure(let encodingError):
+                    print(encodingError)
+                }
+            }
+        )
+    }
+    
 }
