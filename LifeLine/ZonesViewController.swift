@@ -46,11 +46,11 @@ class ZonesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let zone = zones[String(indexPath.row)] as! [String:Any]
-        let latitude = zone["latitude"] as! String
-        let longitude = zone["longitude"] as! String
+        let latitude = zone["latitude"] as! Double
+        let longitude = zone["longitude"] as! Double
         let start = zone["timing_start"] as! String
         let end = zone["timing_end"] as! String
-        let radius = zone["radius"] as! String
+        let radius = zone["radius"] as! Double
         let safe = zone["safe"] as! Bool
         
         let cell = UITableViewCell()

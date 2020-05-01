@@ -8,38 +8,28 @@
 import Alamofire
 import UIKit
 
+protocol MyCustomCellDelegator {
+    func callSegueFromCell(myData dataobject: AnyObject)
+}
+
 class MemberViewCell: UITableViewCell {
+    
+    var delegate:MyCustomCellDelegator!
 
 	@IBOutlet var picture: UIImageView!
 	@IBOutlet var nameLabel: UILabel!
 	@IBOutlet var phoneLabel: UILabel!
-	override func awakeFromNib() {
+    @IBOutlet weak var roleLabel: UILabel!
+    
+    @IBOutlet weak var profileBtn: UIButton!
+    @IBOutlet weak var zonesBtn: UIButton!
+    
+    override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-		
-    }
-    @IBOutlet var Choice: [UIButton]!
-    
-    @IBAction func handleSelection(_ sender: UIButton) {
-        Choice.forEach { (button) in
-            UIView.animate(withDuration: 0.5, animations:{
-                button.isHidden = !button.isHidden
-            })
-        }
-    }
-    
-
-    
-    @IBAction func selectedItem(_ sender: UIButton) {
-        let title = sender.currentTitle
-              print(title)
-        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
 }

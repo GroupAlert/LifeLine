@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		04010633242079420085F3E3 /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04010632242079420085F3E3 /* AccountSettingsViewController.swift */; };
 		04099FFE2458D69800139366 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04099FFD2458D69800139366 /* RoundButton.swift */; };
+		040D4CA2245CC45500FA9EEB /* UICollectionView+indexPathForView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4CA1245CC45500FA9EEB /* UICollectionView+indexPathForView.swift */; };
+		040D4CA4245CC4BE00FA9EEB /* UITableView+indexPathForView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4CA3245CC4BE00FA9EEB /* UITableView+indexPathForView.swift */; };
+		040D4CA6245CD48300FA9EEB /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4CA5245CD48300FA9EEB /* RoundImage.swift */; };
 		04114332245B918C009499A1 /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04114331245B918C009499A1 /* AddMemberViewController.swift */; };
 		0439774E24494D3500E501D3 /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439774D24494D3500E501D3 /* Accelerometer.swift */; };
 		0439775024494E7700E501D3 /* MapDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439774F24494E7700E501D3 /* MapDisplayViewController.swift */; };
@@ -68,6 +71,9 @@
 		03FF27B7276404DDF8BDC030 /* Pods-LifeLineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLineTests.debug.xcconfig"; path = "Target Support Files/Pods-LifeLineTests/Pods-LifeLineTests.debug.xcconfig"; sourceTree = "<group>"; };
 		04010632242079420085F3E3 /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
 		04099FFD2458D69800139366 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		040D4CA1245CC45500FA9EEB /* UICollectionView+indexPathForView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+indexPathForView.swift"; sourceTree = "<group>"; };
+		040D4CA3245CC4BE00FA9EEB /* UITableView+indexPathForView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+indexPathForView.swift"; sourceTree = "<group>"; };
+		040D4CA5245CD48300FA9EEB /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		04114331245B918C009499A1 /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
 		0439774D24494D3500E501D3 /* Accelerometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accelerometer.swift; sourceTree = "<group>"; };
 		0439774F24494E7700E501D3 /* MapDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDisplayViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +190,7 @@
 				7064693D244F768B009A6E3A /* ChatViewController.swift */,
 				048F8182242555060090FE28 /* DeleteAccountViewController.swift */,
 				04099FFD2458D69800139366 /* RoundButton.swift */,
+				040D4CA5245CD48300FA9EEB /* RoundImage.swift */,
 				04928F2B24282F1C002C3549 /* ForgotPasswordViewController.swift */,
 				04938AB12429424600B82DFB /* GroupDetailsViewController.swift */,
 				04EC0ED324525C3D00D27D8C /* GroupMemberViewController.swift */,
@@ -199,6 +206,8 @@
 				043F207424162F8600F25D1D /* SignUpViewController.swift */,
 				043977512449500B00E501D3 /* Speed.swift */,
 				048008D1245A4D8F006AE329 /* Spinner.swift */,
+				040D4CA1245CC45500FA9EEB /* UICollectionView+indexPathForView.swift */,
+				040D4CA3245CC4BE00FA9EEB /* UITableView+indexPathForView.swift */,
 				958EF87E245B75E600338308 /* UsersLocationAnnotation.swift */,
 				04EC0ED524525CA600D27D8C /* ZonesViewController.swift */,
 				0494B01D2415CD9C0016DEE8 /* LaunchScreen.storyboard */,
@@ -504,6 +513,7 @@
 				048F8183242555060090FE28 /* DeleteAccountViewController.swift in Sources */,
 				04099FFE2458D69800139366 /* RoundButton.swift in Sources */,
 				043977522449500B00E501D3 /* Speed.swift in Sources */,
+				040D4CA4245CC4BE00FA9EEB /* UITableView+indexPathForView.swift in Sources */,
 				0491A29A24244AAA00A3A404 /* Archiver.swift in Sources */,
 				04928F2E24282F78002C3549 /* GroupsViewController.swift in Sources */,
 				04DE23A2244FB878008E4DC6 /* MembersViewController.swift in Sources */,
@@ -512,12 +522,14 @@
 				04938AB22429424600B82DFB /* GroupDetailsViewController.swift in Sources */,
 				0494B0472415E32E0016DEE8 /* LifeLineAPICaller.swift in Sources */,
 				958EF87F245B75E600338308 /* UsersLocationAnnotation.swift in Sources */,
+				040D4CA6245CD48300FA9EEB /* RoundImage.swift in Sources */,
 				0439775024494E7700E501D3 /* MapDisplayViewController.swift in Sources */,
 				0439774E24494D3500E501D3 /* Accelerometer.swift in Sources */,
 				043F207524162F8600F25D1D /* SignUpViewController.swift in Sources */,
 				7064693E244F768B009A6E3A /* ChatViewController.swift in Sources */,
 				04DE239E244FADD7008E4DC6 /* AddGroupViewController.swift in Sources */,
 				04010633242079420085F3E3 /* AccountSettingsViewController.swift in Sources */,
+				040D4CA2245CC45500FA9EEB /* UICollectionView+indexPathForView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
