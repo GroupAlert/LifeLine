@@ -162,9 +162,9 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         if segue.identifier == "MembersToZones" {
-            let memberViewController = segue.destination as! ZonesViewController
-            memberViewController.groupID = groupID
-            memberViewController.phone = member["phone"] as! String
+            let zonesViewController = segue.destination as! ZonesViewController
+            zonesViewController.groupID = groupID
+            zonesViewController.phone = member["phone"] as! String
         }
     }
     
