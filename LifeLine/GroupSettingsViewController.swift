@@ -10,12 +10,13 @@ import UIKit
 
 class GroupSettingsViewController: UIViewController {
     @IBOutlet weak var photo: UIImageView!
-    @IBOutlet weak var groupNameFiels: UITextField!
+    @IBOutlet weak var groupNameField: UITextField!
     @IBOutlet weak var ResultLabel: UILabel!
     var groupID = String()
     var userType = String()
     var phone = String()
     var dict = [String:Any]()
+    var groupDict = [String:Any]()
     let userDict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
     
     override func viewDidLoad() {
@@ -32,14 +33,17 @@ class GroupSettingsViewController: UIViewController {
                 print(error.localizedDescription)
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                self.dict = dataDictionary
+                self.groupDict = dataDictionary
+          
             }
         }
         task.resume()
-        print(dict)
+        print("groupDicr:")
+        print( self.groupDict)
     }
     @IBAction func deleteGroup(_ sender: UIButton) {
-        let adminPhone = dict["admin"] as! String
+        
+        let adminPhone = dict["role"] as! String
         if ( self.phone == adminPhone){
             
             LifeLineAPICaller().deleteGroup(groupID: self.groupID, phone: self.phone, resultLabel: self.ResultLabel)
@@ -55,6 +59,6 @@ class GroupSettingsViewController: UIViewController {
     }
     
     @IBAction func UpdateName(_ sender: UIButton) {
-        LifeLineAPICaller().changeGroupName(groupID: self.groupID, owner: self.phone, name: self.groupNameFiels.text!, resultLabel: self.ResultLabel)
+        LifeLineAPICaller().changeGroupName(groupID: self.groupID, owner: self.phone, name: self.groupNameField.text!, resultLabel: self.ResultLabel)
     }
 }
