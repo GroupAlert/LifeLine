@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 import AlamofireImage
 
 class GroupSettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
