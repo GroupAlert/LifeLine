@@ -14,7 +14,6 @@
 		040D4CA6245CD48300FA9EEB /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D4CA5245CD48300FA9EEB /* RoundImage.swift */; };
 		04114332245B918C009499A1 /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04114331245B918C009499A1 /* AddMemberViewController.swift */; };
 		0439774E24494D3500E501D3 /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439774D24494D3500E501D3 /* Accelerometer.swift */; };
-		0439775024494E7700E501D3 /* MapDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0439774F24494E7700E501D3 /* MapDisplayViewController.swift */; };
 		043977522449500B00E501D3 /* Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043977512449500B00E501D3 /* Speed.swift */; };
 		043F207524162F8600F25D1D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F207424162F8600F25D1D /* SignUpViewController.swift */; };
 		048008D2245A4D8F006AE329 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048008D1245A4D8F006AE329 /* Spinner.swift */; };
@@ -77,7 +76,6 @@
 		040D4CA5245CD48300FA9EEB /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		04114331245B918C009499A1 /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
 		0439774D24494D3500E501D3 /* Accelerometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accelerometer.swift; sourceTree = "<group>"; };
-		0439774F24494E7700E501D3 /* MapDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDisplayViewController.swift; sourceTree = "<group>"; };
 		043977512449500B00E501D3 /* Speed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speed.swift; sourceTree = "<group>"; };
 		043F207424162F8600F25D1D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		048008D1245A4D8F006AE329 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 		0494B0112415CD9A0016DEE8 /* LifeLine */ = {
 			isa = PBXGroup;
 			children = (
-				700FA84D245D12D8005F8D26 /* GroupSettingsViewController.swift */,
 				0494B01B2415CD9C0016DEE8 /* Assets.xcassets */,
 				0439774D24494D3500E501D3 /* Accelerometer.swift */,
 				04010632242079420085F3E3 /* AccountSettingsViewController.swift */,
@@ -198,10 +195,10 @@
 				04EC0ED324525C3D00D27D8C /* GroupMemberViewController.swift */,
 				04928F2D24282F78002C3549 /* GroupsViewController.swift */,
 				04938AAF24293E5900B82DFB /* GroupViewCell.swift */,
+				700FA84D245D12D8005F8D26 /* GroupSettingsViewController.swift */,
 				0494B0462415E32E0016DEE8 /* LifeLineAPICaller.swift */,
 				95E9893C245B812800624F82 /* Location.swift */,
 				0494B0422415CFD30016DEE8 /* LoginViewController.swift */,
-				0439774F24494E7700E501D3 /* MapDisplayViewController.swift */,
 				04DE23A1244FB878008E4DC6 /* MembersViewController.swift */,
 				04DE239F244FB526008E4DC6 /* MemberViewCell.swift */,
 				0494B0142415CD9A0016DEE8 /* SceneDelegate.swift */,
@@ -212,10 +209,10 @@
 				040D4CA3245CC4BE00FA9EEB /* UITableView+indexPathForView.swift */,
 				958EF87E245B75E600338308 /* UsersLocationAnnotation.swift */,
 				04EC0ED524525CA600D27D8C /* ZonesViewController.swift */,
+				95EE366B245D0919009ACEBF /* ZoneViewCell.swift */,
 				0494B01D2415CD9C0016DEE8 /* LaunchScreen.storyboard */,
 				0494B0182415CD9A0016DEE8 /* Main.storyboard */,
 				0494B0202415CD9C0016DEE8 /* Info.plist */,
-				95EE366B245D0919009ACEBF /* ZoneViewCell.swift */,
 			);
 			path = LifeLine;
 			sourceTree = "<group>";
@@ -526,7 +523,6 @@
 				0494B0472415E32E0016DEE8 /* LifeLineAPICaller.swift in Sources */,
 				958EF87F245B75E600338308 /* UsersLocationAnnotation.swift in Sources */,
 				040D4CA6245CD48300FA9EEB /* RoundImage.swift in Sources */,
-				0439775024494E7700E501D3 /* MapDisplayViewController.swift in Sources */,
 				0439774E24494D3500E501D3 /* Accelerometer.swift in Sources */,
 				043F207524162F8600F25D1D /* SignUpViewController.swift in Sources */,
 				7064693E244F768B009A6E3A /* ChatViewController.swift in Sources */,
