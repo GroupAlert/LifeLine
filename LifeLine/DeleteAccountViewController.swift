@@ -21,6 +21,7 @@ class DeleteAccountViewController: UIViewController {
     }
     
     @IBAction func deleteAccount(_ sender: Any) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view, backgroundColor: UIColor.green))
         let acknowledge = acknowledgeSwitch.isOn
         let phone = phoneLabel.text!
         let password = passwordField.text!
@@ -30,6 +31,7 @@ class DeleteAccountViewController: UIViewController {
         } else {
             resultLabel.text = "Click the acknowledge switch"
         }
+        self.view.subviews.last?.removeFromSuperview()
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {

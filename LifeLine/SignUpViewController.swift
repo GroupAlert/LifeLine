@@ -24,12 +24,12 @@ class SignUpViewController: UIViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if resultLabel.text == "success" {
+            self.view.addSubview(UIView().customActivityIndicator(view: self.view, backgroundColor: UIColor.green))
             let phone = phoneField.text
             let user = PFUser()
             user.username = phone
             user.password = phone
             user.signUpInBackground { (success, error) in
-                //UIViewController.removeSpinner(spinner: sv)
                 if success{
                     user.saveInBackground()
                     print("Created PFUser")
@@ -44,11 +44,13 @@ class SignUpViewController: UIViewController {
             passwordField.text?.removeAll()
             password2Field.text?.removeAll()
             resultLabel.text = ""
+            self.view.subviews.last?.removeFromSuperview()
             self.performSegue(withIdentifier: "SignUpSegue", sender: self)
         }
     }
     
     @IBAction func submitBtn(_ sender: Any) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view, backgroundColor: UIColor.green))
         let phone = phoneField.text!
         let name = nameField.text!
         let password = passwordField.text!
@@ -60,6 +62,7 @@ class SignUpViewController: UIViewController {
             return
         }
         LifeLineAPICaller().signup(phone: phone, name: name, password: password, resultLabel: resultLabel)
+        self.view.subviews.last?.removeFromSuperview()
     }
 
 }
