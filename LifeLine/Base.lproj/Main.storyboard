@@ -465,8 +465,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Wallpaper5" translatesAutoresizingMaskIntoConstraints="NO" id="TNf-eA-PDg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsg-Cg-gus">
-                                <rect key="frame" x="179" y="829" width="56" height="24"/>
+                                <rect key="frame" x="179" y="775" width="56" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="1Ai-v3-tlJ"/>
                                 </constraints>
@@ -540,7 +543,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-hP-NWf">
-                                <rect key="frame" x="129" y="779" width="156" height="24"/>
+                                <rect key="frame" x="129" y="725" width="156" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="B3E-ES-OSZ"/>
                                 </constraints>
@@ -680,6 +683,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnt-rv-iU0">
                                                     <rect key="frame" x="320" y="42.5" width="78" height="25"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+
                                                     <state key="normal" title="View Zones">
                                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -1500,9 +1504,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nNN-5L-4X6">
+<<<<<<< Updated upstream
 
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="95" id="hQL-w7-KBI"/>
+=======
+                                                    <rect key="frame" x="21" y="7" width="95" height="95"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="95" id="Hrl-nl-poc"/>
+>>>>>>> Stashed changes
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds " value="YES"/>
@@ -1512,22 +1522,41 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-mX-cIs">
+<<<<<<< Updated upstream
 
+=======
+                                                    <rect key="frame" x="132" y="24" width="262" height="61"/>
+>>>>>>> Stashed changes
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="270" id="Mrk-eD-wlD"/>
                                                     </constraints>
+<<<<<<< Updated upstream
 
+=======
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
+                                                    <color key="textColor" red="1" green="0.6958744147" blue="0.67716474400000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+>>>>>>> Stashed changes
                                                     <color key="highlightedColor" red="0.73333333329999995" green="0.87450980389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+<<<<<<< Updated upstream
                                                 <constraint firstItem="nNN-5L-4X6" firstAttribute="top" secondItem="Um8-af-sEm" secondAttribute="topMargin" constant="-4" id="GZ9-Jk-3HR"/>
                                                 <constraint firstItem="MBg-mX-cIs" firstAttribute="top" secondItem="Um8-af-sEm" secondAttribute="topMargin" constant="13" id="KUb-K5-jla"/>
                                                 <constraint firstItem="nNN-5L-4X6" firstAttribute="leading" secondItem="Um8-af-sEm" secondAttribute="leadingMargin" constant="-6" id="SBO-Hp-1rX"/>
                                                 <constraint firstItem="nNN-5L-4X6" firstAttribute="centerY" secondItem="MBg-mX-cIs" secondAttribute="centerY" id="cEn-dd-8f1"/>
                                                 <constraint firstItem="MBg-mX-cIs" firstAttribute="leading" secondItem="nNN-5L-4X6" secondAttribute="trailing" constant="17" id="faH-h6-qAf"/>
                                                 <constraint firstItem="nNN-5L-4X6" firstAttribute="centerY" secondItem="Um8-af-sEm" secondAttribute="centerY" id="hS0-JH-t8o"/>
+=======
+                                                <constraint firstItem="MBg-mX-cIs" firstAttribute="centerY" secondItem="nNN-5L-4X6" secondAttribute="centerY" id="G2Z-cD-bTJ"/>
+                                                <constraint firstItem="nNN-5L-4X6" firstAttribute="top" secondItem="Um8-af-sEm" secondAttribute="topMargin" constant="-4" id="Gwz-ZX-Db2"/>
+                                                <constraint firstItem="MBg-mX-cIs" firstAttribute="leading" secondItem="nNN-5L-4X6" secondAttribute="trailing" constant="16" id="HYQ-Pf-YNC"/>
+                                                <constraint firstItem="MBg-mX-cIs" firstAttribute="trailing" secondItem="Um8-af-sEm" secondAttribute="trailingMargin" id="NCk-k2-NqI"/>
+                                                <constraint firstItem="nNN-5L-4X6" firstAttribute="centerY" secondItem="Um8-af-sEm" secondAttribute="centerY" id="dkH-pp-Hnj"/>
+                                                <constraint firstItem="nNN-5L-4X6" firstAttribute="leading" secondItem="Um8-af-sEm" secondAttribute="leadingMargin" constant="1" id="vLB-Cb-khC"/>
+                                                <constraint firstItem="MBg-mX-cIs" firstAttribute="top" secondItem="Um8-af-sEm" secondAttribute="topMargin" constant="13" id="x0d-VK-t6i"/>
+>>>>>>> Stashed changes
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2139,7 +2168,11 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yK8-Sl-3f3"/>
+<<<<<<< Updated upstream
 
+=======
+        <segue reference="P8n-QY-8IH"/>
+>>>>>>> Stashed changes
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LL Icon5" width="391" height="393"/>
