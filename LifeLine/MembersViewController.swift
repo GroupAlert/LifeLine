@@ -23,7 +23,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         result.addObserver(self, forKeyPath: "text", options: [.old, .new], context: nil)
-
+        
         tableView.dataSource = self
         tableView.delegate = self
         mapView.delegate = self
@@ -89,7 +89,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.zonesBtn.addTarget(self, action: #selector(zoneButtonTapped(_:)), for: .touchUpInside)
         return cell
     }
-
+    
     @IBAction func memberButtonTapped(_ button: UIButton) {
         if let indexPath = self.tableView.indexPathForView(button) {
             member = dict[String(indexPath.row)] as! [String:Any]
@@ -162,6 +162,11 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
             zonesViewController.groupID = groupID
             zonesViewController.phone = member["phone"] as! String
         }
+        if segue.identifier == "MembersToSettings" {
+            let GroupSettingsViewController = segue.destination as! GroupSettingsViewController
+            GroupSettingsViewController.groupID = groupID             //GroupSettingsViewController.member = member
+            
+        }
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -175,3 +180,4 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 }
+ 
