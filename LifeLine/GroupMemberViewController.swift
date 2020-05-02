@@ -23,22 +23,25 @@ class GroupMemberViewController: UIViewController {
         super.viewDidLoad()
         print(group)
         name.text = group
-        print(member)
     }
 
     @IBAction func setRole(_ sender: Any) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view, backgroundColor: UIColor.green))
         let user = Archiver().getObject(fileName: "userinfo") as! NSDictionary
         let adminStr = user["phone"] as! String
         let phoneStr = phone.text!
         let role = roleField.text!
         LifeLineAPICaller().changeRole(groupID: group, admin: adminStr, member: phoneStr, role: role, resultLabel: result)
+        self.view.subviews.last?.removeFromSuperview()
     }
     
     @IBAction func removeUser(_ sender: Any) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view, backgroundColor: UIColor.green))
         let user = Archiver().getObject(fileName: "userinfo") as! NSDictionary
         let adminStr = user["phone"] as! String
         let phoneStr = phone.text!
         LifeLineAPICaller().deleteMember(groupID: group, admin: adminStr, member: phoneStr, resultLabel: result)
+        self.view.subviews.last?.removeFromSuperview()
     }
     
 }

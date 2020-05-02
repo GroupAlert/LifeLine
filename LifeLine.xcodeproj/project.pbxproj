@@ -25,7 +25,6 @@
 		04928F2C24282F1C002C3549 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04928F2B24282F1C002C3549 /* ForgotPasswordViewController.swift */; };
 		04928F2E24282F78002C3549 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04928F2D24282F78002C3549 /* GroupsViewController.swift */; };
 		04938AB024293E5900B82DFB /* GroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04938AAF24293E5900B82DFB /* GroupViewCell.swift */; };
-		04938AB22429424600B82DFB /* GroupDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04938AB12429424600B82DFB /* GroupDetailsViewController.swift */; };
 		0494B0132415CD9A0016DEE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494B0122415CD9A0016DEE8 /* AppDelegate.swift */; };
 		0494B0152415CD9A0016DEE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494B0142415CD9A0016DEE8 /* SceneDelegate.swift */; };
 		0494B01A2415CD9A0016DEE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0494B0182415CD9A0016DEE8 /* Main.storyboard */; };
@@ -87,7 +86,6 @@
 		04928F2B24282F1C002C3549 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		04928F2D24282F78002C3549 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		04938AAF24293E5900B82DFB /* GroupViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewCell.swift; sourceTree = "<group>"; };
-		04938AB12429424600B82DFB /* GroupDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailsViewController.swift; sourceTree = "<group>"; };
 		0494B00F2415CD9A0016DEE8 /* LifeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0494B0122415CD9A0016DEE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0494B0142415CD9A0016DEE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 				04099FFD2458D69800139366 /* RoundButton.swift */,
 				040D4CA5245CD48300FA9EEB /* RoundImage.swift */,
 				04928F2B24282F1C002C3549 /* ForgotPasswordViewController.swift */,
-				04938AB12429424600B82DFB /* GroupDetailsViewController.swift */,
 				04EC0ED324525C3D00D27D8C /* GroupMemberViewController.swift */,
 				04928F2D24282F78002C3549 /* GroupsViewController.swift */,
 				04938AAF24293E5900B82DFB /* GroupViewCell.swift */,
@@ -519,7 +516,6 @@
 				04DE23A2244FB878008E4DC6 /* MembersViewController.swift in Sources */,
 				04EC0ED424525C3D00D27D8C /* GroupMemberViewController.swift in Sources */,
 				048008D2245A4D8F006AE329 /* Spinner.swift in Sources */,
-				04938AB22429424600B82DFB /* GroupDetailsViewController.swift in Sources */,
 				0494B0472415E32E0016DEE8 /* LifeLineAPICaller.swift in Sources */,
 				958EF87F245B75E600338308 /* UsersLocationAnnotation.swift in Sources */,
 				040D4CA6245CD48300FA9EEB /* RoundImage.swift in Sources */,

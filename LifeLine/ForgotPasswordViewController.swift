@@ -15,11 +15,13 @@ class ForgotPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
+    }        
     
     @IBAction func resetPassword(_ sender: Any) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view, backgroundColor: UIColor.green))
         let phone = phoneField.text!
         LifeLineAPICaller().forgetPassword(phone: phone, resultLabel: resultLabel)
+        self.view.subviews.last?.removeFromSuperview()
     }
     
 }

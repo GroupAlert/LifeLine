@@ -34,6 +34,7 @@ class AccountSettingsViewController: UIViewController {
                 print(response.result)
                     if let data = response.data {
                         self.picture.image = UIImage(data: data)
+                        self.picture.setRounded()
                     }
                 }
             }
@@ -41,22 +42,26 @@ class AccountSettingsViewController: UIViewController {
     }
     
     @IBAction func defaultPicture(_ sender: Any) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view,backgroundColor: UIColor.green))
         LifeLineAPICaller().deletePicture(phone: (self.dict["phone"] as! String), resultLabel: self.result)
+        self.view.subviews.last?.removeFromSuperview()
     }
     
     @IBAction func updatePicture(_ sender: Any) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view,backgroundColor: UIColor.green))
         let image = self.picture.image!
         LifeLineAPICaller().changePicture(phone: (self.dict["phone"] as! String), image: image.pngData(), resultLabel: self.result)
+        self.view.subviews.last?.removeFromSuperview()
     }
     
     @IBAction func updateName(_ sender: Any) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view,backgroundColor: UIColor.green))
         LifeLineAPICaller().changeName(phone: self.phone.text!, name: self.name.text!, resultLabel: self.result)
+        self.view.subviews.last?.removeFromSuperview()
     }
     
     @IBAction func signOut(_ sender: Any) {
-        //let sv = UIViewController.displaySpinner(onView: self.view)
         PFUser.logOutInBackground { (error: Error?) in
-            //UIViewController.removeSpinner(spinner: sv)
             if (error != nil) {
                 if let descrip = error?.localizedDescription{
                     print(descrip)

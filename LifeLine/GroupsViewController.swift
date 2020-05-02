@@ -68,23 +68,10 @@ class GroupsViewController: UIViewController, UITableViewDataSource, UITableView
                 }
             }
         }
-        
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
-        if segue.identifier == "GroupsToGroup" {
-            let cell = sender as! UITableViewCell
-            let indexPath = table.indexPath(for: cell)!
-            let group = dict[String(indexPath.row)] as! [String:Any]
-            
-            let detailsViewController = segue.destination as! GroupDetailsViewController
-            detailsViewController.group = group
-            
-            table.deselectRow(at: indexPath, animated: true)
-        }
-		
 		if segue.identifier == "GroupsToMembers" {
 			let cell = sender as! UITableViewCell
             let indexPath = table.indexPath(for: cell)!
