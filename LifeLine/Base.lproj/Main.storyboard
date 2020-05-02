@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -126,7 +126,7 @@
                                     <segue destination="YMN-bG-Npk" kind="showDetail" id="Rq9-VM-TgY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySq-7U-FtG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySq-7U-FtG">
                                 <rect key="frame" x="69" y="518" width="277" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="N9g-ZK-xei"/>
@@ -605,7 +605,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ji8-pU-L84"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ukv-JH-Pie"/>
+                    <navigationItem key="navigationItem" title="Member" id="Ukv-JH-Pie"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
                             <integer key="value" value="20"/>
@@ -772,14 +772,14 @@
                         <viewLayoutGuide key="safeArea" id="7PR-3t-pbj"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="adc-Pi-fHI">
+                    <navigationItem key="navigationItem" title="Members" id="adc-Pi-fHI">
                         <rightBarButtonItems>
-                            <barButtonItem title="Chat" id="b3u-ef-EDo" userLabel="Chat">
+                            <barButtonItem title="Chat" image="message.fill" catalog="system" id="b3u-ef-EDo" userLabel="Chat">
                                 <connections>
                                     <segue destination="AUy-Wy-pbG" kind="show" identifier="MembersToChat" id="k2R-E0-xO2"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Settings" id="VSf-g6-cTw">
+                            <barButtonItem title="Settings" image="gear" catalog="system" id="VSf-g6-cTw">
                                 <connections>
                                     <segue destination="AqJ-co-O5R" kind="show" identifier="MembersToSettings" id="0KJ-iH-RPh"/>
                                 </connections>
@@ -953,7 +953,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpJ-Mg-skK">
-                                <rect key="frame" x="174" y="480" width="49" height="31"/>
+                                <rect key="frame" x="174" y="480" width="51" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="TXi-5Z-6zU"/>
                                     <constraint firstAttribute="width" constant="49" id="Yus-H9-CwD"/>
@@ -1160,8 +1160,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5S3-o6-9MB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="biz-X0-L0P">
-                        <barButtonItem key="rightBarButtonItem" title="Add Zone" id="QtI-h0-JZX"/>
+                    <navigationItem key="navigationItem" title="Zones" id="biz-X0-L0P">
+                        <barButtonItem key="rightBarButtonItem" title="Add Zone" image="plus.circle.fill" catalog="system" id="QtI-h0-JZX"/>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="0D9-2y-iLw" id="NiT-NY-RgE"/>
@@ -1624,7 +1624,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="270" id="Mrk-eD-wlD"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="highlightedColor" red="0.73333333329999995" green="0.87450980389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
@@ -1663,13 +1663,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Groups" id="K3t-LE-0hL">
                         <barButtonItem key="leftBarButtonItem" title="Settings" image="person.fill" catalog="system" id="8K9-mc-Gqi">
-                            <color key="tintColor" red="1" green="0.6958744147" blue="0.67716474400000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="805-61-AOF" kind="show" id="Er4-Cl-E8d"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="New Group" id="qDY-i8-VDm">
-                            <color key="tintColor" red="1" green="0.6958744147" blue="0.67716474400000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="rightBarButtonItem" title="New Group" image="plus.circle.fill" catalog="system" id="qDY-i8-VDm">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="ubh-au-Zun" kind="show" id="mve-ME-QQc"/>
                             </connections>
@@ -1975,13 +1975,15 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ntl-XT-tYj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.24295502899999999" green="0.60877490040000004" blue="0.83214575049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" red="1" green="0.6958744147" blue="0.67716474400000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2102,7 +2104,7 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="gWP-PV-Cpa"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="w2W-2p-1ld"/>
+                    <navigationItem key="navigationItem" title="Chat" id="w2W-2p-1ld"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="messageTextField" destination="s9D-DG-t0U" id="PtU-nC-lWs"/>
@@ -2278,15 +2280,18 @@
             <point key="canvasLocation" x="-1314" y="1552"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="rJJ-x2-YB4"/>
-        <segue reference="P8n-QY-8IH"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="LL Icon5" width="391" height="393"/>
         <image name="LL Logo3" width="500" height="174"/>
         <image name="Wallpaper5" width="1125" height="2436"/>
-        <image name="camera" catalog="system" width="128" height="96"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="camera" catalog="system" width="64" height="48"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="message.fill" catalog="system" width="64" height="56"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yK8-Sl-3f3"/>
+        <segue reference="P8n-QY-8IH"/>
+    </inferredMetricsTieBreakers>
 </document>
