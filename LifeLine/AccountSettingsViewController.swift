@@ -37,7 +37,7 @@ class AccountSettingsViewController: UIViewController, UIImagePickerControllerDe
                         self.picture.image = UIImage(data: data)
                         self.picture.setRounded()
                     }
-                }
+                
             }
         }
         self.view.subviews.last?.removeFromSuperview()

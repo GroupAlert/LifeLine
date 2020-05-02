@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 import AlamofireImage
 
 class GroupSettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
@@ -77,4 +78,5 @@ class GroupSettingsViewController: UIViewController, UIImagePickerControllerDele
     @IBAction func UpdateName(_ sender: UIButton) {
         LifeLineAPICaller().changeGroupName(groupID: groupID, owner: phone, name: groupNameField.text!, resultLabel: ResultLabel)
     }
+    
 }
