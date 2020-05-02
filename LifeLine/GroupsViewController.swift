@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class GroupsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -42,9 +43,7 @@ class GroupsViewController: UIViewController, UITableViewDataSource, UITableView
            }
         }
         task.resume()
-		
-        //AccelerometerController().startGyros()
-        //AccelerometerController().testAccelerometer()
+        AccelerometerController().startAccelerometer()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,6 +58,17 @@ class GroupsViewController: UIViewController, UITableViewDataSource, UITableView
         let groupName = group["group_name"] as! String
         
         cell.groupName.text = groupName
+        let pictureUrl = URL(string: group["picture"] as! String)!
+        Alamofire.request(pictureUrl).responseData { (response) in
+            if response.error == nil {
+                print(response.result)
+                if let data = response.data {
+                    cell.picture.image = UIImage(data: data)
+                    cell.picture.setRounded()
+                }
+            }
+        }
+        
         return cell
     }
     
