@@ -41,6 +41,7 @@
 		04E334CB245BBA1100FD442F /* AddZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E334CA245BBA1100FD442F /* AddZoneViewController.swift */; };
 		04EC0ED424525C3D00D27D8C /* GroupMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC0ED324525C3D00D27D8C /* GroupMemberViewController.swift */; };
 		04EC0ED624525CA600D27D8C /* ZonesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC0ED524525CA600D27D8C /* ZonesViewController.swift */; };
+		700FA84E245D12D8005F8D26 /* GroupSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700FA84D245D12D8005F8D26 /* GroupSettingsViewController.swift */; };
 		7064693E244F768B009A6E3A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7064693D244F768B009A6E3A /* ChatViewController.swift */; };
 		70646940244F76E0009A6E3A /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7064693F244F76E0009A6E3A /* ChatCell.swift */; };
 		7F94EC7B924CA3F14D7A45EF /* Pods_LifeLine_LifeLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCED616DBB8F317DDF13E8F3 /* Pods_LifeLine_LifeLineUITests.framework */; };
@@ -112,6 +113,7 @@
 		58E5E68DDA79978E6C4BE881 /* Pods-LifeLine-LifeLineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine-LifeLineUITests.debug.xcconfig"; path = "Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		612CF9A5E075BA3C4AB5BBB5 /* Pods_LifeLineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeLineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C32A843B91751030309406 /* Pods-LifeLineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLineTests.release.xcconfig"; path = "Target Support Files/Pods-LifeLineTests/Pods-LifeLineTests.release.xcconfig"; sourceTree = "<group>"; };
+		700FA84D245D12D8005F8D26 /* GroupSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSettingsViewController.swift; sourceTree = "<group>"; };
 		7064693D244F768B009A6E3A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		7064693F244F76E0009A6E3A /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		958EF87E245B75E600338308 /* UsersLocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersLocationAnnotation.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		0494B0112415CD9A0016DEE8 /* LifeLine */ = {
 			isa = PBXGroup;
 			children = (
+				700FA84D245D12D8005F8D26 /* GroupSettingsViewController.swift */,
 				0494B01B2415CD9C0016DEE8 /* Assets.xcassets */,
 				0439774D24494D3500E501D3 /* Accelerometer.swift */,
 				04010632242079420085F3E3 /* AccountSettingsViewController.swift */,
@@ -530,6 +533,7 @@
 				04DE239E244FADD7008E4DC6 /* AddGroupViewController.swift in Sources */,
 				04010633242079420085F3E3 /* AccountSettingsViewController.swift in Sources */,
 				040D4CA2245CC45500FA9EEB /* UICollectionView+indexPathForView.swift in Sources */,
+				700FA84E245D12D8005F8D26 /* GroupSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
