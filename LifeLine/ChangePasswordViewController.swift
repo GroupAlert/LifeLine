@@ -23,6 +23,7 @@ class ChangePasswordViewController: UIViewController {
     }
     
     @IBAction func updatePassword(_ sender: Any) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view, backgroundColor: UIColor.green))
         let oldPassword = oldPasswordField.text!
         let newPassword = newPasswordField.text!
         let newPassword2 = newPassword2Field.text!
@@ -34,6 +35,7 @@ class ChangePasswordViewController: UIViewController {
         } else {
             resultLabel.text = "Passwords do not match"
         }
+        self.view.subviews.last?.removeFromSuperview()
     }
     
 }

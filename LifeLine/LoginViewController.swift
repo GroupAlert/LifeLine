@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.view.addSubview(UIView().customActivityIndicator(view: self.view,backgroundColor: UIColor.green)) // Spinner start
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view,backgroundColor: UIColor.green))
         let dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
         let loggedin = dict["loggedin"] as! String
         if (loggedin == "yes") {
@@ -49,11 +49,11 @@ class LoginViewController: UIViewController {
                     }
                 }
             }
-            Location.manager.checkLocationServices()
+           // Location.manager.checkLocationServices()
             self.view.subviews.last?.removeFromSuperview()
             self.performSegue(withIdentifier: "SignInSegue", sender: self)
         }
-        self.view.subviews.last?.removeFromSuperview() // Spinner end
+        self.view.subviews.last?.removeFromSuperview()
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {

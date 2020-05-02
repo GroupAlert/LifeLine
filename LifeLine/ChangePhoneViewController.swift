@@ -23,6 +23,7 @@ class ChangePhoneViewController: UIViewController {
     }
 
     @IBAction func updatePhone(_ sender: Any) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view, backgroundColor: UIColor.green))
         let oldphone = oldPhoneLabel.text!
         let newPhone = newPhoneField.text!
         let password = passwordField.text!
@@ -33,5 +34,7 @@ class ChangePhoneViewController: UIViewController {
             user!.password = newPhone
             user!.saveInBackground()
         }
+        self.view.subviews.last?.removeFromSuperview()
     }
+    
 }

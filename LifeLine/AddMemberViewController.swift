@@ -21,11 +21,13 @@ class AddMemberViewController: UIViewController {
     }
     
     @IBAction func resetPassword(_ sender: Any) {
+        self.view.addSubview(UIView().customActivityIndicator(view: self.view, backgroundColor: UIColor.green))
         let userinfo = Archiver().getObject(fileName: "userinfo") as! NSDictionary
         let admin = userinfo["phone"] as! String
         let phone = phoneField.text!
         let role = roleField.text!
         LifeLineAPICaller().addMember(groupID: groupID, admin: admin, member: phone, role: role, resultLabel: result)
+        self.view.subviews.last?.removeFromSuperview()
     }
 
 }

@@ -10,47 +10,40 @@ import UIKit
 import AlamofireImage
 
 class GroupSettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var groupNameField: UITextField!
     @IBOutlet weak var ResultLabel: UILabel!
-    var groupID = String()
-    var userType = String()
-    var phone = String()
-    var dict = [String:Any]()
-    var groupDict = [String:Any]()
-    let userDict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
     
+    var group = [String:Any]()
+    var isOwner = Bool()
+    var phone = String()
+    var groupID = String()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        phone = userDict["phone"] as! String
-        let url = URL(string: LifeLineAPICaller().baseURL + "group/groupget.php")!
-        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
-        request.httpMethod = "POST"
-        let postString = "group_id=\(self.groupID)"
-        request.httpBody = postString.data(using: String.Encoding.utf8)
-        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
-        let task = session.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let data = data {
-                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                self.groupDict = dataDictionary
-                
+        let pictureUrl = URL(string: group["picture"] as! String)!
+        Alamofire.request(pictureUrl).responseData { (response) in
+            if response.error == nil {
+                print(response.result)
+                if let data = response.data {
+                    self.photo.image = UIImage(data: data)
+                    self.photo.setRounded()
+                }
             }
         }
-        task.resume()
-        print("groupDicr:")
-        print( self.groupDict)
+        groupNameField.text = group["group_name"] as? String
+        let userDict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
+        phone = userDict["phone"] as! String
+        groupID = group["group_id"] as! String
     }
+    
     @IBAction func deleteGroup(_ sender: UIButton) {
-        
-        let adminPhone = dict["role"] as! String
-        if ( self.phone == adminPhone){
-            
-            LifeLineAPICaller().deleteGroup(groupID: self.groupID, phone: self.phone, resultLabel: self.ResultLabel)
+        if isOwner {
+            LifeLineAPICaller().deleteGroup(phone: phone, groupId:groupID, resultLabel:ResultLabel)
         }
         else{
-            LifeLineAPICaller().leaveGroup(groupID: self.groupID, phone: self.phone, resultLabel: self.ResultLabel)
+            LifeLineAPICaller().leaveGroup(phone: phone, groupId:groupID, resultLabel:ResultLabel)
         }
     }
     
@@ -66,6 +59,7 @@ class GroupSettingsViewController: UIViewController, UIImagePickerControllerDele
         }
         present(picker,animated: true, completion: nil )
     }
+  
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as! UIImage
         let size = CGSize(width: 300, height: 300)
@@ -75,14 +69,12 @@ class GroupSettingsViewController: UIViewController, UIImagePickerControllerDele
         
     }
     
-    
-    
     @IBAction func photoButton(_ sender: Any) {
         let image = self.photo.image!
-        LifeLineAPICaller().changeGroupPicture(groupID: self.groupID, image: image.pngData(), resultLabel: self.ResultLabel)
+        LifeLineAPICaller().changeGroupPicture(groupID: groupID, image: image.pngData(), resultLabel: ResultLabel)
     }
     
     @IBAction func UpdateName(_ sender: UIButton) {
-        LifeLineAPICaller().changeGroupName(groupID: self.groupID, owner: self.phone, name: self.groupNameField.text!, resultLabel: self.ResultLabel)
+        LifeLineAPICaller().changeGroupName(groupID: groupID, owner: phone, name: groupNameField.text!, resultLabel: ResultLabel)
     }
 }

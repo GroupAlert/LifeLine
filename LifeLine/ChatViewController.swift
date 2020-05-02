@@ -138,6 +138,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 if response.error == nil {
                         if let data = response.data {
                             cell.picture.image = UIImage(data: data)
+                            cell.picture.setRounded()
                         }
                     }
                 }

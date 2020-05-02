@@ -61,38 +61,23 @@ class GroupsViewController: UIViewController, UITableViewDataSource, UITableView
         let pictureUrl = URL(string: group["picture"] as! String)!
         Alamofire.request(pictureUrl).responseData { (response) in
             if response.error == nil {
-                print(response.result)
                 if let data = response.data {
                     cell.picture.image = UIImage(data: data)
                     cell.picture.setRounded()
                 }
             }
         }
-        
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
-        if segue.identifier == "GroupsToGroup" {
-            let cell = sender as! UITableViewCell
-            let indexPath = table.indexPath(for: cell)!
-            let group = dict[String(indexPath.row)] as! [String:Any]
-            
-            let detailsViewController = segue.destination as! GroupDetailsViewController
-            detailsViewController.group = group
-            
-            table.deselectRow(at: indexPath, animated: true)
-        }
-		
 		if segue.identifier == "GroupsToMembers" {
 			let cell = sender as! UITableViewCell
             let indexPath = table.indexPath(for: cell)!
             let group = dict[String(indexPath.row)] as! [String:Any]
-			let groupID = group["group_id"]
             
             let membersViewController = segue.destination as! MembersViewController
-			membersViewController.groupID = groupID as! String
+            membersViewController.group = group
             table.deselectRow(at: indexPath, animated: true)
 		}
     }

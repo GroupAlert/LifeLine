@@ -16,7 +16,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var result: UILabel!
     
-    var groupID = String()
+    var group = [String:Any]()
     var dict = [String:Any]()
     var member = [String:Any]()
     
@@ -34,7 +34,8 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         let url = URL(string: LifeLineAPICaller().baseURL + "group/groupmembergetmembers.php")!
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         request.httpMethod = "POST"
-        let postString = "group_id=\(self.groupID)"
+        let groupID = group["group_id"] as! String
+        let postString = "group_id=\(groupID)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -67,7 +68,6 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberViewCell") as! MemberViewCell
         let	groupMember = dict[String(indexPath.row)] as! [String:Any]
-        print(groupMember)
         let name = groupMember["name"] as! String
         let phone = groupMember["phone"] as! String
         let role = groupMember["role"] as! String
@@ -148,24 +148,23 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MembersToChat" {
             let chatViewController = segue.destination as! ChatViewController
-            chatViewController.groupID = groupID
+            chatViewController.groupID = group["group_id"] as! String
         }
         
         if segue.identifier == "MembersToMember" {
             let memberViewController = segue.destination as! GroupMemberViewController
-            memberViewController.group = groupID
+            memberViewController.group = group["group_id"] as! String
             memberViewController.member = member
         }
         
         if segue.identifier == "MembersToZones" {
             let memberViewController = segue.destination as! ZonesViewController
-            memberViewController.groupID = groupID
+            memberViewController.groupID = group["group_id"] as! String
             memberViewController.phone = member["phone"] as! String
         }
         if segue.identifier == "MembersToSettings" {
             let GroupSettingsViewController = segue.destination as! GroupSettingsViewController
-            GroupSettingsViewController.groupID = groupID             //GroupSettingsViewController.member = member
-            
+            GroupSettingsViewController.group = group
         }
     }
     
