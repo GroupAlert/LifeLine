@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import Alamofire
+import AlamofireImage
 
-class GroupSettingsViewController: UIViewController {
-    
+class GroupSettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var groupNameField: UITextField!
     @IBOutlet weak var ResultLabel: UILabel!
@@ -45,6 +45,28 @@ class GroupSettingsViewController: UIViewController {
         else{
             LifeLineAPICaller().leaveGroup(phone: phone, groupId:groupID, resultLabel:ResultLabel)
         }
+    }
+    
+    @IBAction func onCameraButton(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            picker.sourceType = .camera
+        }else{
+            picker.sourceType = .photoLibrary
+        }
+        present(picker,animated: true, completion: nil )
+    }
+  
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.editedImage] as! UIImage
+        let size = CGSize(width: 300, height: 300)
+        let scaledImage = image.af_imageScaled(to: size)
+        photo.image = scaledImage
+        dismiss(animated: true, completion: nil)
+        
     }
     
     @IBAction func photoButton(_ sender: Any) {

@@ -8,9 +8,10 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 import Parse
 
-class AccountSettingsViewController: UIViewController {
+class AccountSettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var name: UITextField!
@@ -21,7 +22,7 @@ class AccountSettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
         self.name.text = (self.dict["name"] as! String)
         self.phone.text = (self.dict["phone"] as! String)
@@ -38,6 +39,7 @@ class AccountSettingsViewController: UIViewController {
                     }
                 }
             }
+        }
         self.view.subviews.last?.removeFromSuperview()
     }
     
@@ -53,6 +55,29 @@ class AccountSettingsViewController: UIViewController {
         LifeLineAPICaller().changePicture(phone: (self.dict["phone"] as! String), image: image.pngData(), resultLabel: self.result)
         self.view.subviews.last?.removeFromSuperview()
     }
+    
+    
+    @IBAction func onCameraButton(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            picker.sourceType = .camera
+        }else{
+            picker.sourceType = .photoLibrary
+        }
+        present(picker,animated: true, completion: nil )
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.editedImage] as! UIImage
+        let size = CGSize(width: 300, height: 300)
+        let scaledImage = image.af_imageScaled(to: size)
+        picture.image = scaledImage
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
     
     @IBAction func updateName(_ sender: Any) {
         self.view.addSubview(UIView().customActivityIndicator(view: self.view,backgroundColor: UIColor.green))
