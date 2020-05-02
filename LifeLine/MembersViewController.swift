@@ -23,11 +23,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         result.addObserver(self, forKeyPath: "text", options: [.old, .new], context: nil)
-        /*
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
-        */
+
         tableView.dataSource = self
         tableView.delegate = self
         mapView.delegate = self
