@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -609,7 +609,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6FX-Ck-tVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-597" y="2241"/>
+            <point key="canvasLocation" x="-1425" y="2032"/>
         </scene>
         <!--MembersViewController-->
         <scene sceneID="q7h-Ao-PTh">
@@ -735,7 +735,7 @@
                                     <segue destination="AUy-Wy-pbG" kind="show" identifier="MembersToChat" id="k2R-E0-xO2"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Temp" id="VSf-g6-cTw"/>
+                            <barButtonItem title="Settings" id="VSf-g6-cTw"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -749,7 +749,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZU0-2t-RPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-597.10144927536237" y="1551.5625"/>
+            <point key="canvasLocation" x="-1425" y="1343"/>
         </scene>
         <!--GroupDetailsViewController-->
         <scene sceneID="W28-Y7-vUJ">
@@ -783,7 +783,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fim-4P-FJH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2161" y="1170"/>
+            <point key="canvasLocation" x="-3551" y="1192"/>
         </scene>
         <!--Map Display View Controller-->
         <scene sceneID="mVq-SI-oOi">
@@ -926,7 +926,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHL-ry-AVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885.50724637681162" y="1551.5625"/>
+            <point key="canvasLocation" x="59" y="1343"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="axZ-mk-2qm">
@@ -1052,7 +1052,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdH-Bi-BnP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886" y="2241"/>
+            <point key="canvasLocation" x="59" y="2032"/>
         </scene>
         <!--ZonesViewController-->
         <scene sceneID="riT-72-hN5">
@@ -1078,7 +1078,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXH-BC-TfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="1552"/>
+            <point key="canvasLocation" x="-675" y="1343"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="z0K-Qr-F28">
@@ -1153,7 +1153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R96-NX-MD0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="2241"/>
+            <point key="canvasLocation" x="-675" y="2032"/>
         </scene>
         <!--ChangePasswordViewController-->
         <scene sceneID="h8D-jc-G2r">
@@ -1264,7 +1264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPT-lC-AJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1624.6376811594205" y="1551.5625"/>
+            <point key="canvasLocation" x="799" y="1343"/>
         </scene>
         <!--DeleteAccountViewController-->
         <scene sceneID="rtF-HQ-Fc7">
@@ -1471,6 +1471,7 @@
         <!--GroupsViewController-->
         <scene sceneID="Dos-5D-mTJ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0Z-ve-Fbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="GroupsViewController" id="fEK-Up-ycH" customClass="GroupsViewController" customModule="LifeLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x8q-sb-Ai4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1490,13 +1491,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nNN-5L-4X6">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nNN-5L-4X6">
                                                     <rect key="frame" x="9" y="0.0" width="110" height="109"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="110" id="Hrl-nl-poc"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Group Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-mX-cIs">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-mX-cIs">
                                                     <rect key="frame" x="132" y="24" width="262" height="61"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="262" id="r8E-FV-AMC"/>
@@ -1539,7 +1540,7 @@
                         <barButtonItem key="rightBarButtonItem" title="New Group" id="qDY-i8-VDm">
                             <color key="tintColor" red="0.24295502899999999" green="0.60877490040000004" blue="0.83214575049999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="ubh-au-Zun" kind="show" id="mve-ME-QQc"/>
+                                <segue destination="ubh-au-Zun" kind="show" identifier="" id="mve-ME-QQc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1547,7 +1548,6 @@
                         <outlet property="table" destination="qv6-Un-ULw" id="HQW-Z3-nL7"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v0Z-ve-Fbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="150.72463768115944" y="847.76785714285711"/>
         </scene>
@@ -1991,19 +1991,136 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHy-xe-zHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1333" y="2241"/>
+            <point key="canvasLocation" x="-2159" y="2032"/>
+        </scene>
+        <!--GroupSettings-->
+        <scene sceneID="weV-5Y-TFu">
+            <objects>
+                <viewController title="GroupSettings" id="J4B-Eh-s1j" customClass="GroupSettingsViewController" customModule="LifeLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fc3-hO-ZBP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Wallpaper5" translatesAutoresizingMaskIntoConstraints="NO" id="pEU-be-ic1">
+                                <rect key="frame" x="0.0" y="-44" width="414" height="984"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hS-bF-h9w" customClass="RoundButton" customModule="LifeLine" customModuleProvider="target">
+                                <rect key="frame" x="133" y="272" width="143" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Update Picture">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="UpdatePicture:" destination="pSj-22-GWo" eventType="touchUpInside" id="gha-eF-EDp"/>
+                                    <action selector="photoButton:" destination="J4B-Eh-s1j" eventType="touchUpInside" id="jMP-HY-aYN"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lFN-Ca-CQZ">
+                                <rect key="frame" x="106" y="88.5" width="200" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4y-9W-6iq" customClass="RoundButton" customModule="LifeLine" customModuleProvider="target">
+                                <rect key="frame" x="69" y="475" width="276" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Update Group Name">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="UpdateName:" destination="J4B-Eh-s1j" eventType="touchUpInside" id="AZQ-9l-Agx"/>
+                                    <action selector="updateButton:" destination="pSj-22-GWo" eventType="touchUpInside" id="cr4-qY-qbp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pp-uh-kos">
+                                <rect key="frame" x="187" y="729" width="48" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWD-c2-6EY">
+                                <rect key="frame" x="163" y="376" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knQ-b9-EAO" customClass="RoundButton" customModule="LifeLine" customModuleProvider="target">
+                                <rect key="frame" x="133" y="605" width="150" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Delete Group">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="deleteGroup:" destination="J4B-Eh-s1j" eventType="touchUpInside" id="epI-wl-1do"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aMP-fI-wfS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile Settings" id="1tC-RP-Pl5"/>
+                    <connections>
+                        <outlet property="ResultLabel" destination="5pp-uh-kos" id="DmO-1t-u7I"/>
+                        <outlet property="groupNameFiels" destination="qWD-c2-6EY" id="BBh-5Q-VIQ"/>
+                        <outlet property="photo" destination="lFN-Ca-CQZ" id="uta-nJ-D8B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8l-Ho-8TR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="pSj-22-GWo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-2110.144927536232" y="1348.6607142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yK8-Sl-3f3"/>
+        <segue reference="nqb-4L-bVI"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Camera" width="432" height="432"/>
         <image name="LL Icon5" width="391" height="393"/>
         <image name="LL Logo2" width="500" height="174"/>
         <image name="Wallpaper5" width="1125" height="2436"/>
-        <image name="camera" catalog="system" width="64" height="48"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="yK8-Sl-3f3"/>
-        <segue reference="P8n-QY-8IH"/>
-    </inferredMetricsTieBreakers>
 </document>

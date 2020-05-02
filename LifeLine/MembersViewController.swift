@@ -166,6 +166,11 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
             memberViewController.groupID = groupID
             memberViewController.phone = member["phone"] as! String
         }
+        if segue.identifier == "MembersToSettings" {
+            let memberViewController = segue.destination as! GroupMemberViewController
+            memberViewController.group = groupID
+            memberViewController.member = member
+        }
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
