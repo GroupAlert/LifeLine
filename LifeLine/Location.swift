@@ -17,8 +17,7 @@ class Location: CLLocationManager, CLLocationManagerDelegate {
 	
 
 	func checkLocationServices() {
-		self.dict = Archiver().getObject(fileName: "userinfo") as! NSDictionary
-		self.phone = dict["phone"] as! String
+		
 		if CLLocationManager.locationServicesEnabled() {
 			
 			Location.manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -33,6 +32,7 @@ class Location: CLLocationManager, CLLocationManagerDelegate {
 		   switch CLLocationManager.authorizationStatus() {
 		   case .authorizedWhenInUse:
 			Location.manager.startUpdatingLocation()
+			
 			
 			   break
 		   case .denied:

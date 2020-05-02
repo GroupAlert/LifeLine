@@ -46,6 +46,7 @@
 		7F94EC7B924CA3F14D7A45EF /* Pods_LifeLine_LifeLineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCED616DBB8F317DDF13E8F3 /* Pods_LifeLine_LifeLineUITests.framework */; };
 		958EF87F245B75E600338308 /* UsersLocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958EF87E245B75E600338308 /* UsersLocationAnnotation.swift */; };
 		95E9893D245B812800624F82 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9893C245B812800624F82 /* Location.swift */; };
+		95EE366C245D0919009ACEBF /* ZoneViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE366B245D0919009ACEBF /* ZoneViewCell.swift */; };
 		DDC571537312B88BEC789714 /* Pods_LifeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D650467AB4A2DE9D4293EF9F /* Pods_LifeLine.framework */; };
 		F61622057A2D54632B9632E9 /* Pods_LifeLineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612CF9A5E075BA3C4AB5BBB5 /* Pods_LifeLineTests.framework */; };
 /* End PBXBuildFile section */
@@ -116,6 +117,7 @@
 		7064693F244F76E0009A6E3A /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		958EF87E245B75E600338308 /* UsersLocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersLocationAnnotation.swift; sourceTree = "<group>"; };
 		95E9893C245B812800624F82 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		95EE366B245D0919009ACEBF /* ZoneViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneViewCell.swift; sourceTree = "<group>"; };
 		B22846C99F41CF2B2827E78F /* Pods-LifeLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine.debug.xcconfig"; path = "Target Support Files/Pods-LifeLine/Pods-LifeLine.debug.xcconfig"; sourceTree = "<group>"; };
 		C85525FF75794DF83C2EA560 /* Pods-LifeLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine.release.xcconfig"; path = "Target Support Files/Pods-LifeLine/Pods-LifeLine.release.xcconfig"; sourceTree = "<group>"; };
 		CBB27A49AB2CE35F44E60AA0 /* Pods-LifeLine-LifeLineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeLine-LifeLineUITests.release.xcconfig"; path = "Target Support Files/Pods-LifeLine-LifeLineUITests/Pods-LifeLine-LifeLineUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				0494B01D2415CD9C0016DEE8 /* LaunchScreen.storyboard */,
 				0494B0182415CD9A0016DEE8 /* Main.storyboard */,
 				0494B0202415CD9C0016DEE8 /* Info.plist */,
+				95EE366B245D0919009ACEBF /* ZoneViewCell.swift */,
 			);
 			path = LifeLine;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 			files = (
 				0483B1292421A804003BF6DB /* ChangePhoneViewController.swift in Sources */,
 				04EC0ED624525CA600D27D8C /* ZonesViewController.swift in Sources */,
+				95EE366C245D0919009ACEBF /* ZoneViewCell.swift in Sources */,
 				0483B12B2421A819003BF6DB /* ChangePasswordViewController.swift in Sources */,
 				04114332245B918C009499A1 /* AddMemberViewController.swift in Sources */,
 				04928F2C24282F1C002C3549 /* ForgotPasswordViewController.swift in Sources */,

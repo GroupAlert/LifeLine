@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
                     }
                 }
             }
-            Location.manager.checkLocationServices()
+           // Location.manager.checkLocationServices()
             self.view.subviews.last?.removeFromSuperview()
             self.performSegue(withIdentifier: "SignInSegue", sender: self)
         }
