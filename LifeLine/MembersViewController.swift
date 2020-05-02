@@ -167,9 +167,9 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
             memberViewController.phone = member["phone"] as! String
         }
         if segue.identifier == "MembersToSettings" {
-            let memberViewController = segue.destination as! GroupMemberViewController
-            memberViewController.group = groupID
-            memberViewController.member = member
+            let GroupSettingsViewController = segue.destination as! GroupSettingsViewController
+            GroupSettingsViewController.groupID = groupID
+            //GroupSettingsViewController.member = member
         }
     }
     
