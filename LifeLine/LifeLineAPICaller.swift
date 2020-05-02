@@ -224,7 +224,9 @@ class LifeLineAPICaller {
             
             let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
             let result = dataDictionary["result"] as! String
-            print(result)
+            if result != "success" {
+                print(result)
+            }
         }
         task.resume()
     }
@@ -280,7 +282,9 @@ class LifeLineAPICaller {
 
             let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
             let result = dataDictionary["result"] as! String
-            print(result)
+            if result != "success" {
+                print(result)
+            }
         }
         task.resume()
     }
@@ -419,12 +423,12 @@ class LifeLineAPICaller {
         task.resume()
     }
     
-    func leaveGroup(groupID:String, phone:String, resultLabel:UILabel) {
+    func leaveGroup(phone:String, groupId:String, resultLabel:UILabel) {
         let url = baseURL + "group/groupmemberleave.php"
         
         let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
         request.httpMethod = "POST"
-        let postString = "group_id=\(groupID)&phone=\(phone)"
+        let postString = "group_id=\(groupId)&phone=\(phone)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
 
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
@@ -432,25 +436,31 @@ class LifeLineAPICaller {
             
             let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
             let result = dataDictionary["result"] as! String
-            resultLabel.text = result
+            
+            DispatchQueue.main.async {
+                resultLabel.text = result
+            }
         }
         task.resume()
     }
-    
-    func deleteGroup(groupID:String, phone:String, resultLabel:UILabel) {
+
+    func deleteGroup(phone:String, groupId:String, resultLabel:UILabel) {
         let url = baseURL + "group/groupdelete.php"
         
         let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
         request.httpMethod = "POST"
-        let postString = "group_id=\(groupID)&owner_phone=\(phone)"
+        let postString = "owner_phone=\(phone)&group_id=\(groupId)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
 
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
             let dataDictionary = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
-            let result = dataDictionary["result"] as! String
-            resultLabel.text = result
+            let result = dataDictionary["result"] as? String
+
+            DispatchQueue.main.async {
+                resultLabel.text = result
+            }
         }
         task.resume()
     }

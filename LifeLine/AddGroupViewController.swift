@@ -26,7 +26,6 @@ class AddGroupViewController: UIViewController {
             self.view.addSubview(UIView().customActivityIndicator(view: self.view, backgroundColor: UIColor.green))
             LifeLineAPICaller().createGroup(groupName: name, phone: phone as! String)
             self.view.subviews.last?.removeFromSuperview()
-
         }
     }
     
